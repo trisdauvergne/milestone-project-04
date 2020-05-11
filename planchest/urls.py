@@ -23,6 +23,8 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),
     path('designers/', include('designers.urls')),
+    path('prints/', include('prints.urls')),
+    path('profiles/', include('profiles.urls')),
 ]
 
 if settings.DEBUG:

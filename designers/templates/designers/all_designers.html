@@ -4,8 +4,8 @@
 {% block content %}
 <h1>All designers page</h1>
 {% for designers in designers %}
-    <a href="{% url 'individual_designer' designers.id %}"><p>{{ designers.first_name }} {{ designers.last_name }}</p></a>
-    <p>{{ designers.id }}</p>
+    <a href="{% url 'individual_designer' designers.id %}"><p>Name: {{ designers.first_name }} {{ designers.last_name }}</p></a>
+    <p>ID NO: {{ designers.id }}</p>
     <p>{{ designers.country }}</p>
     <p>{{ designers.email }}</p>
     <br>
