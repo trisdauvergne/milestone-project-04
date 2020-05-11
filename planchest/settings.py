@@ -76,9 +76,9 @@ TEMPLATES = [
     },
 ]
 
-ACCOUNT_FORMS = {
-    'signup': 'users.forms.CustomSignupForm'
-}
+# ACCOUNT_FORMS = {
+#     'signup': 'users.forms.CustomSignupForm'
+# }
 
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`

@@ -17,6 +17,20 @@
         <div class="col-12">
             <h1 class="header-logo">Planchest</h1>
         </div>
+        <div class="topnav" id="myTopnav">
+            <a href="">About</a>
+            <a href="">Designers</a>
+            <a href="">All Work</a>
+            <a href="{% url 'account_signup' %}">Register / Create a Profile</a>
+            <a href="">Login</a>
+            <a href="">Logout</a>
+            <a href="">Add Work</a>
+            <a href="">View your profile</a>
+            <a href="">Bag</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </header>
 
     {% block page_header %}
