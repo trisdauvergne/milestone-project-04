@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'home',
+    'profiles',
 ]
 
 MIDDLEWARE = [
@@ -76,9 +77,9 @@ TEMPLATES = [
     },
 ]
 
-# ACCOUNT_FORMS = {
-#     'signup': 'users.forms.CustomSignupForm'
-# }
+ACCOUNT_FORMS = {
+    'signup': 'profiles.forms.CustomSignupForm'
+}
 
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`
