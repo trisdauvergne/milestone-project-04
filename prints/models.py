@@ -1,10 +1,10 @@
 from django.db import models
-from django.contrib.auth.models import User
+from profiles.models import DesignerProfile
 
 
-class Print(models.Model):
+class UploadPrint(models.Model):
 
-    designer = models.ForeignKey(User,
+    designer = models.ForeignKey(DesignerProfile,
                                  null=True,
                                  blank=True,
                                  on_delete=models.CASCADE)

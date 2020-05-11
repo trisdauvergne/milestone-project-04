@@ -1,12 +1,12 @@
 from django import forms
 
-from .models import Print
+from .models import UploadPrint
 
 
-class UploadPrint(forms.ModelForm):
+class UploadPrintForm(forms.ModelForm):
 
     class Meta:
-        model = Print
+        model = UploadPrint
         fields = ['designer',
                   'title',
                   'description',
