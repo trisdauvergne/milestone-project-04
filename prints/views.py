@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 from .forms import UploadPrintForm
 
@@ -28,8 +28,8 @@ def large_print(request, print_id):
     }
 
     return render(request,
-                 'prints/large_print.html',
-                 context)
+                  'prints/large_print.html',
+                  context)
 
 
 def add_print(request):
@@ -46,3 +46,27 @@ def add_print(request):
                   'prints/add_print.html',
                   {'form': form})
 
+
+def edit_print(request, print_id):
+    """ A view to edit a print """
+    the_print = get_object_or_404(Print, id=print_id)
+    if request.method == 'POST':
+        form = UploadPrintForm(request.POST, request.FILES, instance=the_print)
+        if form.is_valid():
+            form.save()
+            return redirect('all_prints')
+    form = UploadPrintForm(instance=the_print)
+    context = {
+        'form': form,
+    }
+    return render(request,
+                  'prints/edit_print.html',
+                  context)
+
+
+def delete_print(request, print_id):
+    """ A view to delete a print """
+    the_print = get_object_or_404(Print, id=print_id)
+    the_print.delete()
+
+    return redirect('all_prints')
