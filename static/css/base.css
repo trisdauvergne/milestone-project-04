@@ -9,6 +9,10 @@
     margin-top: 5%;
 }
 
+h1, p {
+    font-family: 'Crimson Text', serif;
+}
+
 /* CSS for Navbar from W3 Schools */
 /* Add a black background color to the top navigation */
 .topnav {

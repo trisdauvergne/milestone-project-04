@@ -19,7 +19,7 @@
         </div>
         <div class="topnav" id="myTopnav">
             <a href="{% url 'home' %}">About</a>
-            <a href="">Designers</a>
+            <a href="{% url 'all_designers' %}">Designers</a>
             <a href="">All Work</a>
             {% if user.is_authenticated %}
                 <a href="">Add Work</a>

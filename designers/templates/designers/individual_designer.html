@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>{{ the_designer.first_name }} {{ the_designer.last_name }}</h1>
+<p>ID NO: {{ the_designer.id }}</p>
+<p>{{ the_designer.country }}</p>
+<p>{{ the_designer.email }}</p>
+<br>
+<a href="{% url 'all_designers' %}">Back to designers</a>
+{% endblock %}
