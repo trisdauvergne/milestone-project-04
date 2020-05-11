@@ -20,6 +20,18 @@ def all_prints(request):
                   context)
 
 
+def large_print(request, print_id):
+    the_print = Print.objects.get(id=print_id)
+
+    context = {
+        'print': the_print,
+    }
+
+    return render(request,
+                 'prints/large_print.html',
+                 context)
+
+
 def add_print(request):
     """ A view to add a print to a page """
     form = UploadPrintForm()

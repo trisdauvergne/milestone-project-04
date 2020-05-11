@@ -2,16 +2,21 @@
 {% load static %}
 
 {% block content %}
-    <div class="col-6">
-        <h1>{{ the_designer.first_name }} {{ the_designer.last_name }}</h1>
-        <p>ID NO: {{ the_designer.id }}</p>
-        <p>Country: {{ the_designer.country }}</p>
-        <p>Contact: {{ the_designer.email }}</p>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h1>{{ the_designer.first_name }} {{ the_designer.last_name }}</h1>
+            <p>ID NO: {{ the_designer.id }}</p>
+            <p>About: {{ the_designer.bio }}</p>
+            <p>Country: {{ the_designer.country }}</p>
+            <p>Contact: {{ the_designer.email }}</p>
+        </div>
+        <div class="col-6">
+            {% for prints in prints %}
+                <a href="{% url 'large_print' prints.id %}"><img src="{{ prints.image.url }}" class="image-height"></a>
+            {% endfor %}
+        </div>
     </div>
-    <div class="col-6">
-        {% for prints in prints %}
-            <img src="{{ prints.image.url }}" class="image-height">
-        {% endfor %}
-    </div>
-    <a href="{% url 'all_designers' %}">Back to designers</a>
+</div>
+<a href="{% url 'all_designers' %}">Back to designers</a>
 {% endblock %}
