@@ -4,6 +4,7 @@
 {% block content %}
 <h1>All work on Planchest page</h1>
 {% for print in prints %}
-    <p>{{ print.title }}</p>
+    <a href=""><img src="{{ print.image.url }}" class="image-height"></a>
+    <p class="small-print">{{ print.designer.first_name }} {{ print.designer.last_name }},<br> {{ print.title }},<br> {{ print.size }}</p>
 {% endfor %}
 {% endblock %}

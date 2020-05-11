@@ -3,14 +3,17 @@ from django.shortcuts import render, redirect
 from .forms import UploadPrintForm
 
 from .models import Print
+from profiles.models import DesignerProfile
 
 
 def all_prints(request):
     """ A view to return all the prints on the site """
     all_prints = Print.objects.all()
+    all_designers = DesignerProfile.objects.all()
 
     context = {
         'prints': all_prints,
+        'designers': all_designers,
     }
     return render(request,
                   'prints/all_prints.html',

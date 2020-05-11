@@ -13,6 +13,15 @@ h1, p {
     font-family: 'Crimson Text', serif;
 }
 
+.image-height {
+    height: 200px;
+}
+
+.small-print {
+    font-size: 10px;
+    color: grey;
+}
+
 /* CSS for Navbar from W3 Schools */
 /* Add a black background color to the top navigation */
 .topnav {
