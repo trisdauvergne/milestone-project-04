@@ -2,7 +2,7 @@ from django.db import models
 from profiles.models import DesignerProfile
 
 
-class UploadPrint(models.Model):
+class Print(models.Model):
 
     designer = models.ForeignKey(DesignerProfile,
                                  null=True,

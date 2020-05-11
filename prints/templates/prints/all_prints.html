@@ -3,5 +3,7 @@
 
 {% block content %}
 <h1>All work on Planchest page</h1>
-
+{% for print in prints %}
+    <p>{{ print.title }}</p>
+{% endfor %}
 {% endblock %}

@@ -1,8 +1,8 @@
 from django.contrib import admin
 
-from .models import UploadPrint
+from .models import Print
 
 # Register your models here.
 
-admin.site.register(UploadPrint)
+admin.site.register(Print)
 

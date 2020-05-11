@@ -2,12 +2,19 @@ from django.shortcuts import render, redirect
 
 from .forms import UploadPrintForm
 
+from .models import Print
+
 
 def all_prints(request):
     """ A view to return all the prints on the site """
+    all_prints = Print.objects.all()
 
+    context = {
+        'prints': all_prints,
+    }
     return render(request,
-                  'prints/all_prints.html')
+                  'prints/all_prints.html',
+                  context)
 
 
 def add_print(request):
