@@ -6,8 +6,9 @@
 {% for designers in designers %}
     <a href="{% url 'individual_designer' designers.id %}"><p>Name: {{ designers.first_name }} {{ designers.last_name }}</p></a>
     <p>ID NO: {{ designers.id }}</p>
-    <p>{{ designers.country }}</p>
-    <p>{{ designers.email }}</p>
+    <p>About {{ designers.first_name }} {{ designers.last_name }}: {{ designers.bio }}</p>
+    <p>Country: {{ designers.country }}</p>
+    <p>Contact: {{ designers.email }}</p>
     <br>
 {% endfor %}
 {% endblock %}

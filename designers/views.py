@@ -1,12 +1,13 @@
 from django.shortcuts import render
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
+from profiles.models import DesignerProfile
 
 
 # Create your views here.
 
 def all_designers(request):
     """ A view to return the all designers page """
-    all_designers = User.objects.all()
+    all_designers = DesignerProfile.objects.all()
     alphabetical_designers = all_designers.order_by('last_name')
 
     context = {
@@ -20,7 +21,7 @@ def all_designers(request):
 
 def individual_designer(request, designer_id):
     """ A view to return a page focusing on 1 x designer """
-    the_designer = User.objects.get(id=designer_id)
+    the_designer = DesignerProfile.objects.get(id=designer_id)
 
     context = {
         'the_designer': the_designer,
