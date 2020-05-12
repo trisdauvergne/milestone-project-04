@@ -164,5 +164,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Added from Boutique Ado - to review after code along
-# FREE_DELIVERY_THRESHOLD = 50
-STANDARD_DELIVERY_PERCENTAGE = 15
+
+STANDARD_DELIVERY_PERCENTAGE = 12.5

@@ -34,8 +34,8 @@
             <a href="{% url 'bag_contents' %}">
                 <p class="my-0">
                     Bag
-                    {% if product_count %}
-                        {{ product_count }}
+                    {% if print_quantity %}
+                        ({{ print_quantity }})
                     {% else %}
                         (0)
                     {% endif %}

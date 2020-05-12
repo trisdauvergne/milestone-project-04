@@ -7,10 +7,39 @@
         <div class="row">
             <div class="col">
                 {% if bag_items %}
-                    <div class="table-responsive">
-                        {{ bag_items }}
-                        {{ grand_total|floatformat:2 }}
+                    {% for item in bag_items %}
+                        <div class="row">
+                            <div class="col">
+                                <img src="{{ item.print.image.url }}" class="image-height">
+                            </div>
+                            <div class="col">
+                                <a href="{% url 'individual_designer' item.print.designer.id %}">{{ item.print.designer.first_name }} {{ item.print.designer.last_name }}</a>
+                            </div>
+                            <div class="col">
+                                <p>{{ item.print.title }}</p>
+                            </div>
+                            <div class="col">
+                                <p>{{ item.print.price }}</p>
+                            </div>
+                            <div class="col">
+                                <p>x {{ item.quantity }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Total = {{ total|floatformat:2 }}</p>
+                            <p>Delivery = {{ delivery|floatformat:2 }}</p>
+                            <p>Grand total = {{ grand_total|floatformat:2 }}</p>
+                        </div>
+                        <div class="col-6">
+                            <a href="{% url 'all_prints' %}">Keep shopping</a>
+                            <a href="">Checkout securely</a>
+                        </div>
                     </div>
+                    <br>
+                    <!-- REMOVE LATER -->
+                    <h3>Bag items are here:<h3><p>{{ bag_items }}</p>
                 {% else %}
                     <p class="lead mb-5">Your bag is empty.</p>
                     <a href="{% url 'all_prints' %}" class="btn btn-outline-black rounded-0 btn-lg">Go back to products
