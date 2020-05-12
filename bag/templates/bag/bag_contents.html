@@ -13,7 +13,7 @@
                                 <img src="{{ item.print.image.url }}" class="image-height">
                             </div>
                             <div class="col">
-                                <a href="{% url 'individual_designer' item.print.designer.id %}">{{ item.print.designer.first_name }} {{ item.print.designer.last_name }}</a>
+                                <a href="{% url 'individual_designer' item.print.designer.id %}">{{ item.print.designer.user.first_name }} {{ item.print.designer.user.last_name }}</a>
                             </div>
                             <div class="col">
                                 <p>{{ item.print.title }}</p>
