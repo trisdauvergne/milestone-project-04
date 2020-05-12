@@ -25,6 +25,7 @@ urlpatterns = [
     path('designers/', include('designers.urls')),
     path('prints/', include('prints.urls')),
     path('profiles/', include('profiles.urls')),
+    path('bag/', include('bag.urls')),
 ]
 
 if settings.DEBUG:

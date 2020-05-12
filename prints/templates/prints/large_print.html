@@ -10,4 +10,23 @@
         <a href="{% url 'delete_print' print.id %}">Delete</a>    
     {% endif %}
     <a href="{% url 'individual_designer' print.designer.id %}">See all of {{ print.designer.first_name}} {{ print.designer.last_name }}'s work</a>
+
+    <!-- Form to add product to bag -->
+    <p>{{ print.bio }}</p>
+    <form class="form" action="{% url 'add_print_to_bag' print.id %}" method="POST">
+    {% csrf_token %}
+        <div class="form-row">
+            <div class="col-12">
+                <p>Quantity:</p>
+                <div class="input-group">
+                    <input class="form-control qty_input" type="number" name="quantity" value="1" max="99" data-item_id="{{ print.id }}" id="id_qty_{{ print.id }}">
+                </div>
+            </div>
+            <div class="COL-12">
+                <a href="{% url 'all_prints' %}" class="btn">Back to all prints</a>
+                <input type="submit" class="btn btn-black" value="Add to Bag">
+            </div>
+            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+        </div>
+    </form>
 {% endblock %}

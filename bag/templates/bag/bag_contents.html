@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>Bag contents</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                {% if bag_items %}
+                    <div class="table-responsive">
+                    </div>
+                {% else %}
+                    <p class="lead mb-5">Your bag is empty.</p>
+                    <a href="{% url 'all_prints' %}" class="btn btn-outline-black rounded-0 btn-lg">Go back to products
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
