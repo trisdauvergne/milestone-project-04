@@ -19,10 +19,10 @@
             <div class="col-12">
                 <p>Quantity:</p>
                 <div class="input-group">
-                    <input class="form-control qty_input" type="number" name="quantity" value="1" max="99" data-item_id="{{ print.id }}" id="id_qty_{{ print.id }}">
+                    <input class="form-control qty_input" type="number" name="quantity" value="1" max="10" data-item_id="{{ print.id }}" id="id_qty_{{ print.id }}">
                 </div>
             </div>
-            <div class="COL-12">
+            <div class="col-12">
                 <a href="{% url 'all_prints' %}" class="btn">Back to all prints</a>
                 <input type="submit" class="btn btn-black" value="Add to Bag">
             </div>

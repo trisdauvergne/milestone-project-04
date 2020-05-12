@@ -1,6 +1,8 @@
 from django.shortcuts import render
 # from django.contrib.auth.models import User
 from profiles.models import DesignerProfile
+from django.contrib.auth.models import User
+
 from prints.models import Print
 
 
@@ -9,10 +11,9 @@ from prints.models import Print
 def all_designers(request):
     """ A view to return the all designers page """
     all_designers = DesignerProfile.objects.all()
-    alphabetical_designers = all_designers.order_by('last_name')
 
     context = {
-        'designers': alphabetical_designers,
+        'designers': all_designers,
     }
 
     return render(request,

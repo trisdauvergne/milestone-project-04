@@ -6,9 +6,11 @@
 
 <form method="POST" action="{% url 'create_profile' %}">
     {% csrf_token %}
-    {{ form.as_p }}
+    <!-- Field 1 from User -->
+    {{ user_form.as_p}}
+    <!-- Field 2 from Designer -->
+    {{ designer_form.as_p }}
     <button type="submit">Submit</button>
 </form>
-
 
 {% endblock %}
