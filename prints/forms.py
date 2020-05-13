@@ -7,7 +7,7 @@ class UploadPrintForm(forms.ModelForm):
 
     class Meta:
         model = Print
-        fields = ['designer',
+        fields = [
                   'title',
                   'description',
                   'size',

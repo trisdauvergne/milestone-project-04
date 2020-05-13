@@ -68,13 +68,19 @@ def large_print(request, print_id):
 @login_required
 def add_print(request):
     """ A view to add a print to a page """
-    designer = request.user
+    user = request.user
 
-    upload_form = UploadPrintForm(instance=designer)
+    designer = get_object_or_404(DesignerProfile,
+                                 user=user)
+
+    upload_form = UploadPrintForm()
 
     if request.method == 'POST':
-        upload_form = UploadPrintForm(request.POST, request.FILES)
+        upload_form = UploadPrintForm(request.POST,
+                                      request.FILES)
         if upload_form.is_valid():
+            upload_form = upload_form.save(commit=False)
+            upload_form.designer = designer
             upload_form.save()
             return redirect('all_prints')
     else:

@@ -2,14 +2,18 @@
 {% load static %}
 
 {% block content %}
-<h1>All designers page</h1>
-<p><a href="">Sort alphabetically</a></p>
-{% for designers in designers %}
-    <p>Name:<a href="{% url 'individual_designer' designers.id %}"> {{ designers.first_name }} {{ designers.last_name }}</a></p>
-    <p>ID NO: {{ designers.id }}</p>
-    <p>About {{ designers.first_name }} {{ designers.last_name }}: {{ designers.bio }}</p>
-    <p>Country: {{ designers.country }}</p>
-    <p>Contact: {{ designers.user.email }}</p>
-    <br>
-{% endfor %}
+<div class="container">
+    <div class="row">
+    <h1>All designers page</h1>
+    <p><a href="">Sort alphabetically</a></p>
+    {% for designers in designers %}
+        <p>Name:<a href="{% url 'individual_designer' designers.id %}"> {{ designers.first_name }} {{ designers.last_name }}</a></p>
+        <p>ID NO: {{ designers.id }}</p>
+        <p>About {{ designers.first_name }} {{ designers.last_name }}: {{ designers.bio }}</p>
+        <p>Country: {{ designers.country }}</p>
+        <p>Contact: {{ designers.user.email }}</p>
+        <br>
+    {% endfor %}
+    </div>
+</div>
 {% endblock %}
