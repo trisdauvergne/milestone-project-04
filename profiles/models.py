@@ -10,17 +10,17 @@ class DesignerProfile(models.Model):
     user = models.OneToOneField(User,
                                 on_delete=models.CASCADE)
     first_name = models.CharField(max_length=30,
-                                  null=False,
-                                  blank=False)
+                                  null=True,
+                                  blank=True)
     last_name = models.CharField(max_length=30,
-                                 null=False,
-                                 blank=False)
+                                 null=True,
+                                 blank=True)
     bio = models.CharField(max_length=240,
-                           null=False,
-                           blank=False)
+                           null=True,
+                           blank=True)
     country = CountryField(blank_label='Country',
-                           null=False,
-                           blank=False)
+                           null=True,
+                           blank=True)
 
     class Meta:
         verbose_name = 'Designer Profile'
@@ -35,6 +35,7 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     Create or update the user profile
     """
     if created:
+        print('test statement')
         DesignerProfile.objects.create(user=instance)
 
     instance.designerprofile.save()

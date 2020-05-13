@@ -22,6 +22,11 @@ h1, p {
     color: grey;
 }
 
+a {
+    color: black !important;
+    font-weight: 600;
+}
+
 /* CSS for Navbar from W3 Schools */
 /* Add a black background color to the top navigation */
 .topnav {

@@ -10,10 +10,17 @@ from prints.models import Print
 
 def all_designers(request):
     """ A view to return the all designers page """
+    completed_designers = []
     all_designers = DesignerProfile.objects.all()
-
+    for designer in all_designers:
+        complete = all([designer.first_name,
+                        designer.last_name,
+                        designer.bio,
+                        designer.country])
+        if complete:
+            completed_designers.append(designer)
     context = {
-        'designers': all_designers,
+        'designers': completed_designers,
     }
 
     return render(request,

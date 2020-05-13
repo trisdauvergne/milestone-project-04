@@ -6,10 +6,10 @@
     <a href=""><img src="{{ print.image.url }}" class="image-height"></a>
     <p class="small-print">{{ print.designer.first_name }} {{ print.designer.last_name }},<br> {{ print.title }},<br> {{ print.size }}</p>
     {% if user.is_authenticated %}
-        <a href="{% url 'edit_print' print.id %}">Edit Print</a>
-        <a href="{% url 'delete_print' print.id %}">Delete</a>    
+        <p><a href="{% url 'edit_print' print.id %}">Edit Print</a>, 
+        <a href="{% url 'delete_print' print.id %}">Delete</a></p>    
     {% endif %}
-    <a href="{% url 'individual_designer' print.designer.id %}">See all of {{ print.designer.first_name}} {{ print.designer.last_name }}'s work</a>
+    <p><a href="{% url 'individual_designer' print.designer.id %}">See all of {{ print.designer.first_name}} {{ print.designer.last_name }}'s work</a></p>
 
     <!-- Form to add product to bag -->
     <p>{{ print.bio }}</p>
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <a href="{% url 'all_prints' %}" class="btn">Back to all prints</a>
+                <p><a href="{% url 'all_prints' %}" class="btn">Back to all prints</a></p>
                 <input type="submit" class="btn btn-black" value="Add to Bag">
             </div>
             <input type="hidden" name="redirect_url" value="{{ request.path }}">
