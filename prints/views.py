@@ -1,8 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 
 from .forms import UploadPrintForm
 
 from .models import Print
+from django.contrib.auth.models import User
+
 from profiles.models import DesignerProfile
 
 
@@ -62,19 +65,23 @@ def large_print(request, print_id):
                   context)
 
 
+@login_required
 def add_print(request):
     """ A view to add a print to a page """
-    form = UploadPrintForm()
+    designer = request.user
+
+    upload_form = UploadPrintForm(instance=designer)
+
     if request.method == 'POST':
-        form = UploadPrintForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
+        upload_form = UploadPrintForm(request.POST, request.FILES)
+        if upload_form.is_valid():
+            upload_form.save()
             return redirect('all_prints')
     else:
-        form = UploadPrintForm()
+        upload_form = UploadPrintForm()
     return render(request,
                   'prints/add_print.html',
-                  {'form': form})
+                  {'form': upload_form})
 
 
 def edit_print(request, print_id):

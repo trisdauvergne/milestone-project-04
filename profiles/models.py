@@ -9,6 +9,12 @@ class DesignerProfile(models.Model):
     """ A user profile model for designers """
     user = models.OneToOneField(User,
                                 on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=30,
+                                  null=False,
+                                  blank=False)
+    last_name = models.CharField(max_length=30,
+                                 null=False,
+                                 blank=False)
     bio = models.CharField(max_length=240,
                            null=False,
                            blank=False)

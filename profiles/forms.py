@@ -8,8 +8,8 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['username',
-                  'first_name',
-                  'last_name',
+                #   'first_name',
+                #   'last_name',
                   'email']
 
 
@@ -17,6 +17,8 @@ class DesignerProfileForm(forms.ModelForm):
 
     class Meta:
         model = DesignerProfile
-        fields = ['bio',
+        fields = ['first_name',
+                  'last_name',
+                  'bio',
                   'country']
 

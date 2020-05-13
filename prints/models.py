@@ -5,8 +5,8 @@ from profiles.models import DesignerProfile
 class Print(models.Model):
 
     designer = models.ForeignKey(DesignerProfile,
-                                 null=True,
-                                 blank=True,
+                                 null=False,
+                                 blank=False,
                                  on_delete=models.CASCADE)
     title = models.CharField(max_length=254,
                              null=False,
