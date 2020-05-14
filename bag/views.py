@@ -13,6 +13,7 @@ def bag_contents(request):
 
 def add_print_to_bag(request, print_id):
     """ Add a print to the bag with a specified quantity """
+
     the_print = Print.objects.get(id=print_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -22,16 +23,14 @@ def add_print_to_bag(request, print_id):
         bag[print_id] += quantity
     else:
         bag[print_id] = quantity
-        messages.success(request, f'Added {the_print.title} to your bag')
+        messages.success(request, f'Added something to your bag')
 
     request.session['bag'] = bag
-    # print(request.session['bag'])
     return redirect(redirect_url)
 
 
 def adjust_bag_quantity(request, print_id):
     """ Adjust the quantity of a print in the bag """
-    print('test from views')
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
 
@@ -41,19 +40,18 @@ def adjust_bag_quantity(request, print_id):
         del bag[print_id]
 
     request.session['bag'] = bag
-    # print(request.session['bag'])
     return redirect(reverse('bag_contents'))
 
 
 def remove_print(request, print_id):
     """ Remove prints from the shopping bag """
-
-    the_print = get_object_or_404(Print, id=print_id)
-
+    # Get the bag information
     bag = request.session.get('bag', {})
 
+    # Action, to remove the item
     del bag[print_id]
 
+    # The bag being updated
     request.session['bag'] = bag
 
     return redirect(reverse('bag_contents'))
