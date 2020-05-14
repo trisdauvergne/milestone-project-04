@@ -26,7 +26,7 @@ SECRET_KEY = 'ikij3rn1q)=n@mx_j$7^y_er#*#i_%k#z$a-((r%wdm@#*=2-v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['planchest-ms4.herokuapp.com']
 
 
 # Application definition
