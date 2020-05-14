@@ -12,6 +12,7 @@ class Order(models.Model):
     order_number = models.CharField(max_length=32,
                                     null=False,
                                     editable=False)
+    date = models.DateTimeField(auto_now_add=True)
     full_name = models.CharField(max_length=50,
                                  null=False,
                                  blank=False)
@@ -30,7 +31,6 @@ class Order(models.Model):
     town = models.CharField(max_length=50,
                             null=True,
                             blank=True)
-    date = models.DateTimeField(auto_now_add=True)
     delivery_cost = models.DecimalField(max_digits=8,
                                         decimal_places=2,
                                         null=False,
@@ -57,7 +57,6 @@ class Order(models.Model):
         self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
-
 
     def save(self, *args, **kwargs):
         """ Override original save method to set order number """
@@ -99,3 +98,4 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return self.lineitem_total
+
