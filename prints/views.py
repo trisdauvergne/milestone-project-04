@@ -82,7 +82,7 @@ def add_print(request):
     designer = get_object_or_404(DesignerProfile,
                                  user=user)
 
-    upload_form = UploadPrintForm()
+    upload_form = UploadPrintForm()  # some random comment
 
     if request.method == 'POST':
         upload_form = UploadPrintForm(request.POST,
