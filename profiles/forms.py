@@ -15,17 +15,12 @@ class UserForm(forms.ModelForm):
 # class MyCustomSignupForm(SignupForm):
 #     def __init__(self, *args, **kwargs):
 #         super(MyCustomSignupForm, self).__init__(*args, **kwargs)
-#         self.fields['is_designer'] = forms.BooleanField(required=True)
+#         self.fields['register_designer'] = forms.BooleanField(required=True)
 
 #     def save(self, request):
-#         is_designer = self.cleaned_data.pop('is_designer')
-
+#         register_designer = self.cleaned_data.pop('register_designer')
+#         ...
 #         user = super(MyCustomSignupForm, self).save(request)
-
-#         user = super().save(request)
-#         if user:
-#             User.objects.create(user=user, is_designer=is_designer)
-#         return user
 
 
 class DesignerProfileForm(forms.ModelForm):
