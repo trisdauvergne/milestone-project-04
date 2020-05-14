@@ -86,8 +86,9 @@ TEMPLATES = [
 # Messages for toast
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
+# Extending the allauth registration form
 # ACCOUNT_FORMS = {
-#     'signup': 'profiles.forms.CustomSignupForm'
+#     'signup': 'profiles.forms.MyCustomSignupForm'
 # }
 
 AUTHENTICATION_BACKENDS = (
