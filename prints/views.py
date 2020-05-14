@@ -54,10 +54,19 @@ def prints_by_price(request):
 
 
 def large_print(request, print_id):
+    """ A view to see individual prints and for designers to edit their uploads """
+    # Get the logged in user's ID
+    user = request.user
+    designer = get_object_or_404(DesignerProfile, user=user)
+    designer_id = designer.id
+    print(designer_id)
+
+    # Calling the print from the database
     the_print = Print.objects.get(id=print_id)
 
     context = {
         'print': the_print,
+        'designer_id': designer_id,
     }
 
     return render(request,
@@ -100,55 +109,25 @@ def add_print(request):
 @login_required
 def edit_print(request, print_id):
     """ A view to edit a print """
-    # Call logged in user info
-    user = request.user
-    # Getting the information associated with the user
-    designer = get_object_or_404(DesignerProfile,
-                                 user=user)
-    print(designer.id)
-    # Getting the info associated with the print
     the_print = get_object_or_404(Print, id=print_id)
-    print(the_print.designer.id)
-    # If the id for the user(designer) and the id of the designer match up...
-    if designer.id == the_print.designer.id:
-
-        the_print = get_object_or_404(Print, id=print_id)
-        if request.method == 'POST':
-            form = UploadPrintForm(request.POST,
-                                   request.FILES,
-                                   instance=the_print)
-            if form.is_valid():
-                form.save()
-                return redirect('all_prints')
-        form = UploadPrintForm(instance=the_print)
-        context = {
-            'form': form,
-        }
-        return render(request,
-                      'prints/edit_print.html',
-                      context)
-    else:
-        print('not allowed to run this edit function')
+    if request.method == 'POST':
+        form = UploadPrintForm(request.POST, request.FILES, instance=the_print)
+        if form.is_valid():
+            form.save()
+            return redirect('all_prints')
+    form = UploadPrintForm(instance=the_print)
+    context = {
+        'form': form,
+    }
+    return render(request,
+                  'prints/edit_print.html',
+                  context)
 
 
 @login_required
 def delete_print(request, print_id):
     """ A view to delete a print """
-    # Call logged in user info
-    user = request.user
-    # Getting the information associated with the user
-    designer = get_object_or_404(DesignerProfile,
-                                 user=user)
-    print(designer.id)
-    # Getting the info associated with the print
     the_print = get_object_or_404(Print, id=print_id)
-    print(the_print.designer.id)
-    # If the id for the user(designer) and the id of the designer match up...
-    if designer.id == the_print.designer.id:
-        the_print = get_object_or_404(Print, id=print_id)
-        the_print.delete()
+    the_print.delete()
 
-        return redirect('all_prints')
-    else:
-        print('not allowed to run this delete function')
-
+    return redirect('all_prints')
