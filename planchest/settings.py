@@ -82,6 +82,8 @@ TEMPLATES = [
     },
 ]
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
 # ACCOUNT_FORMS = {
 #     'signup': 'profiles.forms.CustomSignupForm'
 # }

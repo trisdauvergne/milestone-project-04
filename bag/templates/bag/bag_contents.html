@@ -13,7 +13,7 @@
                                 <img src="{{ item.print.image.url }}" class="image-height">
                             </div>
                             <div class="col">
-                                <a href="{% url 'individual_designer' item.print.designer.id %}">{{ item.print.designer.user.first_name }} {{ item.print.designer.user.last_name }}</a>
+                                <a href="{% url 'individual_designer' item.print.designer.id %}">{{ item.print.designer.first_name }} {{ item.print.designer.last_name }}</a>
                             </div>
                             <div class="col">
                                 <p>{{ item.print.title }}</p>
@@ -22,6 +22,35 @@
                                 <p>{{ item.print.price }}</p>
                             </div>
                             <div class="col">
+                            <!-- Form to increase / decrease quantity in shopping bag -->
+                            <form id="test" class="form update-form" action="{% url 'adjust_bag_quantity' item.print.id %}" method="POST">
+                            {% csrf_token %}
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button class="decrement-qty btn btn-sm btn-black rounded-0" data-item_id="{{ item.print.id }}" id="decrement-qty_{{ item.print.id }}">
+                                                <span>
+                                                    <i class="fas fa-minus fa-sm"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <input class="form-control form-control-sm qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.print.id }}" id="id_qty_{{ item.print.id }}">
+                                        <div class="input-group-append">
+                                            <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                                data-item_id="{{ item.print.id }}" id="increment-qty_{{ item.print.id }}">
+                                                <span>
+                                                    <i class="fas fa-plus fa-sm"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <a class="update-link"><small>Update quantity</small></a>
+                                        <br>
+                                        <a class="remove-item" id="remove_{{ item.print.id }}" ><small>Remove items</small></a>
+
+                                        <!-- <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ print.id }}" id="id_qty_{{ print.id }}"> -->
+                                    </div>
+                                </div>
+                            </form>
                                 <p>x {{ item.quantity }}</p>
                             </div>
                         </div>
@@ -39,7 +68,7 @@
                     </div>
                     <br>
                     <!-- REMOVE LATER -->
-                    <h3>Bag items are here:<h3><p>{{ bag_items }}</p>
+                    <h3>Bag items are here:</h3><p>{{ bag_items }}</p>
                 {% else %}
                     <p class="lead mb-5">Your bag is empty.</p>
                     <a href="{% url 'all_prints' %}" class="btn btn-outline-black rounded-0 btn-lg">Go back to products
@@ -48,4 +77,36 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $('.btt-link').click(function(e) {
+        window.scrollTo(0,0)
+    })
+</script>
+{% include 'prints/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).closest('.update-form');
+        console.log(form.attr('id'));
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove-print/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
 {% endblock %}

@@ -25,6 +25,11 @@ h1, p {
 a {
     color: black !important;
     font-weight: 600;
+    font-family: 'Crimson Text', serif;
+}
+
+input, button {
+    font-family: 'Crimson Text', serif !important;
 }
 
 /* CSS for Navbar from W3 Schools */
@@ -86,4 +91,20 @@ a {
     display: block;
     text-align: left;
   }
+}
+
+/* From Chris's videos re: toasts */
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
 }
