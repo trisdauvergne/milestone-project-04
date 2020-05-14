@@ -82,6 +82,7 @@ TEMPLATES = [
     },
 ]
 
+# Messages for toast
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 # ACCOUNT_FORMS = {

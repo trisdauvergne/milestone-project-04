@@ -23,7 +23,7 @@ def add_print_to_bag(request, print_id):
         bag[print_id] += quantity
     else:
         bag[print_id] = quantity
-        messages.success(request, f'Added something to your bag')
+        # messages.success(request, f'Added to your bag')
 
     request.session['bag'] = bag
     return redirect(redirect_url)
