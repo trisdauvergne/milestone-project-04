@@ -30,8 +30,7 @@ class Order(models.Model):
     street_address_2 = models.CharField(max_length=80,
                                         null=False,
                                         blank=False)
-    town = models.CharField(blank_label='Optional',
-                            max_length=50,
+    town = models.CharField(max_length=50,
                             null=True,
                             blank=True)
     country = CountryField(blank_label='Country',

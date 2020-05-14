@@ -26,6 +26,7 @@ urlpatterns = [
     path('prints/', include('prints.urls')),
     path('profiles/', include('profiles.urls')),
     path('bag/', include('bag.urls')),
+    path('checkout/', include('checkout.urls')),
 ]
 
 if settings.DEBUG:
