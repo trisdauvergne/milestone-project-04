@@ -27,6 +27,7 @@ class OrderAdmin(admin.ModelAdmin):
               'street_address_1',
               'street_address_2',
               'town',
+              'postcode',
               'delivery_cost',
               'order_total',
               'grand_total')
