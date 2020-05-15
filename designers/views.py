@@ -1,7 +1,6 @@
 from django.shortcuts import render
-# from django.contrib.auth.models import User
 from profiles.models import RegisteredUserProfile
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 
 from prints.models import Print
 
@@ -10,17 +9,18 @@ from prints.models import Print
 
 def all_designers(request):
     """ A view to return the all designers page """
-    completed_designers = []
+    checked_designers = []
     all_designers = RegisteredUserProfile.objects.all()
     for designer in all_designers:
         complete = all([designer.first_name,
                         designer.last_name,
                         designer.bio,
-                        designer.country])
+                        designer.country,
+                        designer.register_as_designer])
         if complete:
-            completed_designers.append(designer)
+            checked_designers.append(designer)
     context = {
-        'designers': completed_designers,
+        'designers': checked_designers,
     }
 
     return render(request,
