@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <script src="{% static 'checkout/css/checkout.css' %}"></script>
+{% endblock %}
+
+{% block content %}
+   <div class="container">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2>Thank you!</h2>
+                <hr>
+                <p>Your order information is below. A confirmation email will be sent to <strong>{{ order.eamil }}</strong></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h3>Back to products</h3>
+            </div>
+        </div>
+   </div>
+{% endblock %}
+
+
