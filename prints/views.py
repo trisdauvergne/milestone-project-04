@@ -55,18 +55,18 @@ def prints_by_price(request):
 
 def large_print(request, print_id):
     """ A view to see individual prints and for designers to edit their uploads """
-    # Get the logged in user's ID
-    user = request.user
-    designer = get_object_or_404(RegisteredUserProfile, user=user)
-    designer_id = designer.id
-    print(designer_id)
+    # # Get the logged in user's ID
+    # user = request.user
+    # designer = get_object_or_404(RegisteredUserProfile, user=user)
+    # designer_id = designer.id
+    # print(designer_id)
 
     # Calling the print from the database
     the_print = Print.objects.get(id=print_id)
 
     context = {
         'print': the_print,
-        'designer_id': designer_id,
+        # 'designer_id': designer_id,
     }
 
     return render(request,
