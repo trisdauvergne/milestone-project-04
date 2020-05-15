@@ -1,9 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 
-from .models import DesignerProfile
+from .models import RegisteredUserProfile
 
-from .forms import DesignerProfileForm, UserForm
+from .forms import RegisteredUserProfileForm, UserForm
 
 
 @login_required
@@ -14,17 +14,17 @@ def create_profile(request):
 
     user_form = UserForm(instance=user)
 
-    designer = get_object_or_404(DesignerProfile,
+    designer = get_object_or_404(RegisteredUserProfile,
                                  user=user)
 
-    designer_profile_form = DesignerProfileForm(instance=designer)
+    designer_profile_form = RegisteredUserProfileForm(instance=designer)
 
     if request.method == 'POST':
 
         user_form = UserForm(request.POST,
                              instance=user)
-        designer_profile_form = DesignerProfileForm(request.POST,
-                                                    instance=designer)
+        designer_profile_form = RegisteredUserProfileForm(request.POST,
+                                                          instance=designer)
 
         if user_form.is_valid():
             user_form.save()

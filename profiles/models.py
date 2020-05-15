@@ -3,12 +3,15 @@ from django.contrib.auth.models import User
 # from django.db.models.signals import post_save
 # from django.dispatch import receiver
 from django_countries.fields import CountryField
+# from allauth.account.forms import SignupForm
 
 
-class DesignerProfile(models.Model):
-    """ A user profile model for designers """
+class RegisteredUserProfile(models.Model):
+    """ A user profile model for registered users """
     user = models.OneToOneField(User,
                                 on_delete=models.CASCADE)
+    register_as_designer = models.BooleanField(blank=True)
+    register_as_customer = models.BooleanField(blank=True)
     first_name = models.CharField(max_length=30,
                                   null=False,
                                   blank=False)
@@ -23,10 +26,11 @@ class DesignerProfile(models.Model):
                            blank=False)
 
     class Meta:
-        verbose_name = 'Designer Profile'
+        verbose_name = 'Registered User Profile'
 
     def __str__(self):
         return self.user.username
+
 
 
 # @receiver(post_save, sender=User)
@@ -36,6 +40,6 @@ class DesignerProfile(models.Model):
 #     """
 #     if created:
 #         print('test statement')
-#         DesignerProfile.objects.create(user=instance)
+#         RegisteredUserProfile.objects.create(user=instance)
 
 #     instance.designerprofile.save()

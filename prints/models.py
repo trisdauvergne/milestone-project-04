@@ -1,10 +1,10 @@
 from django.db import models
-from profiles.models import DesignerProfile
+from profiles.models import RegisteredUserProfile
 
 
 class Print(models.Model):
 
-    designer = models.ForeignKey(DesignerProfile,
+    designer = models.ForeignKey(RegisteredUserProfile,
                                  null=False,
                                  blank=False,
                                  on_delete=models.CASCADE)

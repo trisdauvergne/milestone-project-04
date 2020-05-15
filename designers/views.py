@@ -1,6 +1,6 @@
 from django.shortcuts import render
 # from django.contrib.auth.models import User
-from profiles.models import DesignerProfile
+from profiles.models import RegisteredUserProfile
 from django.contrib.auth.models import User
 
 from prints.models import Print
@@ -11,7 +11,7 @@ from prints.models import Print
 def all_designers(request):
     """ A view to return the all designers page """
     completed_designers = []
-    all_designers = DesignerProfile.objects.all()
+    all_designers = RegisteredUserProfile.objects.all()
     for designer in all_designers:
         complete = all([designer.first_name,
                         designer.last_name,
@@ -30,7 +30,7 @@ def all_designers(request):
 
 def individual_designer(request, designer_id):
     """ A view to return a page focusing on 1 x designer """
-    the_designer = DesignerProfile.objects.get(id=designer_id)
+    the_designer = RegisteredUserProfile.objects.get(id=designer_id)
     the_designers_prints = Print.objects.filter(designer_id=the_designer)
 
     context = {
