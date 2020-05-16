@@ -7,11 +7,13 @@ from django.db.models import Sum
 from django.conf import settings
 from django_countries.fields import CountryField
 
-
-# Create your models here.
+from profiles.models import RegisteredUserProfile
 
 
 class Order(models.Model):
+    customer = models.ForeignKey(RegisteredUserProfile,
+                                 null=True,
+                                 on_delete=models.CASCADE)
     order_number = models.CharField(max_length=32,
                                     null=False,
                                     editable=False)
