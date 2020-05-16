@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 
 from .models import RegisteredUserProfile
+from checkout.models import Order
 
 from .forms import RegisteredUserProfileForm, UserForm
 
@@ -36,3 +37,15 @@ def create_profile(request):
                   'profiles/create_profile.html',
                   {'user_form': user_form,
                    'designer_form': designer_profile_form})
+
+
+def order_history(request):
+    """ A view for users to see their purchase history """
+    order = Order.objects.all
+
+    context = {
+        'order': order,
+    }
+    return render(request,
+                  'profiles/order_history.html',
+                  context)
