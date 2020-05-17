@@ -5,17 +5,17 @@ from .models import Print
 
 
 class TestPrintsView(TestCase):
-    # def test_get_allprints(self):
+    # def test_get_all_prints(self):
     #     response = self.client.get('/prints/')
     #     self.assertEqual(response.status_code, 200)
     #     self.assertTemplateUsed(response, 'prints/all_prints.html')
 
-    # def test_get_allprints_price(self):
+    # def test_get_all_prints_price(self):
     #     response = self.client.get('/prints/prints-price/')
     #     self.assertEqual(response.status_code, 200)
     #     self.assertTemplateUsed(response, 'prints/all_prints_price.html')
 
-    # def test_get_allprints_designer(self):
+    # def test_get_all_prints_designer(self):
     #     response = self.client.get('/prints/prints-designer/')
     #     self.assertEqual(response.status_code, 200)
     #     self.assertTemplateUsed(response, 'prints/all_prints_designer.html')
