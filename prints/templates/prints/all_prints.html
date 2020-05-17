@@ -16,9 +16,10 @@
     <div class="row">
         <div class="col-9 offset-3">
             {% for print in prints %}
-                <a href="{% url 'large_print' print.id %}"><img src="{{ print.image.url }}" class="image-height"></a>
-                <!-- <p>{{ print.id }}</p>
-                <p class="small-print">{{ print.designer.first_name }} {{ print.designer.last_name }},<br> {{ print.title }},<br> {{ print.size }},<br> {{ print.price }}SEK</p> -->
+                <div class="image-inline">
+                    <a href="{% url 'large_print' print.id %}"><img src="{{ print.image.url }}" class="image-height"></a>
+                    <p class="small-print">{{ print.designer.first_name }} {{ print.designer.last_name }},<br> {{ print.title }},<br> {{ print.size }},<br> {{ print.price }}SEK</p>
+                </div>
             {% endfor %}
         </div>
     </div>

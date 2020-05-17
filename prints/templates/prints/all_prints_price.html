@@ -2,19 +2,27 @@
 {% load static %}
 
 {% block content %}
-<h1>All work on Planchest page sorted by price</h1>
 <div class="container">
     <div class="row">
-        <p>Sort by: <a href="{% url 'prints_by_designer' %}">Designer</a> <a href="{% url 'prints_by_price' %}">Price</a></p>
+        <div class="col-9 offset-3">
+            <h1>Prints in ascending price</h1>
+        </div>
     </div>
     <div class="row">
-        <div class="col-12">
+        <div class="col-9 offset-3">
+            <p><a href="{% url 'all_prints' %}">Go back to all prints</a> or <a href="{% url 'prints_by_designer' %}">or group prints by designer</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-9 offset-3">
             {% for print in prints %}
-                <a href="{% url 'large_print' print.id %}"><img src="{{ print.image.url }}" class="image-height"></a>
-                <p>{{ print.id }}</p>
-                <p class="small-print">{{ print.designer.user.first_name }} {{ print.designer.user.last_name }},<br> {{ print.title }},<br> {{ print.size }},<br> {{ print.price }}SEK</p>
+                <div class="image-inline">
+                    <a href="{% url 'large_print' print.id %}"><img src="{{ print.image.url }}" class="image-height"></a>
+                    <p class="small-print">{{ print.designer.first_name }} {{ print.designer.last_name }},<br> {{ print.title }},<br> {{ print.size }},<br> {{ print.price }}SEK</p>
+                </div>
             {% endfor %}
         </div>
     </div>
+</div>
 </div>
 {% endblock %}

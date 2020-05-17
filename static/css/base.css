@@ -24,6 +24,11 @@ h1, p {
     margin: 3px;
 }
 
+.big-image {
+    width: 100%;
+    height: auto;
+}
+
 .small-print {
     font-size: 10px;
     color: grey;
