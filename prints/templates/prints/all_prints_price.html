@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
+<div class="container-fluid full-width">
     <div class="row">
         <div class="col-3">
             <span></span>
@@ -23,7 +23,7 @@
         <div class="col-3">
             <span></span>
         </div>
-        <div class="col-9 standard-left-border">
+        <div class="col-6 standard-left-border">
             {% for print in prints %}
                 <div class="image-inline">
                     <a href="{% url 'large_print' print.id %}"><img src="{{ print.image.url }}" class="image-height"></a>

@@ -11,6 +11,13 @@
     /* border-right: solid 1px black; */
 }
 
+/* To make divs go to the edge */
+.container-fluid.full-width {
+    padding-left: 0;
+    padding-right: 0;
+    overflow-x: hidden;
+}
+
 .header-underline {
     border-bottom: solid 1px black;
 }
