@@ -19,7 +19,9 @@ class RegisteredUserProfileForm(forms.ModelForm):
         fields = ['first_name',
                   'last_name',
                   'bio',
-                  'country']
+                  'country',
+                  'register_as_designer',
+                  'register_as_customer']
 
 
 class UserRegistrationType(SignupForm):

@@ -18,12 +18,9 @@
     overflow-x: hidden;
 }
 
+/* Borders between divs and elements */
 .header-underline {
     border-bottom: solid 1px black;
-}
-
-h1, p {
-    font-family: 'Crimson Text', serif;
 }
 
 .nav-left-border {
@@ -44,11 +41,49 @@ h1, p {
     margin-top: 8px;
 }
 
+
+/* Fonts across page */
+h1, p, label, select {
+    font-family: 'Crimson Text', serif;
+}
+
+a {
+    color: black !important;
+    font-weight: 600;
+    font-family: 'Crimson Text', serif;
+}
+
+/* label {
+    font-family: 'Crimson Text', serif;
+} */
+
+.small-print {
+    font-size: 10px;
+    color: grey;
+}
+
+input, button {
+    font-family: 'Crimson Text', serif !important;
+}
+
+
+/* Button styling */
+button {
+    color: red;
+    background-color: black;
+}
+
+.form-check-input {
+    background-color: black !important;
+}
+
 /* Designer Listings to display <p> tags closer to each other */
 .p-without-margin {
     margin-bottom: 0px !important;
 }
 
+
+/* Images of prints */
 .image-height {
     height: 20vh;
     margin: 3px;
@@ -59,28 +94,10 @@ h1, p {
     height: auto;
 }
 
-.small-print {
-    font-size: 10px;
-    color: grey;
-}
-
-a {
-    color: black !important;
-    font-weight: 600;
-    font-family: 'Crimson Text', serif;
-}
-
-label {
-    font-family: 'Crimson Text', serif;
-}
-
 .image-inline {
     display: inline-block;
 }
 
-input, button {
-    font-family: 'Crimson Text', serif !important;
-}
 
 /* CSS for Navbar from W3 Schools */
 /* Add a black background color to the top navigation */

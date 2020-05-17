@@ -3,15 +3,31 @@
 
 {% block content %}
 
-<h1>Create a profile page</h1>
+<div class="container-fluid full-width">
+    <div class="row">
+        <div class="col-3">
+            <span></span>
+        </div>
+        <div class="col-9 standard-left-border margin-top">
+            <h1>Create a profile on Planchest</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <span></span>
+        </div>
+        <div class="col-6 standard-left-border">
+            <form method="POST" action="{% url 'create_profile' %}">
+                {% csrf_token %}
+                <!-- Field 1 from User -->
+                {{ user_form|crispy }}
+                <!-- Field 2 from Designer -->
+                {{ designer_form|crispy }}
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
 
-<form method="POST" action="{% url 'create_profile' %}">
-    {% csrf_token %}
-    <!-- Field 1 from User -->
-    {{ user_form.as_p}}
-    <!-- Field 2 from Designer -->
-    {{ designer_form.as_p }}
-    <button type="submit">Submit</button>
-</form>
 
 {% endblock %}
