@@ -89,6 +89,17 @@ button {
     margin: 3px;
 }
 
+
+/* On page page */
+.image-width {
+    width: 10vw;
+    margin-bottom: 10px;
+}
+
+.align-right {
+    text-align: right
+}
+
 .big-image {
     width: 100%;
     height: auto;
