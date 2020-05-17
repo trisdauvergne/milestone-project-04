@@ -39,6 +39,10 @@ label {
     font-family: 'Crimson Text', serif;
 }
 
+.image-inline {
+    display: inline-block;
+}
+
 input, button {
     font-family: 'Crimson Text', serif !important;
 }

@@ -27,14 +27,14 @@ def prints_by_designer(request):
     all_prints = Print.objects.all()
     ordered_prints = all_prints.order_by('designer')
     print(ordered_prints)
-    # all_designers = RegisteredUserProfile.objects.all()
-    # # print(all_designers)
-    # all_designers_by_name = all_designers.order_by('last_name')
-    # # print(all_designers_by_name)
+    all_designers = RegisteredUserProfile.objects.all()
+    # print(all_designers)
+    all_designers_by_name = all_designers.order_by('last_name')
+    print(all_designers_by_name)
 
     context = {
         'prints': ordered_prints,
-        # 'designers': all_designers_by_name,
+        'designers': all_designers_by_name,
     }
     return render(request,
                   'prints/all_prints_designer.html',
@@ -103,6 +103,7 @@ def add_print(request):
             print(type(upload_form))
             upload_form.designer = designer
             upload_form.save()
+            messages.success(request, f'Your print was uploaded!')
             return redirect('all_prints')
     else:
         upload_form = UploadPrintForm()
