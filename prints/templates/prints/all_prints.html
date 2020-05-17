@@ -4,17 +4,26 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-9 offset-3">
+        <div class="col-3">
+            <span></span>
+        </div>
+        <div class="col-9 standard-left-border margin-top">
             <h1>All work on Planchest page</h1>
         </div>
     </div>
     <div class="row">
-        <div class="col-9 offset-3">
+        <div class="col-3">
+            <span></span>
+        </div>
+        <div class="col-9 standard-left-border">
             <p><a href="{% url 'prints_by_designer' %}">Group prints by designer</a> or <a href="{% url 'prints_by_price' %}">or view prints by ascending price</a></p>
         </div>
     </div>
     <div class="row">
-        <div class="col-9 offset-3">
+        <div class="col-3">
+            <span></span>
+        </div>
+        <div class="col-9 standard-left-border">
             {% for print in prints %}
                 <div class="image-inline">
                     <a href="{% url 'large_print' print.id %}"><img src="{{ print.image.url }}" class="image-height"></a>
