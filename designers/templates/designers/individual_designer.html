@@ -2,21 +2,31 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
+<div class="container-fluid full-width">
     <div class="row">
-        <div class="col-6">
-            <h1>{{ the_designer.first_name }} {{ the_designer.last_name }}</h1>
+        <div class="col-3">
+            <span></span>
+        </div>
+        <div class="col-9 standard-left-border margin-top">
+             <h1>{{ the_designer.first_name }} {{ the_designer.last_name }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <span></span>
+        </div>
+        <div class="col-3 standard-left-border">
             <p>ID NO: {{ the_designer.id }}</p>
             <p>About: {{ the_designer.bio }}</p>
             <p>Country: {{ the_designer.country }}</p>
             <p>Contact: {{ the_designer.user.email }}</p>
+            <p><a href="{% url 'all_designers' %}">Back to designers</a></p>
         </div>
-        <div class="col-6">
+        <div class="col-4">
             {% for prints in prints %}
                 <a href="{% url 'large_print' prints.id %}"><img src="{{ prints.image.url }}" class="image-height"></a>
             {% endfor %}
         </div>
     </div>
 </div>
-<a href="{% url 'all_designers' %}">Back to designers</a>
 {% endblock %}

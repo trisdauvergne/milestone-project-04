@@ -39,6 +39,11 @@ h1, p {
     margin-top: 8px;
 }
 
+/* Designer Listings to display <p> tags closer to each other */
+.p-without-margin {
+    margin-bottom: 0px !important;
+}
+
 .image-height {
     height: 20vh;
     margin: 3px;
