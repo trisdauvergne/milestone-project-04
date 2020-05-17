@@ -35,10 +35,48 @@
 </head>
 <body>
     <header>
-        <div class="col-12">
-            <h1 class="header-logo">Planchest</h1>
+        <div class="container">
+            <div class="row header-underline">
+                <div class="col-3 margin-left">
+                    <h1 class="header-logo">Planchest</h1>
+                </div>
+            
+                <div class="col-9 topnav" id="myTopnav">
+                    <a href="{% url 'home' %}">About</a>
+                    <a href="{% url 'all_designers' %}">Designers</a>
+                    <a href="{% url 'all_prints' %}">Prints</a>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'create_profile' %}">Your profile</a>
+                        <a href="{% url 'add_print' %}">Add Work</a>
+                    {% else %}
+                        <a href="{% url 'account_signup' %}">Register</a>
+                        <a href="{% url 'account_login' %}">Login</a>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'account_logout' %}">Logout</a>
+                    {% endif %}
+                    {% if print_quantity %}
+                        <a href="{% url 'bag_contents' %}">
+                            <p class="my-0">
+                                Bag
+                                {% if print_quantity %}
+                                    ({{ print_quantity }})
+                                {% else %}
+                                    (0)
+                                {% endif %}
+                            </p>
+                        </a>
+                    {% endif %}
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="topnav" id="myTopnav">
+        <!-- <div class="col-12 header-underline">
+            <h1 class="header-logo">Planchest</h1>
+        </div> -->
+        <!-- <div class="topnav" id="myTopnav">
             <a href="{% url 'home' %}">About</a>
             <a href="{% url 'all_designers' %}">Designers</a>
             <a href="{% url 'all_prints' %}">Prints</a>
@@ -67,7 +105,7 @@
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
-        </div>
+        </div> -->
     </header>
 
     {% if messages %}
