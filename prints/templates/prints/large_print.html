@@ -21,7 +21,7 @@
             </p>
             <br>
             {% if designer_id == print.designer.id %}
-                <p>If you're {{ print.designer.first_name }} you can <a href="{% url 'edit_print' print.id %}">edit this print</a> or <a href="{% url 'delete_print' print.id %}">delete it</a> here</p>
+                <p>You can <a href="{% url 'edit_print' print.id %}">edit your print</a> or <a href="{% url 'delete_print' print.id %}">delete it</a> here</p>
             {% else %}
                 <p><a href="{% url 'individual_designer' print.designer.id %}"><strong>See more of {{ print.designer.first_name }} {{ print.designer.last_name }}'s work</strong></a></p>
                 <br>

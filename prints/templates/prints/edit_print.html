@@ -2,12 +2,24 @@
 {% load static %}
 
 {% block content %}
-<h1>Edit a print</h1>
-
-<form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Update Item</button>
-</form>
+<div class="container">
+    <div class="row">
+        <div class="col-9 offset-3">
+            <h1>Edit your print</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-9 offset-3">
+            <p class="small-print">You are editing this print:</p>
+            <img src="{{ print.image.url }}" class="image-height">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <br>
+                {{ form|crispy }}
+                <button type="submit">Update Item</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

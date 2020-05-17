@@ -118,6 +118,7 @@ def edit_print(request, print_id):
     form = UploadPrintForm(instance=the_print)
     context = {
         'form': form,
+        'print': the_print,
     }
     return render(request,
                   'prints/edit_print.html',
