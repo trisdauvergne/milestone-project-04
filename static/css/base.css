@@ -43,8 +43,12 @@
 
 
 /* Fonts across page */
-h1, p, label, select {
+h1, h4, p, label, select, legend {
     font-family: 'Crimson Text', serif;
+}
+
+legend {
+    font-size: 16px;
 }
 
 a {
@@ -60,6 +64,7 @@ a {
 .small-print {
     font-size: 10px;
     color: grey;
+    margin-bottom: 0px !important;
 }
 
 input, button {
@@ -89,8 +94,7 @@ button {
     margin: 3px;
 }
 
-
-/* On page page */
+/* On bag page */
 .image-width {
     width: 10vw;
     margin-bottom: 10px;
