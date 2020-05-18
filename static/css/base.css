@@ -6,9 +6,6 @@
     font-family: 'IM Fell Double Pica', serif;
     font-style: italic;
     font-size: 50px;
-    /* margin-top: 5%; */
-    /* margin-left: 10vw; */
-    /* border-right: solid 1px black; */
 }
 
 /* To make divs go to the edge */
@@ -38,14 +35,42 @@
 }
 
 .margin-top {
-    margin-top: 76px;
+    margin-top: 8px;
+    position: static;
 }
 
+/*
 .fixed-top {
     z-index: 4;
     display: block;
     position: fixed;
     top: 0px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+} */
+
+/* .fixed-header {
+    position: fixed;
+    top: 76px;
+}
+
+.beneath-fixed-header {
+    position: fixed;
+    top: 117px;
+} */
+
+/* Navbar */
+#myTopnav a {
+    padding-top: 16px;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
 }
 
 /* Fonts across page */

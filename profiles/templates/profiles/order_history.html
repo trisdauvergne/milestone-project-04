@@ -16,26 +16,32 @@
             <span></span>
         </div>
         <div class="col-6 standard-left-border">
-                {% for order in order %}
                     <p><strong>Customer Details</strong></p>
-                    <p><strong>Order.customer.id: {{ order.customer.user.id }}</strong></p>
-                    <p><strong>Order.customer.id: {{ order.customer.user }}</strong></p>
-                    <p>Order.customer.full_name: {{ order.full_name }}</p>
-                    <p>Order.email: {{ order.email }}</p>
-                    <p>Order.phone_number: {{ order.phone_number }}</p>
+                    <p class="p-without-margin"><strong>{{ orders.customer.id }} {{ order.customer.last_name }}</strong> ({{ order.customer.user }})</p>
+                    <h2>{{ order.customer.id }}</h2>
+                    <p class="p-without-margin">Email address: {{ order.email }}</p>
+                    <!-- <p class="p-without-margin">Phone number: {{ order.phone_number }}</p> -->
                     <p><strong>Order Information</strong></p>
-                    <p>Order.order_number: {{ order.order_number }}</p>
-                    <p>Order.date: {{ order.date }}</p>
-                    <p>Order.delivery_cost: {{ order.delivery_cost }}</p>
-                    <p>Order.order_total: {{ order.order_total }}</p>
-                    <p>Order.grand_total: {{ order.grand_total }}</p>
-                    <p>Delivery Information</p>
-                    <p>Order.street_address_1: {{ order.street_address_1 }}</p>
-                    <p>Order.street_address_1: {{ order.street_address_2 }}</p>
-                    <p>Order.town: {{ order.town }}</p>
-                    <p>Order.country: {{ order.country }}</p>
-                    <p>Order.postcode: {{ order.postcode }}</p>
-                {% endfor %}
+                    {% for details in orders %}
+                        <p class="p-without-margin">Order Number:<strong>{{ details.order_number }}</strong></p>
+                        <p class="p-without-margin">Ordered on: {{ details.date }}</p>
+                        <p class="p-without-margin">Prints: {{ details.order_total }} SEK</p>
+                        <p class="p-without-margin">Delivery: {{ details.delivery_cost }} SEK</p>
+                        <p class="p-without-margin">Total: {{ details.grand_total }} SEK</p>
+                        <p><strong>Delivery Information</strong></p>
+                        <p>Print details: {{ orderlineitem.order.print_details }}</p>
+                        <p class="p-without-margin">Address: {{ details.street_address_1 }}</p>
+                        <p class="p-without-margin">Address: {{ details.street_address_2 }},</p>
+                        <p class="p-without-margin">Order.town: {{ details.town }}</p>
+                        <p class="p-without-margin">Order.country: {{ details.country }}</p>
+                        <p class="p-without-margin">Order.postcode: {{ details.postcode }}</p>
+                        <br>
+                    {% endfor %}
+                    {% for items in line_items %}
+                        <img class="image-height" src="{{ items.print_details.image.url }}">
+                        <p>{{ items.quantity }} x {{ items.print_details.price }} SEK</p>
+                    {% endfor %}
+                    
         </div>
     </div>
 </div>
