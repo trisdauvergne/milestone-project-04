@@ -3,6 +3,8 @@ from django.contrib.auth.decorators import login_required
 
 from .models import RegisteredUserProfile
 from checkout.models import Order
+from prints.models import Print
+
 
 from .forms import RegisteredUserProfileForm, UserForm
 
@@ -41,11 +43,30 @@ def create_profile(request):
 
 def order_history(request):
     """ A view for users to see their purchase history """
-    order = Order.objects.all
+    user = request.user
+    if user.is_authenticated:
+            print(user,  '- this is who is signed in')
+            customer = get_object_or_404(RegisteredUserProfile, user=user)
+            customer_id = customer.id
+            print(customer_id, '- The ID of who is logged in')
+            all_orders = Order.objects.get(order_number='6A389AA3073B4E8694EB29C834E46B8B')
+            print(all_orders, '- testing this specific order')
+            all_orders_customer = all_orders.customer.first_name
+            print(all_orders_customer, 'but this should be Holli')
+
+    all_orders = Order.objects.all()
+    order = all_orders.order_by('-date')
+    customer = RegisteredUserProfile.objects.get(user=user)
 
     context = {
+        'user': user,
         'order': order,
+        'customer': customer,
     }
+
+    # print(user.id)
+    # print(customer.id)
+    # print(order.id)
     return render(request,
                   'profiles/order_history.html',
                   context)

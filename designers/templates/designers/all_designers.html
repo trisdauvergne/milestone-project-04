@@ -26,6 +26,7 @@
         <div class="col-6 standard-left-border">
             {% for designers in designers %}
                 <p><a href="{% url 'individual_designer' designers.id %}">{{ designers.first_name }} {{ designers.last_name }}</a></p>
+                <p>ID: {{ designers.id }}</p>
                 <!-- <p class="p-without-margin">About: {{ designers.bio }}</p>
                 <p class="p-without-margin">Country: {{ designers.country }}</p>
                 <p class="p-without-margin">Contact: {{ designers.user.email }}</p> -->

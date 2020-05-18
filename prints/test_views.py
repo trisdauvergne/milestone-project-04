@@ -35,8 +35,8 @@ class TestPrintsView(TestCase):
         the_designer.save()
         # And the designer field here is a FK to an actual designer
         the_print = Print.objects.create(designer=the_designer,
-                                            price=25,
-                                            image='test.jpg')
+                                         price=25,
+                                         image='test.jpg')
         response = self.client.get(f'/prints/large-print/{the_print.id}/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'prints/large_print.html')

@@ -2,10 +2,43 @@
 {% load static %}
 
 {% block content %}
-<h1>Order history</h1>
-    {% for order in order %}
-        <p>{{ order.order_number }}</p>
-        <p>{{ order.customer.id }}</p>
-        <hr>
-    {% endfor %}
+<div class="container-fluid full-width">
+    <div class="row">
+        <div class="col-3">
+            <span></span>
+        </div>
+        <div class="col-9 standard-left-border margin-top">
+            <h1>Your order history</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <span></span>
+        </div>
+        <div class="col-6 standard-left-border">
+                {% for order in order %}
+                    <p><strong>Customer Details</strong></p>
+                    <p><strong>Order.customer.id: {{ order.customer.user.id }}</strong></p>
+                    <p><strong>Order.customer.id: {{ order.customer.user }}</strong></p>
+                    <p>Order.customer.full_name: {{ order.full_name }}</p>
+                    <p>Order.email: {{ order.email }}</p>
+                    <p>Order.phone_number: {{ order.phone_number }}</p>
+                    <p><strong>Order Information</strong></p>
+                    <p>Order.order_number: {{ order.order_number }}</p>
+                    <p>Order.date: {{ order.date }}</p>
+                    <p>Order.delivery_cost: {{ order.delivery_cost }}</p>
+                    <p>Order.order_total: {{ order.order_total }}</p>
+                    <p>Order.grand_total: {{ order.grand_total }}</p>
+                    <p>Delivery Information</p>
+                    <p>Order.street_address_1: {{ order.street_address_1 }}</p>
+                    <p>Order.street_address_1: {{ order.street_address_2 }}</p>
+                    <p>Order.town: {{ order.town }}</p>
+                    <p>Order.country: {{ order.country }}</p>
+                    <p>Order.postcode: {{ order.postcode }}</p>
+                {% endfor %}
+        </div>
+    </div>
+</div>
+
+    
 {% endblock %}
