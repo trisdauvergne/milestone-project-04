@@ -38,9 +38,15 @@
 }
 
 .margin-top {
-    margin-top: 8px;
+    margin-top: 76px;
 }
 
+.fixed-top {
+    z-index: 4;
+    display: block;
+    position: fixed;
+    top: 0px;
+}
 
 /* Fonts across page */
 h1, h3, h4, p, label, select, legend, small {

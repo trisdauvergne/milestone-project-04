@@ -4,6 +4,7 @@ from django.conf import settings
 from django.views.decorators.http import require_POST
 
 from .models import OrderLineItem, Order
+from profiles.models import RegisteredUserProfile
 from prints.models import Print
 from .forms import OrderForm
 
@@ -36,6 +37,8 @@ def checkout(request):
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == 'POST':
+        user = request.user
+        user_profile = RegisteredUserProfile.objects.get(user=user)
         bag = request.session.get('bag', {})
 
         form_data = {
@@ -50,7 +53,9 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order = order_form.save()
+            order = order_form.save(commit=False)
+            order.customer = user_profile
+            order.save()
             for print_id, item_data in bag.items():
                 try:
                     print_details = Print.objects.get(id=print_id)
