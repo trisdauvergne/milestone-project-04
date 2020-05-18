@@ -16,32 +16,38 @@
             <span></span>
         </div>
         <div class="col-6 standard-left-border">
-                    <p><strong>Customer Details</strong></p>
-                    <p class="p-without-margin"><strong>{{ orders.customer.id }} {{ order.customer.last_name }}</strong> ({{ order.customer.user }})</p>
-                    <h2>{{ order.customer.id }}</h2>
-                    <p class="p-without-margin">Email address: {{ order.email }}</p>
-                    <!-- <p class="p-without-margin">Phone number: {{ order.phone_number }}</p> -->
-                    <p><strong>Order Information</strong></p>
-                    {% for details in orders %}
-                        <p class="p-without-margin">Order Number:<strong>{{ details.order_number }}</strong></p>
-                        <p class="p-without-margin">Ordered on: {{ details.date }}</p>
-                        <p class="p-without-margin">Prints: {{ details.order_total }} SEK</p>
-                        <p class="p-without-margin">Delivery: {{ details.delivery_cost }} SEK</p>
-                        <p class="p-without-margin">Total: {{ details.grand_total }} SEK</p>
-                        <p><strong>Delivery Information</strong></p>
-                        <p>Print details: {{ orderlineitem.order.print_details }}</p>
-                        <p class="p-without-margin">Address: {{ details.street_address_1 }}</p>
-                        <p class="p-without-margin">Address: {{ details.street_address_2 }},</p>
-                        <p class="p-without-margin">Order.town: {{ details.town }}</p>
-                        <p class="p-without-margin">Order.country: {{ details.country }}</p>
-                        <p class="p-without-margin">Order.postcode: {{ details.postcode }}</p>
-                        <br>
-                    {% endfor %}
-                    {% for items in line_items %}
-                        <img class="image-height" src="{{ items.print_details.image.url }}">
-                        <p>{{ items.quantity }} x {{ items.print_details.price }} SEK</p>
-                    {% endfor %}
-                    
+            <p><strong>Order Information</strong></p>
+            <!-- {% for details in orders %}
+                <p class="p-without-margin">Order: {{ details.order_number }}</p>
+                <p class="p-without-margin small-print">Ordered on: {{ details.date }}</p>
+                <p class="p-without-margin small-print">Prints: {{ details.order_total }} SEK</p>
+                <p class="p-without-margin small-print">Delivery Cost: {{ details.delivery_cost }} SEK</p>
+                <p class="p-without-margin small-print">Total: {{ details.grand_total }} SEK</p>
+                <p class="p-without-margin">Delivery Information</p>
+                <p class="p-without-margin small-print">Address: {{ details.street_address_1 }}</p>
+                <p class="p-without-margin small-print">Address: {{ details.street_address_2 }},</p>
+                <p class="p-without-margin small-print">Order.town: {{ details.town }}</p>
+                <p class="p-without-margin small-print">Order.country: {{ details.country }}</p>
+                <p class="p-without-margin small-print">Order.postcode: {{ details.postcode }}</p>
+                {% for item in orders.order.all %}
+                    <p>{{ item.quantity }}</p>
+                {% endfor %}
+                <br>
+            {% endfor %} -->
+
+            {% for item in line_items %}
+                <a href=""><p class="p-without-margin">Order: {{ item.order.order_number }}</p></a>
+                <p>Ordered on: {{ item.order.date }}</p>
+                {% for images in line_items.print_details %}
+                    <div class="image-inline">
+                        <img class="image-height" src="{{ images.image.url }}">
+                        <!-- <p>{{ images.quantity }} x {{ images.price }} SEK</p> -->
+                    </div>
+                {% endfor %}
+                <!-- <div class="image-inline">
+                   
+                </div> -->
+            {% endfor %} 
         </div>
     </div>
 </div>
