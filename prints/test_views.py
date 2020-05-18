@@ -1,10 +1,7 @@
-from django.shortcuts import get_object_or_404
 from django.test import TestCase
 from .models import Print
 from profiles.models import RegisteredUserProfile
 from django.contrib.auth.models import User
-from .forms import UploadPrintForm
-# from django.contrib.auth.decorators import login_required
 
 
 class TestPrintsView(TestCase):
