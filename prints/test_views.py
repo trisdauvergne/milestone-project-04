@@ -31,6 +31,7 @@ class TestPrintsView(TestCase):
                                                             last_name='test',
                                                             bio='test',
                                                             country='US')
+        the_designer.save()
         # And the designer field here is a FK to an actual designer
         the_print = Print.objects.create(designer=the_designer,
                                             price=25,
