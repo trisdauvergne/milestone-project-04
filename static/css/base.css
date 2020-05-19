@@ -176,7 +176,10 @@ button {
 }
 
 
-
+/* ORDER HISTORY PAGE */
+.list-left-padding {
+    margin-left: none;
+}
 
 
 /* Toast Styling */

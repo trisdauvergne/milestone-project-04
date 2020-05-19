@@ -4,28 +4,26 @@
 {% block content %}
 <div class="container-fluid full-width container-top-padding">
     <div class="row">
-        <div class="col-3 left-col-margin">
+        <div class="col-sm-3 col-1 left-col-margin">
             <span></span>
         </div>
-        <div class="col-6 standard-left-border margin-top">
-            <h1>Your order history</h1>
+        <div class="col-sm-6 col-9 standard-left-border margin-top">
+            <h1 class="fixed-header">Your order history</h1>
             <p class="small-text">(Click on the order number to view and hide your order information)</p>
         </div>
     </div>
     <div class="row">
-        <div class="col-3 left-col-margin">
+        <div class="col-sm-3 col-1 left-col-margin">
             <span></span>
         </div>
-        <div class="col-6 standard-left-border">
+        <div class="col-sm-6 col-9 standard-left-border">
             {% for order in orders %}
-            <ul>
+            <ul class="list-left-padding">
                 <a class="btn" data-toggle="collapse" href="#collapse{{ order.order_number }}" role="button" aria-expanded="false" aria-controls="collapse{{ order.order_number }}">
                 Order:<strong> {{ order.order_number }}</strong>
-                </a>
-                
+                </a>                
                 <div class="collapse" id="collapse{{ order.order_number }}">
                     <div class="offset-1">
-                        <!-- <p>Order number: {{ order.order_number }}</p> -->
                         <p>Ordered on {{ order.date }}</p>
                         <p>Shipped to {{ order.street_address_1 }}, {{ order.street_address_2 }}, {{ order.town }}, {{ order.country }}, {{ order.postcode }}</p>
                         <p>Cost of print(s): {{ order.order_total }} SEK</p>
