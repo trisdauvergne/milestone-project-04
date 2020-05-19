@@ -267,4 +267,9 @@ button {
     .small-br-none {
         display: none;
     }
+
+    .bag-item-border {
+        border-bottom: solid 1px black;
+        margin-top: 5px;
+    }
 }
