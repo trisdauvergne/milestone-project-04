@@ -192,7 +192,6 @@ button {
 @media only screen and (max-width: 910px) {
     .header-logo {
         padding-top: 0px;
-        background-color: red;
         font-size: 45px;
     }
 
@@ -205,18 +204,35 @@ button {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    /* Reduced header sizes */
+    .fixed-header {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    /* Putting padding around the dropdown menu */
+    .navbar-toggler {
+        margin-right: 30px;
+        border-radius: 0px;
+        border: 1px solid black;
+    }
+
+    .nav-link {
+        text-align: right;
+        margin-right: 30px;
+        font-weight: 600;
+    }
+
+    .navbar-collapse {
+        padding-top: 0px !important;
+    }
+}
+
 @media only screen and (max-width: 625px) {
     /* Removing the border next to the left column */
     .standard-left-border {
         border-left: 0px;
-    }
-
-    /* Images reducing in size */
-    .image-height {
-        height: 20vh;
-        width: 15vh;
-        object-fit: cover;
-        margin: 3px;
     }
 }
 
@@ -224,11 +240,16 @@ button {
     /* Increasing image sizes on smallest screens */
     .image-height {
         width: 75vw;
-        height: 50vh;
+        height: 40vh;
         object-fit: cover
     }
 }
 
-@media scren and (max-width: 625px) and (min-width: 600px) {
-
+@media screen and (max-width: 710px) and (min-width: 576px) {
+    /* Increasing image sizes on smallest screens */
+    .image-height {
+        width: 20vw;
+        height: 25vh;
+        object-fit: cover;
+    }
 }
