@@ -33,6 +33,7 @@
 
     <title>Plan Chest</title>
 </head>
+
 <body>
     <header>
         <div class="row header-underline fixed-top white-background">
@@ -79,7 +80,12 @@
                             </li>
                             <li>
                                 <a class="nav-link" href="{% url 'order_history' %}">Order history</a>
-                            </li>
+                            </li>                            
+                            {% if request.user.user_profile.register_as_designer %}
+                                <li>
+                                    <a class="nav-link" href="{% url 'add_print' %}">Add Work</a>
+                                </li>
+                            {% endif %}
                         {% else %}
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'account_signup' %}">Register</a>

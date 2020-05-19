@@ -10,10 +10,10 @@
 <div class="container-fluid full-width container-top-padding">
     <!-- Header panel -->
     <div class="row">
-        <div class="col-3">
+        <div class="col-3 left-col-margin">
             <span></span>
         </div>
-        <div class="col-9 standard-left-border margin-top">
+        <div class="col-6 standard-left-border margin-top">
             <h1>Checkout Page</h1>
         </div>
     </div>
@@ -21,7 +21,7 @@
     <!-- Bag item summary -->
     
     <div class="row">
-        <div class="col-3">
+        <div class="col-3 left-col-margin">
             <span></span>
         </div>
         
@@ -42,7 +42,7 @@
 
     <!-- Payment Summary -->
     <div class="row">
-        <div class="col-3">
+        <div class="col-3 left-col-margin">
             <span></span>
         </div>
         <div class="col-3 standard-left-border">
@@ -60,7 +60,7 @@
 
     <!-- Payment Form  -->
     <div class="row">
-        <div class="col-3">
+        <div class="col-3 left-col-margin">
             <span></span>
         </div>
         <div class="col-6 standard-left-border">
@@ -82,13 +82,13 @@
                     {{ order_form.postcode | as_crispy_field }}
                 <div class="form-check form-check-inline float-right mr-0">
                     {% if user.is_authenticated %}
-                        <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
-                        <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                        <!-- <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+                        <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked> -->
                     {% else %}
                         <label class="form-check-label" for="id-save-info">
                             <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
                             <a class="text-info" href="{% url 'account_login' %}">login
-                            </a>to save this information
+                            </a>to save this order
                         </label>
                     {% endif %}
                 </div>
