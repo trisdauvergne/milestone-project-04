@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica:400,400i&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
 
-/* General */
+/* GENERAL */
+
+/* Navbar */
 .header-logo {
     font-family: 'IM Fell Double Pica', serif;
     font-style: italic;
@@ -15,6 +17,20 @@
     padding-top: 5vh;
 }
 
+.header-underline {
+    border-bottom: solid 1px black;
+}
+
+/* To make the navbar stick to the top of the screen */
+.fixed-top {
+    z-index: 4;
+    display: block;
+    top: 0;
+    position: fixed;
+}
+
+
+/* Footer styling */
 .footer-text a {
     font-size: 16px;
     font-weight: 600;
@@ -28,28 +44,10 @@ footer {
   background: linear-gradient(to bottom, transparent, 50%, white)
 }
 
-/* To stretch divs without much in them */
-.body-height {
-    min-height: 90vh;
-}
 .white-background {
     background: linear-gradient(to top, transparent, 10%, white)
 }
-/* To make divs go to the edge */
-.container-fluid.full-width {
-    padding-left: 0;
-    padding-right: 0;
-    overflow-x: hidden;
-}
 
-/* Borders between divs and elements */
-.header-underline {
-    border-bottom: solid 1px black;
-}
-
-.raised-dropdown {
-    z-index: 999999999;
-}
 
 /* Borders between divs */
 .nav-left-border {
@@ -79,21 +77,21 @@ footer {
     position: static;
 }
 
-/* To make the navbar stick to the top of the screen */
-.fixed-top {
-    z-index: 4;
-    display: block;
-    top: 0;
-    position: fixed;
-    /* position: -webkit-sticky; */
+/* To make divs go to the edge */
+.container-fluid.full-width {
+    padding-left: 0;
+    padding-right: 0;
+    overflow-x: hidden;
 }
 
+
+/* Space above top header */
 .container-top-padding {
     padding-top: 131px;
 }
 
 
-/* Fonts across page */
+/* Font styling across page */
 h1, h3, h4, p, label, select, legend, small {
     font-family: 'Crimson Text', serif;
 }
@@ -107,10 +105,6 @@ a {
     font-weight: 600;
     font-family: 'Crimson Text', serif;
 }
-
-/* label {
-    font-family: 'Crimson Text', serif;
-} */
 
 .small-print {
     font-size: 10px;
@@ -133,11 +127,16 @@ button {
     background-color: black !important;
 }
 
+
+/* DESIGNERS PAGES  */
+
 /* Designer Listings to display <p> tags closer to each other */
 .p-without-margin {
     margin-bottom: 0px !important;
 }
 
+
+/* PRINTS PAGES  */
 
 /* Images of prints */
 .image-height {
@@ -147,7 +146,20 @@ button {
     margin: 3px;
 }
 
-/* On bag page */
+/* Individual print detail */
+.big-image {
+    width: 100%;
+    height: auto;
+}
+
+.image-inline {
+    display: inline-block;
+}
+
+
+/* BAG PAGE */
+
+/* Images on bag page */
 .image-width {
     width: 10vw;
     margin-bottom: 10px;
@@ -157,14 +169,9 @@ button {
     text-align: right
 }
 
-.big-image {
-    width: 100%;
-    height: auto;
-}
 
-.image-inline {
-    display: inline-block;
-}
+
+
 
 /* Toast Styling */
 .message-container {
@@ -180,4 +187,48 @@ button {
 
 .toast-capper {
     height: 2px;
+}
+
+@media only screen and (max-width: 910px) {
+    .header-logo {
+        padding-top: 0px;
+        background-color: red;
+        font-size: 45px;
+    }
+
+    .nav-right-border {
+        border-right: 0px;
+    }
+
+    .container-top-padding {
+        padding-top: 93px;
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    /* Removing the border next to the left column */
+    .standard-left-border {
+        border-left: 0px;
+    }
+
+    /* Images reducing in size */
+    .image-height {
+        height: 20vh;
+        width: 15vh;
+        object-fit: cover;
+        margin: 3px;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    /* Increasing image sizes on smallest screens */
+    .image-height {
+        width: 75vw;
+        height: 50vh;
+        object-fit: cover
+    }
+}
+
+@media scren and (max-width: 625px) and (min-width: 600px) {
+
 }

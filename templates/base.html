@@ -38,7 +38,7 @@
     <header>
         <div class="row header-underline fixed-top white-background">
             <div class="container-fluid full-width">
-                <nav class="navbar navbar-expand-lg navbar-light">
+                <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand header-logo nav-right-border" href="{% url 'home' %}">Plan Chest</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -52,28 +52,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'all_prints' %}">Prints</a>
                         </li>
-
-                        <!-- HOW TO FIX SO DROPDOWN ITEMS ARE VISIBLE ON BELOW DIV -->
-                        <!-- {% if user.is_authenticated %}
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Your Profile
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{% url 'create_profile' %}">Create / edit your profile</a>
-                                    <a class="dropdown-item" href="{% url 'order_history' %}">View order history</a>
-                                </div>
-                            </li>
-                        {% else %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                            </li>
-                        {% endif %} -->
-
-                        <!-- IF CAN'T FIX ABOVE -->
                         {% if user.is_authenticated %}
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'create_profile' %}">Your profile</a>
