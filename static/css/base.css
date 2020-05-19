@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica:400,400i&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
 
+
 /* GENERAL */
 
 /* Navbar */
@@ -198,6 +199,9 @@ button {
     height: 2px;
 }
 
+
+/* MEDIA QUERIES */
+
 @media only screen and (max-width: 910px) {
     .header-logo {
         padding-top: 0px;
@@ -230,7 +234,6 @@ button {
     /* Items in dropdown menu */
     .nav-link {
         text-align: right;
-        margin-right: 30px;
         font-weight: 600;
         font-size: 14px;
     }
@@ -238,6 +241,12 @@ button {
     /* Space between dropdown items and button */
     .navbar-collapse {
         padding-top: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .nav-link {
+        margin-right: 30px;
     }
 }
 
