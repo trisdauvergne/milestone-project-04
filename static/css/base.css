@@ -7,6 +7,12 @@
     font-style: italic;
     font-size: 50px;
     width: 25%;
+    padding-left: 2vw;
+    padding-top: 3vh;
+}
+
+.navbar-padding-top {
+    padding-top: 5vh;
 }
 
 /* To make divs go to the edge */

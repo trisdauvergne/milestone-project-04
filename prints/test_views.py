@@ -49,7 +49,7 @@ class TestPrintsView(TestCase):
         # Log the user in
         self.client.login(username='temporary',
                           password='secret')
-        # Call the user info
+        # Create the user info
         the_user = User.objects.create()
         # Create the designer profile
         the_designer = RegisteredUserProfile.objects.create(user=the_user,
