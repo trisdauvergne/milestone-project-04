@@ -6,6 +6,7 @@
     font-family: 'IM Fell Double Pica', serif;
     font-style: italic;
     font-size: 50px;
+    width: 25%;
 }
 
 /* To make divs go to the edge */
@@ -20,9 +21,17 @@
     border-bottom: solid 1px black;
 }
 
+.raised-dropdown {
+    z-index: 999999999;
+}
+
 .nav-left-border {
     border-left: solid 1px black;
     margin-bottom: 8px;
+}
+
+.nav-right-border {
+    border-right: solid 1px black;
 }
 
 .footer-border {
@@ -32,6 +41,10 @@
 
 .standard-left-border {
     border-left: solid 1px black;
+}
+
+.left-col-margin {
+    margin-right: 8px;
 }
 
 .margin-top {

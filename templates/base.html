@@ -35,42 +35,96 @@
 </head>
 <body>
     <header>
-        <div class="container-fluid full-width">
-            <div class="row header-underline">
-                <div class="col-3">
-                    <h1 class="header-logo">Plan Chest</h1>
+        <div class="row header-underline">
+            <div class="container-fluid full-width">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand header-logo nav-right-border" href="{% url 'home' %}">Plan Chest</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse raised-dropdown" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                <a class="nav-link"  href="{% url 'all_designers' %}">Designers</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'all_prints' %}">Prints</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Your Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'create_profile' %}">Create / edit your profile</a>
+                <a class="dropdown-item" href="{% url 'order_history' %}">View order history</a>
                 </div>
-            
-                <div class="col-9 topnav nav-left-border" id="myTopnav">
-                    <a href="{% url 'home' %}">About</a>
-                    <a href="{% url 'all_designers' %}">Designers</a>
-                    <a href="{% url 'all_prints' %}">Prints</a>
-                    {% if user.is_authenticated %}
-                        <a href="{% url 'create_profile' %}">Your profile</a>
-                        <a href="{% url 'add_print' %}">Add Work</a>
-                    {% else %}
-                        <a href="{% url 'account_signup' %}">Register</a>
-                        <a href="{% url 'account_login' %}">Login</a>
-                    {% endif %}
-                    {% if user.is_authenticated %}
-                        <a href="{% url 'account_logout' %}">Logout</a>
-                    {% endif %}
-                    {% if print_quantity %}
-                        <a href="{% url 'bag_contents' %}">
-                            <p class="my-0">
+                </li>
+                {% else %}
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                </li>
+                {% endif %}
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                {% endif %}
+                {% if print_quantity %}
+                <li>
+                        <a class="nav-link" href="{% url 'bag_contents' %}">
                                 Bag
                                 {% if print_quantity %}
                                     ({{ print_quantity }})
                                 {% else %}
                                     (0)
                                 {% endif %}
-                            </p>
                         </a>
-                    {% endif %}
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
-                    </a>
+                </li>
+                {% endif %}
+                </ul>
                 </div>
+                </nav>
+                <!-- <div class="row header-underline">
+                    <div class="col-3">
+                        <h1 class="header-logo">Plan Chest</h1>
+                    </div>
+                
+                    <div class="col-9 topnav nav-left-border" id="myTopnav">
+                        <a href="{% url 'home' %}">About</a>
+                        <a href="{% url 'all_designers' %}">Designers</a>
+                        <a href="{% url 'all_prints' %}">Prints</a>
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'create_profile' %}">Your profile</a>
+                            <a href="{% url 'add_print' %}">Add Work</a>
+                        {% else %}
+                            <a href="{% url 'account_signup' %}">Register</a>
+                            <a href="{% url 'account_login' %}">Login</a>
+                        {% endif %}
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'account_logout' %}">Logout</a>
+                        {% endif %}
+                        {% if print_quantity %}
+                            <a href="{% url 'bag_contents' %}">
+                                <p class="my-0">
+                                    Bag
+                                    {% if print_quantity %}
+                                        ({{ print_quantity }})
+                                    {% else %}
+                                        (0)
+                                    {% endif %}
+                                </p>
+                            </a>
+                        {% endif %}
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                </div> -->
             </div>
         </div>
     </header>
