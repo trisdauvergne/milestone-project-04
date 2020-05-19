@@ -34,7 +34,7 @@
 .footer-text a {
     font-size: 16px;
     font-weight: 600;
-    padding: 2vh 0;
+    padding: 10px 10px 10px 0;
 }
 
 footer {
@@ -218,12 +218,15 @@ button {
         border: 1px solid black;
     }
 
+    /* Items in dropdown menu */
     .nav-link {
         text-align: right;
         margin-right: 30px;
         font-weight: 600;
+        font-size: 14px;
     }
 
+    /* Space between dropdown items and button */
     .navbar-collapse {
         padding-top: 0px !important;
     }
@@ -251,5 +254,17 @@ button {
         width: 20vw;
         height: 25vh;
         object-fit: cover;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    /* Leftargin on large image text */
+    .left-sm-spacing {
+        margin-left: 10vw;
+    }
+
+    /* Br disappear on large image page */
+    .small-br-none {
+        display: none;
     }
 }

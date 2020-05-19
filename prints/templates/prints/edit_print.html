@@ -4,18 +4,18 @@
 {% block content %}
 <div class="container-fluid full-width container-top-padding">
     <div class="row">
-        <div class="col-3 left-col-margin">
+        <div class="col-sm-3 col-1 left-col-margin">
             <span></span>
         </div>
-        <div class="col-6 standard-left-border margin-top">
+        <div class="col-sm-6 col-9 standard-left-border margin-top">
             <h1>Edit {{ print.title }}</h1>
         </div>
     </div>
     <div class="row">
-        <div class="col-3 left-col-margin">
+        <div class="col-sm-3 col-1 left-col-margin">
             <span></span>
         </div>
-        <div class="col-6 standard-left-border">
+        <div class="col-sm-7 col-9 standard-left-border">
             <p class="small-print">You are editing this print:</p>
             <img src="{{ print.image.url }}" class="image-height">
             <form method="POST" enctype="multipart/form-data">
