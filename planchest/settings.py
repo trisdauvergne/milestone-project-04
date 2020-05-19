@@ -192,15 +192,13 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Added from Boutique Ado - to review after code along
-
+# Stripe related
 STANDARD_DELIVERY_PERCENTAGE = 12.5
-
-# Stripe
 STRIPE_CURRENCY = 'sek'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+DEFAULT_FROM_EMAIL = 'team@planchest.com'
 
 # CREDENTIAL
 

@@ -15,8 +15,24 @@
     padding-top: 5vh;
 }
 
+.footer-text a {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 2vh 0;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, transparent, 50%, white)
+}
+
+/* To stretch divs without much in them */
+.body-height {
+    min-height: 90vh;
+}
 .white-background {
-    /* background-image: linear-gradient(to top, rgba(255,255,255,0), rgb(255, 255, 255, 1)); */
     background: linear-gradient(to top, transparent, 10%, white)
 }
 /* To make divs go to the edge */

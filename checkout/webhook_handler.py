@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.core.mail import send_mail 
 from django.template.loader import render_to_string
 from django.conf import settings
+from .models import Order
 
 
 class StripeWH_Handler:
@@ -35,9 +36,40 @@ class StripeWH_Handler:
     def handle_payment_intent_succeeded(self, event):
         """ Every time a payment_intent.succeeded webhook """
         intent = event.data.object
-        self._send_confirmation_email(order)
-        print(intent)
+        pid = intent.id
+        bag = intent.metadata.bag
 
+        billing_details = intent.charges.data[0].billing_details
+        print(billing_details)
+
+        shipping_details = intent.shipping
+        print(shipping_details)
+
+        grand_total = round(intent.charges.data[0].amount / 100, 2)
+        print(grand_total)
+
+        # order = shipping_details{
+        #     'street_address_1'=line1,
+        #     'street_address_2'=line2,
+        #     'country' = country,
+        # }
+
+        # order = Order.objects.get(
+        #     full_name__iexact=shipping_details.name,
+        #     email__iexact=billing_details.email,
+        #     phone_number__iexact=shipping_details.phone,
+        #     # street_address_1__iexact=shipping_details.line1,
+        #     # street_address_2__iexact=shipping_details.line2,
+        #     postcode=shipping_details.address.postal_code,
+        #     # country__iexact=shipping_details.country,
+        #     grand_total=grand_total,
+        #     stripe_pid=pid,
+        #     bag={'customer': customer,
+        #          'date': date,
+        #          'full_name': full_name}
+        #     )
+        # self._send_confirmation_email(order)
+        print(intent)
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)

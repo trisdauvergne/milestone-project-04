@@ -18,6 +18,7 @@
         </div>
         <div class="col-6 standard-left-border">
             {% for order in orders %}
+            <ul>
                 <a class="btn" data-toggle="collapse" href="#collapse{{ order.order_number }}" role="button" aria-expanded="false" aria-controls="collapse{{ order.order_number }}">
                 Order:<strong> {{ order.order_number }}</strong>
                 </a>
@@ -42,6 +43,7 @@
                         {% endfor %}
                     </div>
                 </div>
+            </ul>
             {% endfor %}
 
             <!-- {% for order in orders %}
