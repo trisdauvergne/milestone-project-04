@@ -4,27 +4,27 @@
 {% block content %}
 <div class="container-fluid full-width container-top-padding">
     <div class="row">
-        <div class="col-3 left-col-margin">
+        <div class="col-sm-3 col-1 left-col-margin">
             <span></span>
         </div>
-        <div class="col-6 standard-left-border margin-top">
-             <h1>{{ the_designer.first_name }} {{ the_designer.last_name }}</h1>
+        <div class="col-sm-6 col-9 standard-left-border margin-top">
+             <h1 class="fixed-header">{{ the_designer.first_name }} {{ the_designer.last_name }}</h1>
         </div>
     </div>
     <div class="row">
-        <div class="col-3 left-col-margin">
+        <div class="col-sm-3 col-1 left-col-margin">
             <span></span>
         </div>
-        <div class="col-3 standard-left-border">
-            <p>ID NO: {{ the_designer.id }}</p>
-            <p>About: {{ the_designer.bio }}</p>
-            <p>Country: {{ the_designer.country }}</p>
-            <p>Contact: {{ the_designer.user.email }}</p>
-            <p><a href="{% url 'all_designers' %}">Back to designers</a></p>
+        <div class="col-sm-4 col-7 standard-left-border">
+            <p class="designer-description">ID NO: {{ the_designer.id }}</p>
+            <p class="designer-description">About: {{ the_designer.bio }}</p>
+            <p class="designer-description">Country: {{ the_designer.country }}</p>
+            <p class="designer-description">Contact: {{ the_designer.user.email }}</p>
+            <p class="designer-description"><a href="{% url 'all_designers' %}">Back to designers</a></p>
         </div>
-        <div class="col-5">
+        <div class="col-sm-4 col-10 left-sm-spacing">
             {% for prints in prints %}
-                <a href="{% url 'large_print' prints.id %}"><img src="{{ prints.image.url }}" class="image-height"></a>
+                <a href="{% url 'large_print' prints.id %}"><img src="{{ prints.image.url }}" class="image-height designer-description-image"></a>
             {% endfor %}
         </div>
     </div>

@@ -4,32 +4,29 @@
 {% block content %}
 <div class="container-fluid full-width container-top-padding">
     <div class="row">
-        <div class="col-3 left-col-margin">
+        <div class="col-sm-3 col-1 left-col-margin">
             <span></span>
         </div>
-        <div class="col-6 standard-left-border margin-top">
-            <h1>Designers on Planchest</h1>
+        <div class="col-sm-6 col-9 standard-left-border margin-top">
+            <h1 class="fixed-header">Designers on Planchest</h1>
+            <p>(Arranged by last name)</p>
         </div>
     </div>
     <div class="row">
-         <div class="col-3 left-col-margin">
+         <div class="col-sm-3 col-1 left-col-margin">
             <span></span>
         </div>
-        <div class="col-6 standard-left-border">
+        <div class="col-sm-6 col-9 standard-left-border">
             <p><a href="{% url 'all_designers' %}">Back to previous view</a></p>
         </div>
     </div>
     <div class="row">
-        <div class="col-3 left-col-margin">
+        <div class="col-sm-3 col-1 left-col-margin">
             <span></span>
         </div>
-        <div class="col-6 standard-left-border">
+        <div class="col-sm-6 col-9 standard-left-border">
             {% for designers in designers %}
-                <p><a href="{% url 'individual_designer' designers.id %}"> {{ designers.first_name }} {{ designers.last_name }}</a></p>
-                <!-- <p>ID NO: {{ designers.id }}</p>
-                <p>About {{ designers.first_name }} {{ designers.last_name }}: {{ designers.bio }}</p>
-                <p>Country: {{ designers.country }}</p>
-                <p>Contact: {{ designers.user.email }}</p> -->
+                <h3 class="designer-name"><a href="{% url 'individual_designer' designers.id %}">{{ designers.first_name }} {{ designers.last_name }}<p class="small-print">(Click to see {{ designers.first_name }}'s work on Plan Chest)</p></a></h3>
                 <br>
             {% endfor %}
         </div>

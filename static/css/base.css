@@ -135,6 +135,12 @@ button {
     margin-bottom: 0px !important;
 }
 
+/* Designers' names in list */
+.designer-name {
+    /* font-family: 'IM Fell Double Pica', serif; */
+    /* font-style: italic; */
+}
+
 
 /* PRINTS PAGES  */
 
@@ -271,5 +277,16 @@ button {
     .bag-item-border {
         border-bottom: solid 1px black;
         margin-top: 5px;
+    }
+
+    .designer-description {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .designer-description-image {
+        width: 40%;
+        height: 25vh;
+        content: cover;
     }
 }
