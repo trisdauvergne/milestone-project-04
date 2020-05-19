@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django_countries',
     'bag',
     'checkout',
+    # 'dj-database-url',
 
     # Other
     'crispy_forms',
@@ -142,6 +143,8 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
+
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 # DATABASES = {
 #     'default': dj_database_url.parse('postgres://tmquexooetswue:b8b0bfbbc28e7add25415bc14b2928c300fcca1dbf263c86eb1b9ebc06f46fd3@ec2-54-75-229-28.eu-west-1.compute.amazonaws.com:5432/d734g0cni65os7')

@@ -14,13 +14,13 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='order',
             name='country',
-            field=django_countries.fields.CountryField(default='temporary value', max_length=2),
+            field=django_countries.fields.CountryField(default='00', max_length=2),
             preserve_default=False,
         ),
         migrations.AddField(
             model_name='order',
             name='postcode',
-            field=models.CharField(default='temporary value', max_length=10),
+            field=models.CharField(default='00', max_length=10),
             preserve_default=False,
         ),
     ]
