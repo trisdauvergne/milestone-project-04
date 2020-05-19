@@ -8,18 +8,18 @@
 {% block content %}
    <div class="container-fluid full-width container-top-padding">
         <div class="row">
-            <div class="col-3 left-col-margin">
+            <div class="col-sm-3 col-1 left-col-margin">
                 <span></span>
             </div>
-            <div class="col-6 standard-left-border margin-top">
+            <div class="col-sm-6 col-9 standard-left-border margin-top">
                 <p>Here is confirmation of your order. A confirmation email will be sent to <strong>{{ order.email }}</strong></p>
             </div>
         </div>
         <div class="row">
-            <div class="col-3 left-col-margin">
+            <div class="col-sm-3 col-1 left-col-margin">
                 <span></span>
             </div>
-            <div class="col-6 standard-left-border">
+            <div class="col-sm-6 col-9 standard-left-border">
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p>Order Number: {{ order.order_number }}</p>
