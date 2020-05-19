@@ -16,7 +16,6 @@
             <span></span>
         </div>
         <div class="col-6 standard-left-border">
-            <p><strong>Order Information</strong></p>
             <!-- {% for details in orders %}
                 <p class="p-without-margin">Order: {{ details.order_number }}</p>
                 <p class="p-without-margin small-print">Ordered on: {{ details.date }}</p>
@@ -34,20 +33,39 @@
                 {% endfor %}
                 <br>
             {% endfor %} -->
+            {% for order in orders %}
+                <p>Order number: {{ order.order_number }}</p>
+                <p>Ordered on {{ order.date }}</p>
+                <p>Shipped to {{ order.street_address_1 }}, {{ order.street_address_2 }}, {{ order.town }}, {{ order.country }}, {{ order.postcode }}</p>
+                <p>Cost of print(s): {{ order.order_total }} SEK</p>
+                <p>Delivery cost: {{ order.delivery_cost }} SEK</p>
+                <p>Total: {{ order.grand_total }} SEK</p>
+                {% for lineitem in order.lineitems.all %}
+                    <div class="image-inline">
+                        <img src="{{ lineitem.print_details.image.url }}" class="image-height">
+                        <p class="small-print">{{ lineitem.print_details.title }}</p>
+                        <p class="small-print">{{ lineitem.print_details.designer.first_name }} {{ lineitem.print_details.designer.last_name }}</p>
+                        <p class="small-print">{{ lineitem.quantity }}</p>
+                        <p class="small-print">{{ lineitem.lineitem_total }}</p>
+                    </div>
+                {% endfor %}
+                <hr>
+            {% endfor %}
 
-            {% for item in line_items %}
+
+            <!-- {% for item in line_items %}
                 <a href=""><p class="p-without-margin">Order: {{ item.order.order_number }}</p></a>
                 <p>Ordered on: {{ item.order.date }}</p>
                 {% for images in line_items.print_details %}
                     <div class="image-inline">
-                        <img class="image-height" src="{{ images.image.url }}">
+                        <img class="image-height" src="{{ images.image.url }}"> -->
                         <!-- <p>{{ images.quantity }} x {{ images.price }} SEK</p> -->
-                    </div>
-                {% endfor %}
+                    <!-- </div>
+                {% endfor %} -->
                 <!-- <div class="image-inline">
                    
                 </div> -->
-            {% endfor %} 
+            <!-- {% endfor %}  -->
         </div>
     </div>
 </div>

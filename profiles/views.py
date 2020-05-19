@@ -47,14 +47,17 @@ def order_history(request):
     # Get the logged in user
     user = request.user
     the_user = get_object_or_404(RegisteredUserProfile, user=user)
+    print(the_user, 'the user')
     user_id = the_user.id
-    print(user_id)
+    print(user_id, 'the user id')
+
     # Get the logged in user's orders
-    the_users_orders = Order.objects.filter(customer_id=user_id)
+    the_users_orders = Order.objects.filter(customer=the_user)
     print(the_users_orders)
+
     # Get the line items from the order
     line_items = OrderLineItem.objects.all()
-    print(line_items)
+    # print(line_items)
 
     context = {
         'orders': the_users_orders,
