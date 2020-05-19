@@ -1,0 +1,28 @@
+Hi (( order.full_name )),
+
+Thank you for your recent purchase with Plan Chest. 
+
+This is a confirmation of your order, your order information is below:
+
+Order No: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Prints total : {{ order.order_total }} SEK
+Delivery: {{ order.delivery_cost }}
+Total (including delivery): {{ order.grand_total }}
+
+Delivery to:
+{{ order.street_address_1 }},
+{{ order.street_address_2 }},
+{{ order.town }},
+{{ order.country }},
+{{ order.postcode }}
+
+If you have any questions, please feel free to contact us at {{ contact_email }}.
+
+Mvh,
+
+The Plan Chest Team
+
+
+

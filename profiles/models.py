@@ -8,7 +8,8 @@ from django_countries.fields import CountryField
 
 class RegisteredUserProfile(models.Model):
     """ A user profile model for registered users """
-    user = models.OneToOneField(User, related_name="user_profile",
+    user = models.OneToOneField(User,
+                                related_name="user_profile",
                                 on_delete=models.CASCADE)
     register_as_designer = models.BooleanField(blank=True)
     register_as_customer = models.BooleanField(blank=True)
