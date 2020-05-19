@@ -9,7 +9,7 @@
         </div>
         <div class="col-9 standard-left-border margin-top">
             <h1>Your order history</h1>
-            <p>Click on the order number to view and hide your order information</p>
+            <p class="small-text">(Click on the order number to view and hide your order information)</p>
         </div>
     </div>
     <div class="row">
@@ -18,11 +18,11 @@
         </div>
         <div class="col-6 standard-left-border">
             {% for order in orders %}
-                <a class="btn" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="btn" data-toggle="collapse" href="#collapse{{ order.order_number }}" role="button" aria-expanded="false" aria-controls="collapse{{ order.order_number }}">
                 Order:<strong> {{ order.order_number }}</strong>
                 </a>
                 
-                <div class="collapse" id="collapseExample">
+                <div class="collapse" id="collapse{{ order.order_number }}">
                     <div class="offset-1">
                         <!-- <p>Order number: {{ order.order_number }}</p> -->
                         <p>Ordered on {{ order.date }}</p>
