@@ -23,7 +23,7 @@
         </div>
         <div class="col-sm-4 col-10 left-sm-spacing">
             {% for prints in prints %}
-                <a href="{% url 'large_print' prints.id %}"><img src="{{ prints.image.url }}" class="image-height designer-description-image"></a>
+                <a href="{% url 'large_print' prints.id %}"><img src="{{ prints.image.url }}" class="image-height designer-description-image" alt="{{ prints.title }}"></a>
             {% endfor %}
         </div>
     </div>

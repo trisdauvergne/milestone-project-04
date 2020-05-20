@@ -186,8 +186,8 @@ button {
 
 /* Designers' names in list */
 .designer-name {
-    /* font-family: 'IM Fell Double Pica', serif; */
-    /* font-style: italic; */
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 /* Images in rows on designers by name */

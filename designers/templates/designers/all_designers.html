@@ -25,7 +25,8 @@
         </div>
         <div class="col-sm-6 col-9 standard-left-border">
             {% for designers in designers %}
-                <h3 class="designer-name"><a href="{% url 'individual_designer' designers.id %}">{{ designers.first_name }} {{ designers.last_name }}<p class="small-print">(Click to see {{ designers.first_name }}'s work on Plan Chest)</p></a></h3>
+                <a class="designer-name" href="{% url 'individual_designer' designers.id %}">{{ designers.first_name }} {{ designers.last_name }}</a>
+                <br>
                 <br>
             {% endfor %}
         </div>
