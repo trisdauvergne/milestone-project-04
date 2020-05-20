@@ -8,7 +8,7 @@
             <span></span>
         </div>
         <div class="col-6 standard-left-border margin-top">
-            <h1>{{ print.title }}</h1>
+            <h1 class="fixed-header">{{ print.title }}</h1>
         </div>
     </div>
     <div class="row">
@@ -25,14 +25,7 @@
                 {{ print.designer.bio }}
             </p>
             <br class="small-br-none">
-            {% if designer_id == print.designer.id %}
-                <p>You can <a href="{% url 'edit_print' print.id %}">edit your print</a> or <a href="{% url 'delete_print' print.id %}">delete it</a> here</p>
-            {% else %}
-                <p><a href="{% url 'individual_designer' print.designer.id %}"><strong>See more of {{ print.designer.first_name }} {{ print.designer.last_name }}'s work</strong></a></p>
-                <br>
-                <p><a href="{% url 'all_prints' %}"><strong>Back to all prints</strong></a></p>
-                <br>
-
+            {% if designer_id != print.designer.id %}
                 <!-- Form to add a print to bag -->
                 <form class="form" action="{% url 'add_print_to_bag' print.id %}" method="POST">
                 {% csrf_token %}
@@ -64,6 +57,14 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
+                <br>
+                <p><a href="{% url 'individual_designer' print.designer.id %}"><strong>See more of {{ print.designer.first_name }} {{ print.designer.last_name }}'s work</strong></a></p>
+                <br>
+                <p><a href="{% url 'all_prints' %}"><strong><i class="fas fa-arrow-left"></i> Back to all prints</strong></a></p>
+                
+                {% else %}
+                 <p>You can <a href="{% url 'edit_print' print.id %}">edit your print</a> or <a href="{% url 'delete_print' print.id %}">delete it</a> here</p>
+            
             {% endif %}   
         </div>
     </div>    

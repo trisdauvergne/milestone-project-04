@@ -16,11 +16,10 @@
             <span></span>
         </div>
         <div class="col-sm-4 col-7 standard-left-border">
-            <p class="designer-description">ID NO: {{ the_designer.id }}</p>
-            <p class="designer-description">About: {{ the_designer.bio }}</p>
+            <p class="designer-description">{{ the_designer.bio }}</p>
             <p class="designer-description">Country: {{ the_designer.country }}</p>
             <p class="designer-description">Contact: {{ the_designer.user.email }}</p>
-            <p class="designer-description"><a href="{% url 'all_designers' %}">Back to designers</a></p>
+            <p class="designer-description"><a href="{% url 'all_designers' %}"><i class="fas fa-arrow-left"></i> Back to designers</a></p>
         </div>
         <div class="col-sm-4 col-10 left-sm-spacing">
             {% for prints in prints %}

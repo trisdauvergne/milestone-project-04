@@ -120,12 +120,18 @@ input, button {
 
 /* Button styling */
 button {
-    color: red;
-    background-color: black;
+    border: 1px solid black;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: white;
 }
 
 .form-check-input {
     background-color: black !important;
+}
+
+.order-button-margin {
+    padding-left: 0px !important;
 }
 
 
@@ -179,7 +185,7 @@ button {
 
 /* ORDER HISTORY PAGE */
 .list-left-padding {
-    margin-left: none;
+    padding-left: 0px !important;
 }
 
 
