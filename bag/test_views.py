@@ -105,7 +105,7 @@ class TestBagViews(TestCase):
             post_data = {
                 'quantity': 0,
             }
-            
+
             response = self.client.post(f'/bag/adjust/{the_print.id}/', post_data)
 
             # To assume that the bag will be empty
