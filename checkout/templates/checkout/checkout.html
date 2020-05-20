@@ -3,7 +3,7 @@
 {% load bag_tools %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+<link rel="stylesheet" href="{% static 'css/checkout.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -80,49 +80,50 @@
                     {{ order_form.town | as_crispy_field }}
                     {{ order_form.country | as_crispy_field }}
                     {{ order_form.postcode | as_crispy_field }}
-                <div class="form-check form-check-inline float-right mr-0">
-                    {% if user.is_authenticated %}
-                        <p>You are logged in successfully and can complete this order.</p>
-                    {% else %}
-                        <!-- <label class="form-check-label" for="id-save-info"> -->
-                            <a href="{% url 'account_signup' %}">Create an account</a> or
-                            <a href="{% url 'account_login' %}">login
-                            </a> to complete this order
-                        <!-- </label> -->
-                    {% endif %}
+                    <div class="form-check form-check-inline float-right mr-0">
+                        {% if user.is_authenticated %}
+                            <p>You are logged in successfully and can complete this order.</p>
+                        {% else %}
+                            <!-- <label class="form-check-label" for="id-save-info"> -->
+                                <a href="{% url 'account_signup' %}">Create an account</a> or
+                                <a href="{% url 'account_login' %}">login
+                                </a> to complete this order
+                            <!-- </label> -->
+                        {% endif %}
+                    </div>
+                </fieldset>
+                <fieldset class="px-3">
+                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                    <!-- A Stripe card element will go here -->
+                    <div class="mb-3" id="card-element"></div>
+
+                    <!-- Used to display form errors -->
+                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                    <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                </fieldset>
+
+                <div class="submit-button text-right mt-5 mb-2">                    
+                    <a href="{% url 'bag_contents' %}" class="btn btn-outline-black rounded-0">
+                        <span class="icon">
+                            <i class="fas fa-arrow-left"></i>
+                        </span>
+                        <span class="font-weight-bold">Adjust Bag</span>
+                    </a>
+                    <button id="submit-button" class="btn btn-black rounded-0">
+                        <span class="font-weight-bold">Complete Order</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </button>
+                    <p class="small text-danger my-0">
+                        <span class="icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </span>
+                        <span>Your card will be charged <strong>{{ grand_total|floatformat:2 }} SEK</strong></span>
+                    </p>
                 </div>
-            </fieldset>
-            <fieldset class="px-3">
-                <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
-                <!-- A Stripe card element will go here -->
-                <div class="mb-3" id="card-element"></div>
-
-                <!-- Used to display form errors -->
-                <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-                <input type="hidden" value="{{ client_secret }}" name="client_secret">
-            </fieldset>
-
-            <div class="submit-button text-right mt-5 mb-2">                    
-                <a href="{% url 'bag_contents' %}" class="btn btn-outline-black rounded-0">
-                    <span class="icon">
-                        <i class="fas fa-arrow-left"></i>
-                    </span>
-                    <span class="font-weight-bold">Adjust Bag</span>
-                </a>
-                <button id="submit-button" class="btn btn-black rounded-0">
-                    <span class="font-weight-bold">Complete Order</span>
-                    <span class="icon">
-                        <i class="fas fa-lock"></i>
-                    </span>
-                </button>
-                <p class="small text-danger my-0">
-                    <span class="icon">
-                        <i class="fas fa-exclamation-circle"></i>
-                    </span>
-                    <span>Your card will be charged <strong>{{ grand_total|floatformat:2 }} SEK</strong></span>
-                </p>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </div>
 
@@ -133,6 +134,12 @@
         </span>
     </h1>
 </div>
+
+<!-- <div id="loading-overlay">
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div> -->
 {% endblock %}
 
 {% block postloadjs %}

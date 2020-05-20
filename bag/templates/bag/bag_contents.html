@@ -20,7 +20,7 @@
                 {% for item in bag_items %}
                 <div class="row bag-item-border">
                     <div class="col">
-                        <img src="{{ item.print.image.url }}" class="image-width">
+                        <img src="{{ item.print.image.url }}" class="image-width" alt="{{ image.print.title }}">
                     </div>
                     <div class="col">
                         <p>{{ item.print.title }} by <br><a href="{% url 'individual_designer' item.print.designer.id %}">{{ item.print.designer.first_name }} {{ item.print.designer.last_name }}</a></p>
