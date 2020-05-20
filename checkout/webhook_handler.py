@@ -11,7 +11,7 @@ class StripeWH_Handler:
     def __init__(self, request):
         self.request = request
 
-    def _send_confirmation_email(self):
+    def _send_confirmation_email(self, order):
         """ Send the customer a confirmation email """
         customer_email = order.email
         subject = render_to_string(
@@ -37,7 +37,7 @@ class StripeWH_Handler:
         """ Every time a payment_intent.succeeded webhook """
         intent = event.data.object
         pid = intent.id
-        bag = intent.metadata.bag
+        # bag = intent.metadata.bag
 
         billing_details = intent.charges.data[0].billing_details
         print(billing_details)
@@ -54,21 +54,21 @@ class StripeWH_Handler:
         #     'country' = country,
         # }
 
-        # order = Order.objects.get(
-        #     full_name__iexact=shipping_details.name,
-        #     email__iexact=billing_details.email,
-        #     phone_number__iexact=shipping_details.phone,
-        #     # street_address_1__iexact=shipping_details.line1,
-        #     # street_address_2__iexact=shipping_details.line2,
-        #     postcode=shipping_details.address.postal_code,
-        #     # country__iexact=shipping_details.country,
-        #     grand_total=grand_total,
-        #     stripe_pid=pid,
-        #     bag={'customer': customer,
-        #          'date': date,
-        #          'full_name': full_name}
-        #     )
-        # self._send_confirmation_email(order)
+        order = Order.objects.get(
+            full_name__iexact=shipping_details.name,
+            email__iexact=billing_details.email,
+            phone_number__iexact=shipping_details.phone,
+            street_address_1__iexact=shipping_details.address.line1,
+            street_address_2__iexact=shipping_details.address.line2,
+            # postcode=shipping_details.address.postal_code,
+            country__iexact=shipping_details.address.country,
+            grand_total=grand_total,
+            stripe_pid=pid,
+            # bag={'customer': customer,
+            #      'date': date,
+            #      'full_name': full_name}
+            )
+        self._send_confirmation_email(order)
         print(intent)
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',

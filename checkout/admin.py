@@ -20,6 +20,7 @@ class OrderAdmin(admin.ModelAdmin):
                        'grand_total',)
 
     fields = ('customer',
+              'stripe_pid',
               'order_number',
               'date',
               'full_name',
