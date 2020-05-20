@@ -26,12 +26,11 @@
         <div class="col-sm-7 col-9 standard-left-border">
             {% for print in prints %}
                 <div class="image-inline">
-                    <a href="{% url 'large_print' print.id %}"><img src="{{ print.image.url }}" class="image-height"></a>
+                    <a href="{% url 'large_print' print.id %}"><img src="{{ print.image.url }}" class="image-height" alt="{{ print.title }}"></a>
                     <p class="small-print">{{ print.designer.first_name }} {{ print.designer.last_name }},<br> {{ print.title }},<br> {{ print.size }},<br> {{ print.price }}SEK</p>
                 </div>
             {% endfor %}
         </div>
     </div>
-</div>
 </div>
 {% endblock %}
