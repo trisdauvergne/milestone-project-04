@@ -269,7 +269,7 @@ button {
 @media screen and (max-width: 710px) and (min-width: 576px) {
     /* Increasing image sizes on smallest screens */
     .image-height {
-        width: 20vw;
+        width: 200px;
         height: 25vh;
         object-fit: cover;
     }
