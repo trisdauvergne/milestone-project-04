@@ -7,6 +7,7 @@ class Print(models.Model):
     designer = models.ForeignKey(RegisteredUserProfile,
                                  null=False,
                                  blank=False,
+                                 related_name="designer_key",
                                  on_delete=models.CASCADE)
     title = models.CharField(max_length=254,
                              null=False,

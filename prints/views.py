@@ -24,13 +24,13 @@ def all_prints(request):
 
 def prints_by_designer(request):
     """ A view to return all the prints on the site """
-    all_prints = Print.objects.all()
-    ordered_prints = all_prints.order_by('designer')
+    all_designers = RegisteredUserProfile.objects.all()
+    ordered_designers = all_designers.order_by('last_name')
 
     context = {
-        'prints': ordered_prints,
+        'designers': ordered_designers,
     }
-    
+
     return render(request,
                   'prints/all_prints_designer.html',
                   context)

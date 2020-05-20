@@ -148,6 +148,14 @@ button {
     /* font-style: italic; */
 }
 
+/* Images in rows on designers by name */
+.image-row {
+    height: 20vh;
+    width: 15vh;
+    object-fit: cover;
+    margin: 2px;
+}
+
 
 /* PRINTS PAGES  */
 
