@@ -76,7 +76,7 @@ class TestBagViews(TestCase):
         self.assertEqual(session['bag'][f'{the_print.id}'], 6)
 
         def test_adjust_bag_quantity_to_zero(self):
-             # Create a user without specifying an ID
+            # Create a user without specifying an ID
             the_user = User.objects.create()
 
             # Same for designer. The user field is a FK to an actual user
