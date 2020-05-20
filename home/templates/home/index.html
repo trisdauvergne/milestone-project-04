@@ -4,13 +4,19 @@
 {% block content %}
     <div class="container-fluid full-width container-top-padding">
         <div class="row body-height">
-            <div class="col-3 left-col-margin">
+            <div class="col-sm-3 col-1 left-col-margin">
                 <span></span>
             </div>
-            <div class="col-6 standard-left-border margin-top">
-                <p>Text about Planchest</p>
-                <p>Reasons to join</p>
-                <a href="{% url 'account_signup' %}">Register</a>
+            <div class="col-sm-6 col-9 standard-left-border margin-top">
+                <!-- <p class="intro-copy inline-image"><strong>Print</strong>, <i>'the process of decorating textile fabrics by application of pigments, dyes, or other related materials in the form of patterns.'</i></p>
+                <p class="small-print source-link"><a href="https://www.britannica.com/topic/printing-publishing" target="_blank">Source</a></p>
+                <br>
+                <p class="intro-body"><strong>Print designers</strong> create two-dimensional designs that can be used, often as a repeat design, in the production of knit, weave and printed fabrics or textile products.</p>
+                <p class="small-print source-link"><a href="https://www.prospects.ac.uk/job-profiles/textile-designer" target="_blank">Source</a></p>
+                <br> -->
+                <p class="register-copy"><strong>Plan Chest</strong> connects print designers with buyers around the world.<br>
+                If you're a designer, add to the Plan Chest portfolio by <a href="{% url 'account_signup' %}"><strong>registering as a designer</strong></a> to sell your work, raise your profile and grow your customer base.</p>
+                <p class="small-print">(Purchases on Plan Chest can only be made by registered account holders. <a href="{% url 'account_signup' %}">Register as a customer</a> before making a purchase).</p>
             </div>
         </div>
     </div>
