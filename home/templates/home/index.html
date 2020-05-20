@@ -4,7 +4,14 @@
 {% block content %}
     <div class="container-fluid full-width container-top-padding">
         <div class="row body-height">
-            <div class="col-sm-3 col-1 left-col-margin">
+            <div class="col-12 fixed-background">
+                <div class="row">
+                    <div class="inline-image">
+                        <img class="background-image" src="{{ print.image.url }}">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-1 left-col-margin foreground">
                 <span></span>
             </div>
             <div class="col-sm-6 col-9 standard-left-border margin-top">
@@ -15,7 +22,7 @@
                 <p class="small-print source-link"><a href="https://www.prospects.ac.uk/job-profiles/textile-designer" target="_blank">Source</a></p>
                 <br> -->
                 <p class="register-copy"><strong>Plan Chest</strong> connects print designers with buyers around the world.<br>
-                If you're a designer, add to the Plan Chest portfolio by <a href="{% url 'account_signup' %}"><strong>registering as a designer</strong></a> to sell your work, raise your profile and grow your customer base.</p>
+                If you're a designer, add your work to the Plan Chest portfolio by <a href="{% url 'account_signup' %}"><strong>registering as a designer</strong></a> to sell your work, raise your profile and grow your customer base.</p>
                 <p class="small-print">(Purchases on Plan Chest can only be made by registered account holders. <a href="{% url 'account_signup' %}">Register as a customer</a> before making a purchase).</p>
             </div>
         </div>

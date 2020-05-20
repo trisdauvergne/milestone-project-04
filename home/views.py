@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from prints.models import Print
 
+import random
+
 # Create your views here.
 
 
@@ -10,9 +12,10 @@ def index(request):
     # user = request.user
 
     background_prints = Print.objects.all()
+    random_print = random.choice(background_prints)
 
     context = {
-        'prints': background_prints,
+        'print': random_print,
     }
 
     # 1. Check if all information.

@@ -145,6 +145,19 @@ button {
 
 /* HOMEPAGE */
 
+.fixed-background {
+    position: fixed;
+    z-index: -999;
+}
+
+.background-image {
+    width: 120vw;
+    height: 225px;
+    opacity: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
 .intro-copy, .intro-body {
     font-size: 16px;
     padding-left: 8px;
@@ -343,6 +356,6 @@ button {
     .designer-description-image {
         width: 40%;
         height: 25vh;
-        content: cover;
+        object-fit: cover;
     }
 }
