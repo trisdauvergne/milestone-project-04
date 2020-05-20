@@ -135,8 +135,11 @@ ROOT_URLCONF = 'planchest.urls'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 if 'DATABASE_URL' in os.environ:
+    db_url_dict = dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    db_url_dict["TEST"] = {"NAME": db_url_dict["NAME"]}
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        # 'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': db_url_dict
     }
 else:
     DATABASES = {
@@ -145,8 +148,6 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-
-# DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 # DATABASES = {
 #     'default': dj_database_url.parse('postgres://tmquexooetswue:b8b0bfbbc28e7add25415bc14b2928c300fcca1dbf263c86eb1b9ebc06f46fd3@ec2-54-75-229-28.eu-west-1.compute.amazonaws.com:5432/d734g0cni65os7')
