@@ -19,20 +19,20 @@
         {% if orders %}
             <p class="small-print">(Click on the order number to view and hide your order information)</p>
             {% for order in orders %}
-            <ul class="list-left-padding">
+            <div class="list-left-padding">
                 <a class="btn order-button-margin" data-toggle="collapse" href="#collapse{{ order.order_number }}" role="button" aria-expanded="false" aria-controls="collapse{{ order.order_number }}">
-                Order:<strong> {{ order.order_number }}</strong>
+                Order date:<strong> {{ order.date }}</strong>
                 </a>                
                 <div class="collapse" id="collapse{{ order.order_number }}">
                     <div class="offset-1">
-                        <p>Ordered on {{ order.date }}</p>
+                        <p>Order number: {{ order.order_number }}</p>
                         <p>Shipped to {{ order.street_address_1 }}, {{ order.street_address_2 }}, {{ order.town }}, {{ order.country }}, {{ order.postcode }}</p>
                         <p>Cost of print(s): {{ order.order_total }} SEK</p>
                         <p>Delivery cost: {{ order.delivery_cost }} SEK</p>
                         <p>Total: {{ order.grand_total }} SEK</p>
                         {% for lineitem in order.lineitems.all %}
                             <div class="image-inline">
-                                <img src="{{ lineitem.print_details.image.url }}" class="image-height">
+                                <img src="{{ lineitem.print_details.image.url }}" class="image-height" alt="{{ lineitem.print_details.title }}">
                                 <p class="small-print">{{ lineitem.print_details.title }}</p>
                                 <p class="small-print">{{ lineitem.print_details.designer.first_name }} {{ lineitem.print_details.designer.last_name }}</p>
                                 <p class="small-print">{{ lineitem.quantity }}</p>
@@ -42,7 +42,7 @@
                         {% endfor %}
                     </div>
                 </div>
-            </ul>
+            </div>
             {% endfor %}
         {% else %}
             <p>You have yet to make an order</p>

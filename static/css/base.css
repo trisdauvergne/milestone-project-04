@@ -133,6 +133,7 @@ button {
 
 .order-button-margin {
     padding-left: 0px !important;
+    font-size: 18px;
 }
 
 .bag-btn {
@@ -237,6 +238,8 @@ button {
 /* ORDER HISTORY PAGE */
 .list-left-padding {
     padding-left: 0px !important;
+    margin-bottom: 0px;
+
 }
 
 
