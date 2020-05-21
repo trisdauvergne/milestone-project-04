@@ -8,13 +8,14 @@ class TestPrintModels(TestCase):
 
     def test_print_model_fields(self):
         the_user = User.objects.create()
-        the_designer = RegisteredUserProfile.objects.create(user=the_user,
-                                                            register_as_designer=True,
-                                                            register_as_customer=False,
-                                                            first_name='test',
-                                                            last_name='test',
-                                                            bio='test',
-                                                            country='US')
+        the_designer = RegisteredUserProfile.objects.create(
+            user=the_user,
+            register_as_designer=True,
+            register_as_customer=False,
+            first_name='test',
+            last_name='test',
+            bio='test',
+            country='US')
         the_print = Print.objects.create(designer=the_designer,
                                          title='test',
                                          description='test',

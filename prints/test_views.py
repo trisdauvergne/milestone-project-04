@@ -25,13 +25,14 @@ class TestPrintsView(TestCase):
         the_user = User.objects.create()
 
         # Same for designer. The user field is a FK to an actual user
-        the_designer = RegisteredUserProfile.objects.create(user=the_user,
-                                                            register_as_designer=True,
-                                                            register_as_customer=False,
-                                                            first_name='test',
-                                                            last_name='test',
-                                                            bio='test',
-                                                            country='US')
+        the_designer = RegisteredUserProfile.objects.create(
+            user=the_user,
+            register_as_designer=True,
+            register_as_customer=False,
+            first_name='test',
+            last_name='test',
+            bio='test',
+            country='US')
         the_designer.save()
         # And the designer field here is a FK to an actual designer
         the_print = Print.objects.create(designer=the_designer,
@@ -52,13 +53,14 @@ class TestPrintsView(TestCase):
         # Create the user info
         the_user = User.objects.create()
         # Create the designer profile
-        the_designer = RegisteredUserProfile.objects.create(user=the_user,
-                                                            register_as_designer=True,
-                                                            register_as_customer=False,
-                                                            first_name='test',
-                                                            last_name='test',
-                                                            bio='test',
-                                                            country='US')
+        the_designer = RegisteredUserProfile.objects.create(
+            user=the_user,
+            register_as_designer=True,
+            register_as_customer=False,
+            first_name='test',
+            last_name='test',
+            bio='test',
+            country='US')
         # Create the print info
         the_print = Print.objects.create(designer=the_designer,
                                          price=25,

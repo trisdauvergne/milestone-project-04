@@ -15,13 +15,14 @@ class TestBagViews(TestCase):
         the_user = User.objects.create()
 
         # Same for designer. The user field is a FK to an actual user
-        the_designer = RegisteredUserProfile.objects.create(user=the_user,
-                                                            register_as_designer=True,
-                                                            register_as_customer=False,
-                                                            first_name='test',
-                                                            last_name='test',
-                                                            bio='test',
-                                                            country='US')
+        the_designer = RegisteredUserProfile.objects.create(
+            user=the_user,
+            register_as_designer=True,
+            register_as_customer=False,
+            first_name='test',
+            last_name='test',
+            bio='test',
+            country='US')
         the_print = Print.objects.create(designer=the_designer,
                                          price=25,
                                          image='test.jpg')
@@ -31,7 +32,8 @@ class TestBagViews(TestCase):
             'redirect_url': '/bag/'
         }
 
-        response = self.client.post(f'/bag/add/{the_print.id}/', post_data)
+        response = self.client.post(
+            f'/bag/add/{the_print.id}/', post_data)
 
         session = self.client.session
 
@@ -43,17 +45,18 @@ class TestBagViews(TestCase):
         self.assertEqual(session["bag"][str(the_print.id)], 3)
 
     def test_adjust_bag_quantity(self):
-         # Create a user without specifying an ID
+        # Create a user without specifying an ID
         the_user = User.objects.create()
 
         # Same for designer. The user field is a FK to an actual user
-        the_designer = RegisteredUserProfile.objects.create(user=the_user,
-                                                            register_as_designer=True,
-                                                            register_as_customer=False,
-                                                            first_name='test',
-                                                            last_name='test',
-                                                            bio='test',
-                                                            country='US')
+        the_designer = RegisteredUserProfile.objects.create(
+            user=the_user,
+            register_as_designer=True,
+            register_as_customer=False,
+            first_name='test',
+            last_name='test',
+            bio='test',
+            country='US')
         the_print = Print.objects.create(designer=the_designer,
                                          price=25,
                                          image='test.jpg')
@@ -71,7 +74,8 @@ class TestBagViews(TestCase):
             'quantity': 6,
         }
 
-        response = self.client.post(f'/bag/adjust/{the_print.id}/', post_data)
+        response = self.client.post(
+            f'/bag/adjust/{the_print.id}/', post_data)
 
         self.assertEqual(session['bag'][f'{the_print.id}'], 6)
 
@@ -80,16 +84,17 @@ class TestBagViews(TestCase):
             the_user = User.objects.create()
 
             # Same for designer. The user field is a FK to an actual user
-            the_designer = RegisteredUserProfile.objects.create(user=the_user,
-                                                                register_as_designer=True,
-                                                                register_as_customer=False,
-                                                                first_name='test',
-                                                                last_name='test',
-                                                                bio='test',
-                                                                country='US')
+            the_designer = RegisteredUserProfile.objects.create(
+                user=the_user,
+                register_as_designer=True,
+                register_as_customer=False,
+                first_name='test',
+                last_name='test',
+                bio='test',
+                country='US')
             the_print = Print.objects.create(designer=the_designer,
-                                            price=25,
-                                            image='test.jpg')
+                                             price=25,
+                                             image='test.jpg')
 
             # What is currently in post data
             post_data = {
@@ -106,7 +111,8 @@ class TestBagViews(TestCase):
                 'quantity': 0,
             }
 
-            response = self.client.post(f'/bag/adjust/{the_print.id}/', post_data)
+            response = self.client.post(
+                f'/bag/adjust/{the_print.id}/', post_data)
 
             # To assume that the bag will be empty
             self.assertNotIn(f'{the_print.id}', session['bag'])
