@@ -148,6 +148,8 @@ button {
 .order-button-margin {
     padding-left: 0px !important;
     font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid black;
 }
 
 .bag-btn {

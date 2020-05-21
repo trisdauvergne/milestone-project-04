@@ -24,7 +24,7 @@
                 Order date:<strong> {{ order.date }}</strong>
                 </a>                
                 <div class="collapse" id="collapse{{ order.order_number }}">
-                    <div class="offset-1">
+                    <div>
                         <p>Order number: {{ order.order_number }}</p>
                         <p>Shipped to {{ order.street_address_1 }}, {{ order.street_address_2 }}, {{ order.town }}, {{ order.country }}, {{ order.postcode }}</p>
                         <p>Cost of print(s): {{ order.order_total }} SEK</p>

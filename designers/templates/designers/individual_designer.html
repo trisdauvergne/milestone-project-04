@@ -23,7 +23,14 @@
         </div>
         <div class="col-sm-4 col-10 left-sm-spacing">
             {% for prints in prints %}
-                <a href="{% url 'large_print' prints.id %}"><img src="{{ prints.image.url }}" class="image-height designer-description-image" alt="{{ prints.title }}"></a>
+                <div class="image-inline">
+                    <a href="{% url 'large_print' prints.id %}"><img src="{{ prints.image.url }}" class="image-height" alt="{{ prints.title }}"></a>
+                    <p class="small-print">{{ prints.title }}<br></p>
+                    <p class="small-print"><a href="{% url 'large_print' prints.id %}"><strong>See more</strong></a></p>
+                    <br>
+                </div>
+
+                <!-- <a href="{% url 'large_print' prints.id %}"><img src="{{ prints.image.url }}" class="image-height designer-description-image" alt="{{ prints.title }}"></a> -->
             {% endfor %}
         </div>
     </div>
