@@ -1,8 +1,9 @@
 from django.test import TestCase
-from .forms import UserForm, RegisteredUserProfileForm, UserRegistrationType
-from allauth.account.forms import SignupForm
+from .forms import UserForm, RegisteredUserProfileForm
 
-from .models import RegisteredUserProfile
+# from allauth.account.forms import SignupForm
+
+# from .models import RegisteredUserProfile
 
 
 class TestProfilesForms(TestCase):
@@ -17,8 +18,8 @@ class TestProfilesForms(TestCase):
         form = RegisteredUserProfileForm({'first_name': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('first_name', form.errors.keys())
-        self.assertEqual(form.errors['first_name'][0],
-                                     'This field is required.')
+        self.assertEqual(
+             form.errors['first_name'][0], 'This field is required.')
 
     """ Test that register as designer isn't required """
     def test_register_as_designer_not_required(self):

@@ -27,8 +27,10 @@ class RegisteredUserProfileForm(forms.ModelForm):
 class UserRegistrationType(SignupForm):
     def __init__(self, *args, **kwargs):
         super(UserRegistrationType, self).__init__(*args, **kwargs)
-        self.fields['register_as_designer'] = forms.BooleanField(required=False)
-        self.fields['register_as_customer'] = forms.BooleanField(required=False)
+        self.fields['register_as_designer'] = forms.BooleanField(
+                                                    required=False)
+        self.fields['register_as_customer'] = forms.BooleanField(
+                                                    required=False)
 
     def save(self, request):
         register_as_designer = self.cleaned_data.pop('register_as_designer')
@@ -37,7 +39,8 @@ class UserRegistrationType(SignupForm):
         user = super().save(request)
 
         if user:
-            RegisteredUserProfile.objects.create(user=user,
-                                                 register_as_designer=register_as_designer,
-                                                 register_as_customer=register_as_customer)
+            RegisteredUserProfile.\
+                objects.create(user=user,
+                               register_as_designer=register_as_designer,
+                               register_as_customer=register_as_customer)
         return user

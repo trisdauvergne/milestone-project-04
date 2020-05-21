@@ -4,28 +4,35 @@
 
 # MUSIC. 
 
-View the project on Github pages [here](https://trisdauvergne.github.io/milestone-project-02/)
+View the project on Github pages [here](https://trisdauvergne.github.io/milestone-project-04/)
 
 ## An introduction to the project
 
-The 'MUSIC.' site offers users the chance to indulge their curiosity by searching for a musical artist or band and to preview 30 second clips of their most popular songs. The experience is clean and stripped back to allow the user to fulfill their goal easily.
+'Plan Chest' is a site which enables print designers to raise their profile on a new platform and to also sell their work to a new customer base. 
 
-The 'MUSIC.' site incorporates an API from the music streaming service 'Deezer' which hosts over 30 million tracks. The site is free for anyone to use as even though Deezer does offer a subscription service, the 'MUSIC.' site doesn't require the user to login to a Deezer account to perform the search or listen to the 30 second clips. 
+The site will also allows designer and customer users to discover new print designers (or check out the competition), see inspirational work and make purchases.
+
+The Plan Chest site will be open for anyone to join, as either a customer or a designer. Both customers and designers can make purchases, but only those registered as designers will be able to start uploading and selling their work. 
 
 ## UX
 
 ### Site Users - who is the site focused on?
-1. Ria, “I’m on my way to see Jax Jones tonight and want to see what his most popular songs are”.
-2. Jen, “I’m on my way to karaoke and know I want to sing Britney Spears but can’t remember which songs I know. I want to see a list of songs and hear clips of the songs to jog my memory”
-3. Harry, “I want to hear Bucks Fizz songs because I’m a big fan”
-4. Rachael, “There’s a singer called George something who sings a really catchy song that’s stuck in my mind, but I don’t know the title of the song! I might recognise the title if I saw it but would need to search for singers called George first and hear the songs to try find out the title”
+1. Peter, “I'm a print designer and currently only work directly for clients. I've got lots of work that I've done in my free time and want to register on Plan Chest and upload work to sell so I can hopefully earn some extra money.”.
+2. Anna, “I'm registered as a designer on Plan Chest and have uploaded some of my work on to the site. I want to charge more so want to update the price”
+3. Preston, “I'm a designer and need to buy some print for a new collection. I have no idea who I want to work with so want to do a bit of exploration before making a decision."
+4. Mary-Anne, “I've purchased lots of prints from Plan Chest but can't remember which one I ordered in March as I want to buy from that designer again. I need to look through my order history so I can find the details of the print.”
+5. Polly, "I work for a design company and want to buy a print, so need to create an account"
+6. Flo, "I'm a print designer and am stuck for ideas. I want to see other print design work that will hopefully give me some inspiration. I don't want to join Plan Chest as I don't have any plans of buying or selling anything"
+7. Sally, "I need to buy a design for a collection my company is designing. I'm a business so will need to print the order confirmation with all the price details on it"
 
-### The 'MUSIC.' site is the best place for users to achieve their goals because: 
+### 'Plan Chest' site is the best place for users to achieve their goals because: 
 - The site is easy to navigate with clear instructions, steps and accessibility
-- The site is easily accessible without the need for login details or a subscription
-- It provides users with an easy solution to finding a specific song by an artist or group 
-- It allows users to easily explore an artist or group's most popular songs
-- It provides users with the option to listen to a 30 second clip of all songs
+- The site is easily accessible with some functions which can be used even without having login details
+- The site has a quick and easy registration process that allows users to easily start taking advantage of the site's features
+- The site has an easy system for designers to upload their work and start selling work
+- The site allows users (both registered and non-registered) to discover new designers and browse work
+- It allows an easy system for customers to purchase print design work
+- The site stores registered customers' order histories, allowing them to easily view their previous purchases
 
 # WIREFRAMES 
 1. Opening page (before search):
@@ -51,9 +58,19 @@ The 'MUSIC.' site incorporates an API from the music streaming service 'Deezer' 
 ## FEATURES
 
 The site is based around a single page layout. 
-The design of the site is very stripped back, with a black and white colour scheme with neon green to highlight clicked elements. 
+The design of the site is very stripped back, with a black and white colour scheme and a subtle border feature running across the width of the page above the **footer** and underneath the **navigation bar**. This is to allow the prints to act as the main visual feature of the page. The navbar and footer have a subtle white gradient to soften the overflow and add another subtle detail that doesn't distract from the imagery itself. 
 
-The site opens with the **heading** 'MUSIC.' and a brief **introduction** to the site and its features. The introduction consists of two short sentences. The heading will appear in the top left hand side on desktop and tablet size screens, and top center on mobile size screens. The instruction copy will always sit below it.
+The **navigation bar** will always be visible on the page, with certain buttons visible at all times and others only showing up when a user is logged in. When a user isn't logged in, they will be able to see the buttons to go to **'Designers'** which will show all designers on Plan Chest, **'Prints'** that will show all prints available on Plan Chest and buttons to **'Register'** and **'Login'**. The navbar will always be situated at the top of the page with all buttons visible. On a screen size smaller than tablet the buttons will condense into a collapsible **'hamburger icon'**. When clicked, the icon will reveal all the navigation buttons which will appear aligned to the right hand side of the screen. 
+
+The **footer** features an **email address** for 'Plan Chest' which when clicked opens a new window. 
+
+The site opens with the a brief **introduction** to 'Plan Chest' and its features. The introduction consists of two sentences and will appear in the main section of the screen, slightly offset to the left on a desktop and in the centre of the screen on smaller screens. Beneath the introduction will sit a call-to-action for the user, to **register** as a designer. This will be a live link that will take the user straight to the registration page. In small print beneath this will also be some copy that advises visitors to the site that they must **register** as a customer in order to complete purchases. 
+
+When a user clicks on register, they are taken to a **registration page** where they can register as a user of the site by providing their email address, a username and password. At the same time, they will also **register as a designer or customer** which will effect which features they will be able to access on the page when they log in.
+
+Users will then receive a **verification email** with a link to confirm the registration. On successful **login** to the site, the user will see a **success message** which will confirm their log in and display their username. 
+
+If the user is logged in as a designer, the navbar will update with a **'Your profile'** button, **'Order history'** and **'Add work'**. If a user is logged in as a customer, they won't see the **'Add work'** button. If a user clicks on **'Designers'** in the navigation bar, it will show a list of all the **designers' names** who are currently on Plan Chest and each name will be a link. When a name is clicked, it will take the user to the **designer detail** page, which shows the designer's information including a bio, country and their contact email address. Each 
 
 The user enters the artist name into the **input box**. When the user clicks into the input box, it clears the text 'artist name here'. When the search button is clicked or the enter button pressed this box automatically clears whatever value the user has input into the box and replaces it with the original text 'artist name here'. This encourages the user to repeat the process and perform another search. If the search doesn't return any results (which could be due to incorrect spelling or the artist not being on the Deezer database), an error message will show up asking the user to try again.
 Next to the input box is the **search button**, which will search for whatever the user has entered into the input box. When the search button is clicked, this clears the text the user has typed into the input box. 
@@ -91,8 +108,9 @@ When the user **clicks on a song title**, it will make another column appear to 
 - An **error message** will appear if the user has made a spelling mistake or the API can't return any results that match exactly what the user has searched for
 
 ### Features to implement in the future
-- Feature to view music videos using data from another API
-- Feature to view song lyrics using data from another API
+- Feature for designers to view their sales history
+- Validation of designers and check work before it goes live on the site
+- Purchases from non-registered users 
 
 ## Technologies used
 - HTML and CSS programming languages
