@@ -58,9 +58,9 @@ The 'Plan Chest' site will be open for anyone to join, as either a customer or a
 
 ## FEATURES
 
-The design of the site is very stripped back, with a black and white colour scheme and a subtle border feature running across the width of the page above the **footer** and underneath the **navigation bar**. This is to allow the prints to act as the main visual feature of the page. The navbar and footer have a subtle white gradient to soften the overflow and add another subtle detail that doesn't distract from the imagery itself. 
+The design of the site is very stripped back, with a black and white colour scheme and a subtle border feature running across the width of the page above the **footer** and underneath the **navigation bar**. This is to allow the prints to act as the main visual feature of the page. The navigation bar and footer have a subtle white gradient to soften the overflow and add another subtle detail that doesn't distract from the imagery itself. 
 
-The **navigation bar** will always be visible on the page, with certain buttons visible at all times and others only showing up when a user is logged in. The 'Plan Chest' **logo** will always be present in the top left corner and will take the user back to the home page when clicked on. When When a user isn't logged in, they will be able to see the buttons to go to **'Designers'** which will show all designers on 'Plan Chest', **'Prints'** that will show all prints available on 'Plan Chest' and buttons to **'Register'** and **'Login'**. The navbar will always be situated at the top of the page with all buttons visible. On a screen size smaller than tablet the buttons will condense into a collapsible **'hamburger icon'**. When clicked, the icon will reveal all the navigation buttons which will appear aligned to the right hand side of the screen. 
+The **navigation bar** will always be visible on the page, with certain buttons visible at all times and others only showing up when a user is logged in. The 'Plan Chest' **logo** will always be present in the top left corner and will take the user back to the home page when clicked on. When When a user isn't logged in, they will be able to see the buttons to go to **'Designers'** which will show all designers on 'Plan Chest', **'Prints'** that will show all prints available on 'Plan Chest' and buttons to **'Register'** and **'Login'**. The navigation bar will always be situated at the top of the page with all buttons visible. On a screen size smaller than tablet the buttons will condense into a collapsible **'hamburger icon'**. When clicked, the icon will reveal all the navigation buttons which will appear aligned to the right hand side of the screen. 
 
 The **footer** features an **email address** for 'Plan Chest' which when clicked opens a new window. 
 
@@ -70,15 +70,15 @@ When a user clicks on register, they are taken to a **registration page** where 
 
 Users will then receive a **verification email** with a link to confirm the registration. On successful **login** to the site, the user will see a **success message** which will confirm their log in and display their username. 
 
-If the user is logged in as a designer, the navbar will update with a **'Your profile'** button, **'Order history'** and **'Add work'**. If a user is logged in as a customer, they won't see the **'Add work'** button. If a user clicks on **'Designers'** in the navigation bar, it will show a list of all the **designers' names** who are currently on 'Plan Chest' and each name will be a link. It will automatically arrange the designers in alphabetical order by last name. The names will show in an offset list on a desktop and tablet, but the list will be centred on a screen size smaller than a tablet.
+If the user is logged in as a designer, the navigation bar will update with a **'Your profile'** button, **'Order history'** and **'Add work'**. If a user is logged in as a customer, they won't see the **'Add work'** button. If a user clicks on **'Designers'** in the navigation bar, it will show a list of all the **designers' names** who are currently on 'Plan Chest' and each name will be a link. It will automatically arrange the designers in alphabetical order by last name. The names will show in an offset list on a desktop and tablet, but the list will be centred on a screen size smaller than a tablet.
 
 When a name is clicked, it will take the user to the **designer detail** page, which shows the designer's information including a bio, country and their contact **email address**. Beneath the designer's details will be a button for users to go **back to designers** giving them clear navigation around the site. All of the **designer's prints** will also be displayed on this page, and each image will also be a link to the the **print's details** page. Beneath the images will be the print's title and also a button to **see more** On a desktop and tablet, the text will show on the left and the images on the right. On a screen size smaller than a tablet, the images will increase in size and be stacked beneath beneath the text. 
 
-When an image is clicked, it will take the user to that **print's details** page where the user can see a larger image of the print, as well as **add the print to their bag** purchase. If a user is logged in as a designer and has uploaded this print themselves, they will be able to **edit the print** or **delete their print** on this page. If a user is not logged in as the designer who has uploaded that print, they will be able to **adjust the quantity** add it to their bag. Underneath the add to bag button, there will be another button to encourage the user to **see more** of that designer's prints or another button directing them **back to all prints** to ease navigation throughout the site. 
+When an image is clicked, it will take the user to that **print's details** page where the user can see a larger image of the print, as well as **add the print to their bag** purchase. If a user is logged in as a designer and has uploaded this print themselves, they will be able to **edit the print** or **delete the print** on this page. If a user is not logged in as the designer who has uploaded that print, they will be able to **adjust the quantity** add it to their bag. Underneath the add to bag button, there will be another button to encourage the user to **see more** of that designer's prints or another button directing them **back to all prints** to ease navigation throughout the site. 
 
 When a user adds a print to their bag, the **bag button** will appears in the navigation bar with the number of items in the bag. A **success message** will appear confirming that the product was successfully added. When the **bag button** is clicked, it takes the user to the **bag page** where the user can see everything that's currently in their bag. 
 
-In the navbar, if the user clicks on the **'Prints'** button, it will take them to a page that shows all prints currently on 'Plan Chest'. This page will show all prints in order of when they were uploaded, but the user can click to **arrange prints by designer** or **view prints by ascending price**. On a desktop and tablet, the prints will display in rows but on a mobile the images will be stacked.
+In the navigation bar, if the user clicks on the **'Prints'** button, it will take them to a page that shows all prints currently on 'Plan Chest'. This page will show all prints in order of when they were uploaded, but the user can click to **arrange prints by designer** or **view prints by ascending price**. Every image will be a **link to print details** to view a larger image and details. There will also be a **see more** button under the print to give the user another way to find out more about this specific design. On a desktop and tablet, the prints will display in rows but on a mobile the images will be stacked.
 
 On the **arrange prints by designer** page, the prints will be organised by the designer's last name. The designer name will appear as a link back to the **designer detail page** with the designer's images beneath their name. The images will also be a link to the **print details** page with a button to **see more** underneath the print as well to provide the user with multiple ways to find out more. On a desktop and tablet, this information will display in rows but with images also displayed in horizontal rows. On a mobile, the images will be stacked above each other. 
 
@@ -105,10 +105,13 @@ If the user is logged in, it will show them the **'Log out'** button in the navi
 - **Designers** always visible in the navigation bar / dropdown menu, even when users aren't logged in, to encourage any visitors to the site to view the list of designers on 'Plan Chest'
 - **Prints** always visible in the navigation bar / dropdown menu, even when users aren't logged in, to encourage any visitors to the site to view the variety of prints for sale on 'Plan Chest'
 - **Register** always visible in the navigation bar / dropdown menu to encourage users to register on the site
-- **Login** always visible in the navigation bar / dropdown menu to make it easy for any registered users to log in to the site and perform the actions they require
 - **Footer** and **email address** always at the bottom of the page as reasurrrance for the user that they can contact 'Plan Chest'
 - **Logo** always in the top left hand corner of the viewport as an easy way for the user to navigate back to the home page and strengthen the brand presence
 - **Hamburger icon** always visible on mobile to aid accessibility and help the user to easily navigate through the site on a small screen
+
+#### Navigation bar
+- **Login** visible in the navigation bar / dropdown menu to make it easy for any registered users to log in to the site and perform the actions they require. This will only be visible when the user is not logged in to the session
+- **Logout** will be visible in the navigation bar / dropdown menu only when the user is logged in
 
 #### Homepage
 - **Introduction** only visible on homepage to provide a brief introduction to 'Plan Chest', its purpose and a call to action for people to register
@@ -117,33 +120,51 @@ If the user is logged in, it will show them the **'Log out'** button in the navi
 - **Verification email** users will receive an email when they register for an account asking them to verify their email address
 - **Success message** when users log in to the page a success message will appear to confirm they have logged in successfully and the username they are logged in with
 
-#### Designers Pages
+#### 'Designers' Pages
 - **Designers names** a page that will load the designer's names in alphabetical order. The names are all links to the individual designer pages to find out more about them 
 - **Designer detail page** will show the designer's name, a brief bio, country and their email address. It will show a preview of all the prints that the user has uploaded to the site
 - **Designer email address** the designer's email address will be live and when clicked will open a new email window
 - **Designer's prints** the preview images on the designer's page will all be live links. When clicked, they will go to an individual image page
-- **Print details** page will be loaded when an image is clicked on. This will show a large image of the work and also give the user the ability to add the print (or another quantity of the print) to their bag
-- **Adjust quantity** will allow the user to adjust the quantity of the print they would like to add to their bag
-- **Add to bag** button where the user can add the print to their bag
+
+#### 'Prints' Pages
+- **All prints page** this page will show all prints that have been uploaded to 'Plan Chest', each image is a live link
+- **Arrange prints by designer** page will display all the designers' names with their prints beneath their names. The designers' names will be links to the **designer detail page** and each of the images will be a link to the **print details** page
+- **View prints by ascending price** page will display all prints on 'Plan Chest', starting from the lowest to highest price. Each image will be a link to the **print details** page
+- Every image will be a live **Link to print details** page when clicked
+- Underneath every image will also be a link to **see more** which will also go to the print's details page
+- **Print details** page will be loaded when an image is clicked on. This page will display a large image of the work and also give the user the ability to add the print (or another quantity of the print) to their bag
+- **Adjust quantity** will allow be visible on the print details page and will allow the user to adjust the quantity of the print they would like to add to their bag
+- **Add to bag** button will allow be visible on the print details page allowing the user can add the print to their bag
 - **See more of the designer's work** button underneath the 'add to bag' button will go back to the designer's page to see their information and all their work
-- **Edit the print** this button will only be visible to the logged in user who uploaded this print and will take them to the upload print form where they can edit the print's details or change the print
-- ** **
-- ** **
-- ** **
-- ** **
-- ** **
-- ** **
-- ** **
-- ** **
-- ** **
-- ** **
-- ** **
-- ** **
-- ** **
-- ** **
-- ** **
-- ** **
-- ** **
+- **Edit the print** button will only be visible on the print detail page and only to the logged in user who uploaded this print. When clicked it will take them to the upload print form where they can edit the print's details or change the uploaded image
+- **Delete the print** button will only be visible on the print detail page and only to the logged in user who uploaded this print. When clicked, it will delete the print
+
+#### 'Your Profile' Page
+- **Your Profile** will be linked to from the navigation bar. This button will only be visible to logged in users and will allow registered users to add / update their account information 
+- **Submit button** at the bottom of the form will submit or update the user's profile information to the database
+
+#### 'Order History' Page
+- **Order History** button will only be visible in the navigation bar to users who are logged in. The page will show a list of all orders that the user has made 
+- **Order details button** will show the order date. When clicked, the button will expand and show the order details including the order number, order summary, costs and shipping details
+
+#### 'Add Work' Page
+- **Add work** will only be visible in the navigation bar to logged in users who are registered as designers. This page will load a form for designers to upload new prints to sell
+- The **submit** button in the form will upload the designer's work to the database 
+
+#### 'Bag' Page
+- **Bag** button will show up in the navigation bar when the user has added to their bag from the **print detail** page. When clicked, the page displaying all items in the user's bag will be displayed. On this page the user can also update the quantity of items and remove items
+- **Name of designer** on the bag page will be a link to the designer of the print's page and will send the user to see more information about the designer
+- **Change the quantity** of the item in the row. The user can change the quantity using the plus and minus icons with the quantity displayed in the field
+- **Update quantity** button will submit the new quantity to the bag
+- **Remove items** button will remove the entire quantity of a specific item and bring the quantity to 0. If the bag is empty, the bag icon won't be visible
+- **Checkout securely** button at the bottom of the bag page will take the user through to the checkout page
+- **Keep shopping** button will act as a final nudge to the user to add more to their bag and when clicked will take the user back to the **all prints page**
+
+#### 'Checkout' Page
+- **Checkout page** will display a form for the user to enter details to confirm the order
+- **Payment Form** all fields are required apart from town and the form won't be submitted without the required fields. Missing fields will be highlighted when the user tries to submit the form without all required information
+- **Checkout success** page will load when the order has been submitted. This page will show a summary of the order with items, shipping and billing details, and costs
+- **Look at some more prints** button at the bottom of the page will encourage users to review more prints and will link to the **all prints** page
 
 ### Features to implement in the future
 - Feature for designers to view their sales history

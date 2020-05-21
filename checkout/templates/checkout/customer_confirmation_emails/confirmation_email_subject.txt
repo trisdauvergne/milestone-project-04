@@ -1,1 +1,1 @@
-Planchest Order Confirmation {{ order.order_number }}
+Plan Chest Order Confirmation {{ order.order_number }}

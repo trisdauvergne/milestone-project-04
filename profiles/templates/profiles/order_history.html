@@ -45,7 +45,8 @@
             </div>
             {% endfor %}
         {% else %}
-            <p>You have yet to make an order</p>
+            <p>Your haven't made any orders yet.</p>
+            <p><a href="{% url 'all_prints' %}">Take a look at the prints available to buy on Plan Chest here.</a></p>
         {% endif %}
         </div>
     </div>
