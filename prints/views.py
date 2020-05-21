@@ -51,7 +51,9 @@ def prints_by_price(request):
 
 
 def large_print(request, print_id):
-    """ A view to see individual prints and for designers to edit their uploads """
+    """
+    A view to see individual prints and for designers to edit their uploads
+    """
     # # Get the logged in user's ID
     user = request.user
     designer_id = None
