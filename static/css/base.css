@@ -222,12 +222,14 @@ button {
 /* PRINTS PAGES  */
 
 /* Images of prints */
-.image-height {
+.image-height, .order-summary-images {
     height: 25vh;
     width: 20vh;
     object-fit: cover;
     margin: 3px;
 }
+
+.order-summary-images {}
 
 /* Individual print detail */
 .big-image {
@@ -355,6 +357,14 @@ button {
         width: 200px;
         height: 25vh;
         object-fit: cover;
+    }
+}
+
+@media only screen and (max-width: 711px) {
+     /* Reducing image sizes on smaller screen */
+    .order-summary-images {
+        width: 20vw;
+        height: 20vh;
     }
 }
 

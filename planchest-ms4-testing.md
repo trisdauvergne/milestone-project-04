@@ -170,15 +170,92 @@
 
 2. **Arrange prints by designer**
 - From the all prints page, click on **'Arrange prints by designer'** underneath the heading and check this takes you to a new page which shows the designers' names with rows of prints beneath the name
-- 
+- Shrink the screen size to check that the images stack in rows of 2 on a tablet and single rows on a mobile
+- Click on a designer's name to check it takes you to the **designer detail** page with further information about that designer and all of their prints
+- On the prints by designer page, click on an image of a print and check it takes you to the **print detail** page
+- Click on **see more** underneath the print information and check it takes you to the **print detail** page
 
+3. **View prints by price**
+- On either of the prints pages, click on **View prints by ascending price** to check it 
+loads a page with all prints now arranged by price, from the lowest price to highest price
+- Check the images load in rows on a desktop
+- Shrink the screen size to check that the images stack in rows of 2 on a tablet and single rows on a mobile
+- Click on **see more** underneath the print to check that it also takes you to the **print detail** page
 
+4. **Print details**
+- Click on a print to check it loads a page focusing on that print with a large preview of the print in the center with an empty column to the left. The image should sit underneath the print's title with smaller information to the right hand side 
+- There will be a button to **see more of the designer's work** of the artist's work, click on that to check it goes back to the correct designer's page
+- Click on the **back to all prints** button to check it goes back to the all prints page
+- Click on **Add to bag** to check that the 'Bag' button appears in the navigation bar with a quantity for the number of prints added to the bag
+- Type a number over 99 into the quantity box and press add to check that a maximum of 99 can be added to the box
+- Type 0 into the box to check that a number higher than 1 has to be added
+- Press the '-' and '+' icons to **adjust the quantity** and to check that the number in the quantity box is updated 
+- Whilst logged in as a designer, upload a sample of work. Navigate to the **print detail** page for the print just uploaded and check that the **edit the print** and **delete print** buttons have appeared
+- Check that the **Add to bag** and **adjust quantity** buttons aren't visible on this page
+- Check that the items stack on a screen smaller than a tablet size
+- Click on **edit the print** to check it takes you to the upload form where you can update the information. Leave one field purposely blank to check that the form can't be submitted without all fields having an input
+- Try to input over 254 characters into the description as well as the title to check the character limit works
+- Try to insert a character into the price to check that the decimals field works
+- Try to upload a file forma
+- On the **print detail** page, click on the **delete print** button to check that it removes a print
 
-2. **Designers**
-- Click on the 
+### 'Your Profle' page
+1. **Your Profile**
+- Whilst logged in, click on 'Your profile' in the navigation bar
+- Check that the page loads with a form that is prepopulated with username and email address
+- If you have populated the additional fields already, first name, last name and a bio should also be populated
+- Change the details and press **Submit** to check that your data is updated
+- Try to select 'Country' in the country field and submit to check that a country is required
+- Try to leave any of the fields blank to check that all fields are required (other than register as designer and register as customer)
+ 
+###  'Add Work' page
+1. **Add work**
+- Whilst logged in and after having registered as a designer, check that the **'Add work'** button is visible in the navigation bar
+- Click on the **submit** button to check that a page with a form loads
+- Try to submit the form and leave fields blank to check that the form requires all fields to have a value
+- Try to upload a non-image format file in the image field to check that only image formats are allowed
+- Click **submit** and go to the **all prints** page to check that the print has been uploaded to the database
+- Click on the print to go to the print details page and check that all data has been uploaded
 
-### Appear on page after functions are executed
+### 'Bag' page
+1. **Bag** 
+- Whilst logged in, add a print to the bag to ensure that the bag is visible in the navigation bar
+- Click on the bag to load the page and check that it loads with a preview, the title of the print and a link to the designer's **designer detail** page, the price x actual quantity in the bag as well as the **update quantity** and **remove items** buttons
+- Reduce the screen size to check that the order summary remains in a row with all elements stacked beneath it on a smaller screen 
+- Press the plus icon to try get a value over 99 to check the max value is working
+- Update the quantity to 0 to check this removes the item from the bag
+- Press the remove item button to check this also removes items from the bag
+- Click on **keep shopping** to check that it takes you back to the all prints page
+- On the bag page, click on **checkout securely** to check that it takes you to the checkout page
+- Logout and add a print to the bag to check that the **checkout securely** and **keep shopping** buttons aren't visible but a message reminding users to register is visible
 
+### 'Checkout' page
+1. **Checkout**
+- Whilst logged in, check that the checkout page loads when the **checkout securely** button is pressed while in the bag page
+- Check that order summary is displayed at the top
+- Check that when images are responsive in a smaller screen and that all elements stack above the checkout form below
+- Fill out the form but leave one of the fields blank to check the form can't be submitted without all fields 
+- Enter an insufficient number of card digits in the payment input and press **complete order** to check that card details are being checked
+- Use Stripe test card details to confirm an order: Number - 4242424242424242, CVC - 424, Date - Any future date 
+- Check that a **success message** appears when the order has gone through
+- Check the details in the success message match with the data that was input into the checkout form
+- Check that a spinner appears while the payment is processing
+- Check that the **checkout success** page has loaded after the purchase has been made
+- Check that an email has been sent to the email address provided when completing the purchase
+- Check that the email features the correct name, the order number is consistent with the order number in the **checkout success** message and the order summary and shipping details are correct
+
+2. **Checkout success**
+- Check that you are redirected automatically to this page after a purchase has been completed
+- Check responsiveness and that the column to the left disappears on a small screen
+- Check that the details in the order summary match the purchase that was made
+- Check that the **success message** uses the correct email address provided in the form
+- Click on the **Look at some more prints** button to check it takes you back to the all prints page
+
+### 'Order History' page
+- After an order has been made and whilst logged in as the same user who placed the order, click on the 'Order history' button in the navigation bar
+- Check that your order has appeared on the page and that the order date and time shows up with a black underline as an **order details button**
+- Click on the button to check that this expands with a brief order summary
+- Click on the button again to check that this collapses and only displays the order date again
 
 ## Further testing:
 
@@ -190,4 +267,4 @@
 
 ## Bugs and problems
 
-1. A cookie warning is received when the site is run, however CI tutors confirmed this can't be fixed
+1. Users can currently register as designer and customer.

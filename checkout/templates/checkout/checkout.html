@@ -30,7 +30,7 @@
         {% for item in bag_items %}
             <div class="image-inline">
             <a href="{% url 'large_print' item.print.id %}">
-            <img class="image-height" src="{{ item.print.image.url }}" alt="{{ item.print.title }}">
+            <img class="order-summary-images" src="{{ item.print.image.url }}" alt="{{ item.print.title }}">
             </a>
             <p class="small-print"><strong>{{ item.print.title }}</strong></p>
             <p class="small-print">Size: {{ item.print.size }}</p>
