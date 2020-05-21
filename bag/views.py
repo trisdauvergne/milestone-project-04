@@ -1,8 +1,6 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
-from prints.models import Print
-
-# Create your views here.
+# from prints.models import Print
 
 
 def bag_contents(request):
@@ -14,7 +12,7 @@ def bag_contents(request):
 def add_print_to_bag(request, print_id):
     """ Add a print to the bag with a specified quantity """
 
-    the_print = Print.objects.get(id=print_id)
+    # the_print = Print.objects.get(id=print_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
