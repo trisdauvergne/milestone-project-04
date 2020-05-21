@@ -58,7 +58,6 @@ The 'Plan Chest' site will be open for anyone to join, as either a customer or a
 
 ## FEATURES
 
-The site is based around a single page layout. 
 The design of the site is very stripped back, with a black and white colour scheme and a subtle border feature running across the width of the page above the **footer** and underneath the **navigation bar**. This is to allow the prints to act as the main visual feature of the page. The navbar and footer have a subtle white gradient to soften the overflow and add another subtle detail that doesn't distract from the imagery itself. 
 
 The **navigation bar** will always be visible on the page, with certain buttons visible at all times and others only showing up when a user is logged in. The 'Plan Chest' **logo** will always be present in the top left corner and will take the user back to the home page when clicked on. When When a user isn't logged in, they will be able to see the buttons to go to **'Designers'** which will show all designers on 'Plan Chest', **'Prints'** that will show all prints available on 'Plan Chest' and buttons to **'Register'** and **'Login'**. The navbar will always be situated at the top of the page with all buttons visible. On a screen size smaller than tablet the buttons will condense into a collapsible **'hamburger icon'**. When clicked, the icon will reveal all the navigation buttons which will appear aligned to the right hand side of the screen. 
@@ -71,9 +70,7 @@ When a user clicks on register, they are taken to a **registration page** where 
 
 Users will then receive a **verification email** with a link to confirm the registration. On successful **login** to the site, the user will see a **success message** which will confirm their log in and display their username. 
 
-If the user is logged in as a designer, the navbar will update with a **'Your profile'** button, **'Order history'** and **'Add work'**. If a user is logged in as a customer, they won't see the **'Add work'** button. If a user clicks on **'Designers'** in the navigation bar, it will show a list of all the **designers' names** who are currently on 'Plan Chest' and each name will be a link. The names will show in an offset list on a desktop and tablet, but the list will be centred on a screen size smaller than a tablet.
-
-On the **designer's names** page, the user can click a button to **arrange the list of names alphabetically** (by the designer's last names). The layout and responsiveness will be exactly the same as the regular designer names page. Underneath the heading will be a button to aid navigation and offer the user to **go back to the previous view**. 
+If the user is logged in as a designer, the navbar will update with a **'Your profile'** button, **'Order history'** and **'Add work'**. If a user is logged in as a customer, they won't see the **'Add work'** button. If a user clicks on **'Designers'** in the navigation bar, it will show a list of all the **designers' names** who are currently on 'Plan Chest' and each name will be a link. It will automatically arrange the designers in alphabetical order by last name. The names will show in an offset list on a desktop and tablet, but the list will be centred on a screen size smaller than a tablet.
 
 When a name is clicked, it will take the user to the **designer detail** page, which shows the designer's information including a bio, country and their contact **email address**. Beneath the designer's details will be a button for users to go **back to designers** giving them clear navigation around the site. All of the **designer's prints** will also be displayed on this page, and each image will also be a link to the the **print's details** page. Beneath the images will be the print's title and also a button to **see more** On a desktop and tablet, the text will show on the left and the images on the right. On a screen size smaller than a tablet, the images will increase in size and be stacked beneath beneath the text. 
 
@@ -116,36 +113,43 @@ If the user is logged in, it will show them the **'Log out'** button in the navi
 #### Homepage
 - **Introduction** only visible on homepage to provide a brief introduction to 'Plan Chest', its purpose and a call to action for people to register
 - **Register link** a link on the homepage to provide users with another way to register in addition to the 'Register' button in the navigation bar
-- **Register as designer or customer** a checkbox in the user registration form that will determine which levels of access the 
-- ** **
-- ** **
-- ** **
+- **Register as designer or customer** a checkbox in the user registration form that will determine which functions the user will be able to access
+- **Verification email** users will receive an email when they register for an account asking them to verify their email address
+- **Success message** when users log in to the page a success message will appear to confirm they have logged in successfully and the username they are logged in with
 
-is always on the page as a reminder of the name of the site and what features the site offers. On a desktop these are on the left hand side, but on a tablet and smaller screen sizes these are at the top of the page above everything else.
-- **Input box** is always on the page to offer the user somewhere to input an artist name and encourage searching. This always sits below the heading and introduction. Upon loading the page, the input box will have the text 'artist name here' in it to guide the user through the process. When the user clicks inside the box, this will automatically clear. When the user presses the search button, this will also clear whatever value has been input into the box.
-- **Search button** is always on the page to enable the user to perform a search easily. This sits beside the input box on a desktop but beneath it on a tablet and smaller size screens. When clicked, the search button flashes with a pop of neon green to show the user that the site has registered their action.  
-
-#### Appear on page after functions are executed
-- The **artist column** appears when the user has searched for an artist name. The artist column will consist of a header, short instruction and space for artists' names. On a desktop, the column is styled to appear with a subtle left border to define a separate space from the permanent elements. The border helps the user read down the list, thus aiding accessibility. On a tablet size screen, this will sit in a row with the other columns beneath the permanent elements. On a mobile screen this will sit beneath the search button with the 'song' column beneath it. 
-- The 'artist' **header** and **short instruction** will appear at the top of the artist column. The instruction will continue to guide the user through their experience on the site, prompting them to click on an artist. The instruction is styled with a subtle green bottom border to define a separate space. The instruction on a mobile size screen will differ to larger screens, instructing users that when an artist is clicked on, their songs will appear below.
-- Each name returned from the user's artist search will appear within the artist column as a list of **clickable buttons**. When the user hovers over any name, it will turn neon green and the text increases in size and weight to aid accessibility and clearly show the user where they are. When the user clicks on a name it will perform a new search to return that artist's most popular songs. The artist names will always sit beneath the artist column's short instruction.
-- When the user **clicks on the name** of an artist (or group), this will perform a search for that will return that artist's most popular songs in a new column on the right hand side.
-- The **songs column** will appear when the user clicks on an artist name and will consist of a header, short instruction and space for that artist's most popular songs. On a desktop, the column will be styled to appear with a subtle left border across the height of the page to define a separate space and aid readability. On a tablet size screen, this will sit in a row next to the artist names column. On a mobile screen this will sit beneath the artists' names. 
-- The 'songs' **header** and **short instruction** will sit at the top of this column. The short instruction will encourage the user to click on a song. For consistency, the instruction is styled with a subtle green bottom border to define a separate space. The short instruction will differ on a mobile size-screen in response to where the audio-player in the preview column will be positioned on different screen sizes. 
-- Each song in the column will be a **clickable button**. When the user hovers over any song title, it will turn neon green and the text will increase in size and weight to aid accessibility.
-- When the user **clicks on a song title**, it will create a new column on the right hand side of the 'songs' column
-- The **preview column** will appear when a song title is clicked on and will contain an audio player and album artwork. The preview column will not appear on a mobile size screen.
-- The 'preview **header** will be positioned at the top of the column. Beneath the header will be a **short instruction** to guide the user through their experience on the site. To maintain consistency, this will be styled as per the 'artist' and 'songs' column with a subtle neon green bottom border. 
-- An **audio player** will appear when a song title is clicked and give users a way to listen to a clip of the selected song. The clip will not play automatically and the user will be required to press play to listen to a song. When a different song title is clicked, the audio will stop and the user will be required to press play to listen to the new song that is loaded. The audio player will appear beneath the header on a desktop and tablet, on a mobile size screen the audio player will appear at the top of the screen in the neon green bar. 
-- **Album artwork** will also appear beneath the audio player when a song title is clicked. Album artwork will only be visible on a desktop and tablet size screen but not on a mobile.
-- The audio player will always be **sticky** so when the user scrolls down the page it will always remain visible. 
-- At any stage after a search has been performed, the user can type a new name into the input box, press the search button and this will **reset** any previous search results. The column headers will remain. 
-- An **error message** will appear if the user has made a spelling mistake or the API can't return any results that match exactly what the user has searched for
+#### Designers Pages
+- **Designers names** a page that will load the designer's names in alphabetical order. The names are all links to the individual designer pages to find out more about them 
+- **Designer detail page** will show the designer's name, a brief bio, country and their email address. It will show a preview of all the prints that the user has uploaded to the site
+- **Designer email address** the designer's email address will be live and when clicked will open a new email window
+- **Designer's prints** the preview images on the designer's page will all be live links. When clicked, they will go to an individual image page
+- **Print details** page will be loaded when an image is clicked on. This will show a large image of the work and also give the user the ability to add the print (or another quantity of the print) to their bag
+- **Adjust quantity** will allow the user to adjust the quantity of the print they would like to add to their bag
+- **Add to bag** button where the user can add the print to their bag
+- **See more of the designer's work** button underneath the 'add to bag' button will go back to the designer's page to see their information and all their work
+- **Edit the print** this button will only be visible to the logged in user who uploaded this print and will take them to the upload print form where they can edit the print's details or change the print
+- ** **
+- ** **
+- ** **
+- ** **
+- ** **
+- ** **
+- ** **
+- ** **
+- ** **
+- ** **
+- ** **
+- ** **
+- ** **
+- ** **
+- ** **
+- ** **
+- ** **
 
 ### Features to implement in the future
 - Feature for designers to view their sales history
 - Validation of designers and check work before it goes live on the site
 - Purchases from non-registered users 
+- Confirm delete before action
 
 ## Technologies used
 - HTML and CSS programming languages
