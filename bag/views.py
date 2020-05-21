@@ -20,7 +20,7 @@ def add_print_to_bag(request, print_id):
     if print_id in list(bag.keys()):
         bag[print_id] += quantity
         print('test print')
-        messages.success(request, f'Product was Updated!')
+        messages.success(request, f'The print was added to your bag!')
     else:
         bag[print_id] = quantity
 
@@ -49,6 +49,7 @@ def remove_print(request, print_id):
 
     # Action, to remove the item
     del bag[print_id]
+    messages.success(request, f'Your print was removed from Plan Chest')
 
     # The bag being updated
     request.session['bag'] = bag

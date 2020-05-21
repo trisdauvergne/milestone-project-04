@@ -60,7 +60,6 @@ def large_print(request, print_id):
     if user.is_authenticated:
         designer = get_object_or_404(RegisteredUserProfile, user=user)
         designer_id = designer.id
-    # print(designer_id)
 
     # Calling the print from the database
     the_print = Print.objects.get(id=print_id)
