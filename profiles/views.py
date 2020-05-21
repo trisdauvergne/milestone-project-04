@@ -60,4 +60,3 @@ def order_history(request):
     return render(request,
                   'profiles/order_history.html',
                   context)
-
