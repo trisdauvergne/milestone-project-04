@@ -61,7 +61,7 @@ The 'Plan Chest' site will be open for anyone to join, as either a customer or a
 The site is based around a single page layout. 
 The design of the site is very stripped back, with a black and white colour scheme and a subtle border feature running across the width of the page above the **footer** and underneath the **navigation bar**. This is to allow the prints to act as the main visual feature of the page. The navbar and footer have a subtle white gradient to soften the overflow and add another subtle detail that doesn't distract from the imagery itself. 
 
-The **navigation bar** will always be visible on the page, with certain buttons visible at all times and others only showing up when a user is logged in. When a user isn't logged in, they will be able to see the buttons to go to **'Designers'** which will show all designers on 'Plan Chest', **'Prints'** that will show all prints available on 'Plan Chest' and buttons to **'Register'** and **'Login'**. The navbar will always be situated at the top of the page with all buttons visible. On a screen size smaller than tablet the buttons will condense into a collapsible **'hamburger icon'**. When clicked, the icon will reveal all the navigation buttons which will appear aligned to the right hand side of the screen. 
+The **navigation bar** will always be visible on the page, with certain buttons visible at all times and others only showing up when a user is logged in. The 'Plan Chest' **logo** will always be present in the top left corner and will take the user back to the home page when clicked on. When When a user isn't logged in, they will be able to see the buttons to go to **'Designers'** which will show all designers on 'Plan Chest', **'Prints'** that will show all prints available on 'Plan Chest' and buttons to **'Register'** and **'Login'**. The navbar will always be situated at the top of the page with all buttons visible. On a screen size smaller than tablet the buttons will condense into a collapsible **'hamburger icon'**. When clicked, the icon will reveal all the navigation buttons which will appear aligned to the right hand side of the screen. 
 
 The **footer** features an **email address** for 'Plan Chest' which when clicked opens a new window. 
 
@@ -91,12 +91,37 @@ In the navigation bar, if a user clicks on **'Your profile'** it will take them 
 
 If the user clicks on **'Order History'** in the navigation bar it will take them to a page where they can view all their previous orders. The orders will be displayed as a list with the earliest order first. Each of the orders is a button, which when clicked will reveal the **order details** including the order number, delivery address and costs. It will also show a preview of the prints in the order. When the button is clicked it will collapse the order. On a desktop and tablet, the content will be slightly offset, but on a mobile the content will be centred. 
 
-If the user is logged in as a designer, they will see the **'Add Work'** button. If they click on this button it will take them to a page where they can upload their prints. The page will load a form that asks for the print title, a few words about the work, its size, price and an image. All fields are required. At the bottom of the page is a **submit button**. On a desktop and tablet the form is slightly offset, but on a mobile it will be centred. When a print is uploaded, it will redirect the user to the all prints page and show a success message that the print was uploaded. 
+If the user is logged in as a designer, they will see the **'Add Work'** button. If they click on this button it will take them to a page where they can upload their prints. The page will load a form that asks for the print title, a few words about the work, its size, price and an image. All fields are required. At the bottom of the page is a **submit button**. When a print is uploaded, it will redirect the user to the all prints page and show a success message that the print was uploaded. On a desktop and tablet the form is slightly offset, but on a mobile it will be centred. 
+
+If the user clicks on the **bag** icon in the navigation bar, it will take them to their bag page where they can see all items added to their bag. On this page, it will show a preview of the print, the title, the **name of the designer** (which will be a link back to the designer detail page), the price of the print and quantity, as well as the option **change the quantity** with a plus or minus icon, to **update quantity** or **remove items**. The total amount including delivery is displayed on the page with an option to **checkout securely** or to **keep shopping**. If the user clicks on keep shopping, it will take them back to the 'Prints' page with all the prints on 'Plan Chest'. If the user clicks on checkout securely, it will take them to the **checkout page** where they can complete their order. 
+
+On the checkout page, the user is greeted with an order summary, showing a preview of the item, a small description, the order total, delivery and grand total. Beneath the summary is the **payment form**. Each of the fields is required apart from town and the form won't submit without all required fields being completed. At the bottom is also a button to **Adjust Bag** which will take the user back to their bag where they can adjust or remove items. 
+
+When the user clicks on **Place your order** a spinner will load reassuring the user that their order is processing. If there is an error with a form field or the card details, messages will show up by the field with an error. On a desktop and tablet, the form will be slightly offset but centred on a mobile sized screen. When the order has been processed successfully, it will take the user through to the **checkout success** page, which will show a summary of the order. A **success message** will also appear in the corner, showing the order number and confirming that an email will be sent to the user's email address. At the bottom of the summary is a **button** to encourage the user to keep looking at prints. 
+
+If the user is logged in, it will show them the **'Log out'** button in the navigation bar. When clicked, it will take the user to the logout page where they can sign out from the site. When the user signs out, a **success message** will appear confirming the user has been signed out and return the user to the home page. 
 
 ### Existing features
 
-#### Permanently on page
-- **Heading** and **introduction** is always on the page as a reminder of the name of the site and what features the site offers. On a desktop these are on the left hand side, but on a tablet and smaller screen sizes these are at the top of the page above everything else.
+#### Permanently visible on page
+- **Navigation bar** always on page for easy navigation. Navigation bar is sticky and remains at the top of the viewport at all times for accessibility
+- **Designers** always visible in the navigation bar / dropdown menu, even when users aren't logged in, to encourage any visitors to the site to view the list of designers on 'Plan Chest'
+- **Prints** always visible in the navigation bar / dropdown menu, even when users aren't logged in, to encourage any visitors to the site to view the variety of prints for sale on 'Plan Chest'
+- **Register** always visible in the navigation bar / dropdown menu to encourage users to register on the site
+- **Login** always visible in the navigation bar / dropdown menu to make it easy for any registered users to log in to the site and perform the actions they require
+- **Footer** and **email address** always at the bottom of the page as reasurrrance for the user that they can contact 'Plan Chest'
+- **Logo** always in the top left hand corner of the viewport as an easy way for the user to navigate back to the home page and strengthen the brand presence
+- **Hamburger icon** always visible on mobile to aid accessibility and help the user to easily navigate through the site on a small screen
+
+#### Homepage
+- **Introduction** only visible on homepage to provide a brief introduction to 'Plan Chest', its purpose and a call to action for people to register
+- **Register link** a link on the homepage to provide users with another way to register in addition to the 'Register' button in the navigation bar
+- **Register as designer or customer** a checkbox in the user registration form that will determine which levels of access the 
+- ** **
+- ** **
+- ** **
+
+is always on the page as a reminder of the name of the site and what features the site offers. On a desktop these are on the left hand side, but on a tablet and smaller screen sizes these are at the top of the page above everything else.
 - **Input box** is always on the page to offer the user somewhere to input an artist name and encourage searching. This always sits below the heading and introduction. Upon loading the page, the input box will have the text 'artist name here' in it to guide the user through the process. When the user clicks inside the box, this will automatically clear. When the user presses the search button, this will also clear whatever value has been input into the box.
 - **Search button** is always on the page to enable the user to perform a search easily. This sits beside the input box on a desktop but beneath it on a tablet and smaller size screens. When clicked, the search button flashes with a pop of neon green to show the user that the site has registered their action.  
 

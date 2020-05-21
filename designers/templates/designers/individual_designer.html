@@ -19,7 +19,7 @@
             <p class="designer-description">{{ the_designer.bio }}</p>
             <p class="designer-description">Country: {{ the_designer.country }}</p>
             <p class="designer-description image-inline">Contact:</p><a href="mailto:{{ the_designer.user.email }}" target="_blank"> {{ the_designer.user.email }}</a>
-            <p class="designer-description"><a href="{% url 'all_designers' %}"><i class="fas fa-arrow-left"></i> Back to designers</a></p>
+            <p class="designer-description"><a href="{% url 'all_designers_alphabetical' %}"><i class="fas fa-arrow-left"></i> Back to designers</a></p>
         </div>
         <div class="col-sm-4 col-10 left-sm-spacing">
             {% for prints in prints %}
@@ -29,8 +29,6 @@
                     <p class="small-print"><a href="{% url 'large_print' prints.id %}"><strong>See more</strong></a></p>
                     <br>
                 </div>
-
-                <!-- <a href="{% url 'large_print' prints.id %}"><img src="{{ prints.image.url }}" class="image-height designer-description-image" alt="{{ prints.title }}"></a> -->
             {% endfor %}
         </div>
     </div>
