@@ -32,7 +32,6 @@
                         <div class="col">
 
                             <!-- Form to increase / decrease quantity in shopping bag -->
-
                             <form class="form update-form" action="{% url 'adjust_bag_quantity' item.print.id %}" method="POST">
                             {% csrf_token %}
                                 <div class="form-group">
