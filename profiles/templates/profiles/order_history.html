@@ -16,41 +16,40 @@
             <span></span>
         </div>
         <div class="col-sm-6 col-9 standard-left-border">
-        {% if orders %}
-            <p class="small-print">(Click on the order number to view and hide your order information)</p>
-            {% for order in orders %}
-            <div class="list-left-padding">
-                <a class="btn order-button-margin" data-toggle="collapse" href="#collapse{{ order.order_number }}" role="button" aria-expanded="false" aria-controls="collapse{{ order.order_number }}">
-                Order date:<strong> {{ order.date }}</strong>
-                </a>                
-                <div class="collapse" id="collapse{{ order.order_number }}">
-                    <div>
-                        <p>Order number: {{ order.order_number }}</p>
-                        <p>Shipped to {{ order.street_address_1 }}, {{ order.street_address_2 }}, {{ order.town }}, {{ order.country }}, {{ order.postcode }}</p>
-                        <p>Cost of print(s): {{ order.order_total }} SEK</p>
-                        <p>Delivery cost: {{ order.delivery_cost }} SEK</p>
-                        <p>Total: {{ order.grand_total }} SEK</p>
-                        {% for lineitem in order.lineitems.all %}
-                            <div class="image-inline">
-                                <img src="{{ lineitem.print_details.image.url }}" class="image-height" alt="{{ lineitem.print_details.title }}">
-                                <p class="small-print">{{ lineitem.print_details.title }}</p>
-                                <p class="small-print">{{ lineitem.print_details.designer.first_name }} {{ lineitem.print_details.designer.last_name }}</p>
-                                <p class="small-print">{{ lineitem.quantity }}</p>
-                                <p class="small-print">{{ lineitem.lineitem_total }}</p>
+            {% if orders %}
+                <p class="small-print">(Click on the order number to view and hide your order information)</p>
+                {% for order in orders %}
+                    <div class="list-left-padding">
+                        <a class="btn order-button-margin" data-toggle="collapse" href="#collapse{{ order.order_number }}" role="button" aria-expanded="false" aria-controls="collapse{{ order.order_number }}">
+                        Order date:<strong> {{ order.date }}</strong>
+                        </a>                
+                        <div class="collapse" id="collapse{{ order.order_number }}">
+                            <div>
+                                <p>Order number: {{ order.order_number }}</p>
+                                <p>Shipped to {{ order.street_address_1 }}, {{ order.street_address_2 }}, {{ order.town }}, {{ order.country }}, {{ order.postcode }}</p>
+                                <p>Cost of print(s): {{ order.order_total }} SEK</p>
+                                <p>Delivery cost: {{ order.delivery_cost }} SEK</p>
+                                <p>Total: {{ order.grand_total }} SEK</p>
+                                {% for lineitem in order.lineitems.all %}
+                                    <div class="image-inline">
+                                        <img src="{{ lineitem.print_details.image.url }}" class="image-height" alt="{{ lineitem.print_details.title }}">
+                                        <p class="small-print">{{ lineitem.print_details.title }}</p>
+                                        <p class="small-print">{{ lineitem.print_details.designer.first_name }} {{ lineitem.print_details.designer.last_name }}</p>
+                                        <p class="small-print">{{ lineitem.quantity }}</p>
+                                        <p class="small-print">{{ lineitem.lineitem_total }}</p>
+                                    </div>
+                                    <br>
+                                {% endfor %}
                             </div>
-                            <br>
-                        {% endfor %}
+                        </div>
                     </div>
-                </div>
-            </div>
-            {% endfor %}
-        {% else %}
-            <p>Your haven't made any orders yet.</p>
-            <p><a href="{% url 'all_prints' %}">Take a look at the prints available to buy on Plan Chest here.</a></p>
-        {% endif %}
+                {% endfor %}
+            {% else %}
+                <p>Your haven't made any orders yet.</p>
+                <p><a href="{% url 'all_prints' %}">Take a look at the prints available to buy on Plan Chest here.</a></p>
+            {% endif %}
         </div>
     </div>
 </div>
 
-    
 {% endblock %}

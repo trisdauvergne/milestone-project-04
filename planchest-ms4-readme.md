@@ -90,7 +90,7 @@ If the user clicks on **'Order History'** in the navigation bar it will take the
 
 If the user is logged in as a designer, they will see the **'Add Work'** button. If they click on this button it will take them to a page where they can upload their prints. The page will load a form that asks for the print title, a few words about the work, its size, price and an image. All fields are required. At the bottom of the page is a **submit button**. When a print is uploaded, it will redirect the user to the all prints page and show a success message that the print was uploaded. On a desktop and tablet the form is slightly offset, but on a mobile it will be centred. 
 
-If the user clicks on the **bag** icon in the navigation bar, it will take them to their bag page where they can see all items added to their bag. On this page, it will show a preview of the print, the title, the **name of the designer** (which will be a link back to the designer detail page), the price of the print and quantity, as well as the option **change the quantity** with a plus or minus icon, to **update quantity** or **remove items**. The total amount including delivery is displayed on the page with an option to **checkout securely** or to **keep shopping**. If the user clicks on keep shopping, it will take them back to the 'Prints' page with all the prints on 'Plan Chest'. If the user clicks on checkout securely, it will take them to the **checkout page** where they can complete their order. 
+If the user clicks on the **bag** icon in the navigation bar, it will take them to their bag page where they can see all items added to their bag. On this page, it will show a preview of the print, the title, the **name of the designer** (which will be a link back to the designer detail page), the price of the print and quantity, as well as the option **change the quantity** with a plus or minus icon, to **update quantity** or **remove items**. The total amount including delivery is displayed on the page with an option to **checkout securely** or to **keep shopping**. If the user clicks on keep shopping, it will take them back to the 'Prints' page with all the prints on 'Plan Chest'. If the user clicks on checkout securely, it will take them to the **checkout page** where they can complete their order. The **checkout securely** and **keep shopping** buttons will only be visible to logged in users. If a user isn't logged in, a message encouraging them to sign in to complete the purchase will be shown.
 
 On the checkout page, the user is greeted with an order summary, showing a preview of the item, a small description, the order total, delivery and grand total. Beneath the summary is the **payment form**. Each of the fields is required apart from town and the form won't submit without all required fields being completed. At the bottom is also a button to **Adjust Bag** which will take the user back to their bag where they can adjust or remove items. 
 
@@ -167,20 +167,18 @@ If the user is logged in, it will show them the **'Log out'** button in the navi
 - **Look at some more prints** button at the bottom of the page will encourage users to review more prints and will link to the **all prints** page
 
 ### Features to implement in the future
-- Feature for designers to view their sales history
-- Validation of designers and check work before it goes live on the site
-- Purchases from non-registered users 
-- Confirm delete before action
+- A feature for designers to view their sales history
+- A way to check work before it goes live on the site
+- Ability for non-registered users to make purchases
+- Confirmation before actions like delete / remove items
 
 ## Technologies used
 - HTML and CSS programming languages
-<!-- - [BootstrapCDN](https://www.bootstrapcdn.com/): [BootStrap4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) to assist with the structuring and responsiveness of the site
-- [RapidAPI](https://rapidapi.com/) for providing the Deezer SDK and access to the Deezer API
-- [Deezer](https://rapidapi.com/deezerdevs/api/deezer-1) for the API and access to the song network
+- [BootstrapCDN](https://www.bootstrapcdn.com/): [BootStrap4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) to assist with the structuring and responsiveness of the site
 - [Google Fonts](https://fonts.google.com/) for the fonts used throughout the page
 - [Github](https://github.com/) to store repositories of the project
 - [Gitpod](https://www.gitpod.io/) for providing the workspace where the code was written
-- [ICO Converter](https://www.icoconverter.com/) to create the tab icon -->
+- [ICO Converter](https://www.icoconverter.com/) to create the tab icon
 
 ## Testing
 

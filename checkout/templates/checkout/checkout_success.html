@@ -43,22 +43,22 @@
                     </div>
                 </div>
                 {% for item in order.lineitems.all %}
-                <div class="row">
-                    <div class="col-12 col-md-4">
-                        <p>Print:</p>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p>Print:</p>
+                        </div>
+                        <div class="col-12 col-md-4 text-md-right">
+                            <p>{{ item.print_details.title }} x {{ item.quantity }}</p>
+                        </div>
                     </div>
-                    <div class="col-12 col-md-4 text-md-right">
-                        <p>{{ item.print_details.title }} x {{ item.quantity }}</p>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p>Designer:</p>
+                        </div>
+                        <div class="col-12 col-md-4 text-md-right">
+                            <p>{{ item.print_details.designer.first_name }} {{ item.print_details.designer.last_name }} </p>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-4">
-                        <p>Designer:</p>
-                    </div>
-                    <div class="col-12 col-md-4 text-md-right">
-                        <p>{{ item.print_details.designer.first_name }} {{ item.print_details.designer.last_name }} </p>
-                    </div>
-                </div>
                 {% endfor %}
 
                 <div class="row">
@@ -84,14 +84,14 @@
                     </div>
                 </div>
                 {% if order.town %}
-                <div class="row">
-                    <div class="col-12 col-md-4">
-                        <p>Town:</p>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p>Town:</p>
+                        </div>
+                        <div class="col-12 col-md-4 text-md-right">
+                            <p>{{ order.town }}</p>
+                        </div>
                     </div>
-                    <div class="col-12 col-md-4 text-md-right">
-                        <p>{{ order.town }}</p>
-                    </div>
-                </div>
                 {% endif %}
                 <div class="row">
                     <div class="col-12 col-md-4">
@@ -141,7 +141,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <h3><a href="{% url 'all_prints' %}"><i class="fas fa-arrow-left"></i> Look at some more prints</a><h3>
+                        <h3><a href="{% url 'all_prints' %}"><i class="fas fa-arrow-left"></i> Look at some more prints</a></h3>
                     </div>
                 </div>
             </div>

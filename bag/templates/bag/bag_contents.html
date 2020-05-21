@@ -16,60 +16,65 @@
             <span></span>
         </div>
         <div class="col-sm-6 col-9 standard-left-border">
+            <br>
             {% if bag_items %}
                 {% for item in bag_items %}
-                <div class="row bag-item-border">
-                    <div class="col">
-                        <img src="{{ item.print.image.url }}" class="image-width" alt="{{ image.print.title }}">
-                    </div>
-                    <div class="col">
-                        <p>{{ item.print.title }} by <br><a href="{% url 'individual_designer' item.print.designer.id %}">{{ item.print.designer.first_name }} {{ item.print.designer.last_name }}</a></p>
-                    </div>
-                    <div class="col">
-                        <p>{{ item.print.price }} SEK x {{ item.quantity }}</p>
-                    </div>
-                    <div class="col">
+                    <div class="row bag-item-border">
+                        <div class="col">
+                            <img src="{{ item.print.image.url }}" class="image-width" alt="{{ image.print.title }}">
+                        </div>
+                        <div class="col">
+                            <p>{{ item.print.title }} by <br><a href="{% url 'individual_designer' item.print.designer.id %}">{{ item.print.designer.first_name }} {{ item.print.designer.last_name }}</a></p>
+                        </div>
+                        <div class="col">
+                            <p>{{ item.print.price }} SEK x {{ item.quantity }}</p>
+                        </div>
+                        <div class="col">
 
-                        <!-- Form to increase / decrease quantity in shopping bag -->
+                            <!-- Form to increase / decrease quantity in shopping bag -->
 
-                        <form id="test" class="form update-form" action="{% url 'adjust_bag_quantity' item.print.id %}" method="POST">
-                        {% csrf_token %}
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <button class="decrement-qty btn btn-sm btn-black rounded-0" data-item_id="{{ item.print.id }}" id="decrement-qty_{{ item.print.id }}">
-                                            <span>
-                                                <i class="fas fa-minus fa-sm"></i>
-                                            </span>
-                                        </button>
+                            <form class="form update-form" action="{% url 'adjust_bag_quantity' item.print.id %}" method="POST">
+                            {% csrf_token %}
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button class="decrement-qty btn btn-sm btn-black rounded-0" data-item_id="{{ item.print.id }}" id="decrement-qty_{{ item.print.id }}">
+                                                <span>
+                                                    <i class="fas fa-minus fa-sm"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <input class="form-control form-control-sm qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.print.id }}" id="id_qty_{{ item.print.id }}">
+                                        <div class="input-group-append">
+                                            <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                                data-item_id="{{ item.print.id }}" id="increment-qty_{{ item.print.id }}">
+                                                <span>
+                                                    <i class="fas fa-plus fa-sm"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <a class="update-link"><small>Update quantity / </small></a>
+                                        <br class="small-br-none">
+                                        <a class="remove-item" id="remove_{{ item.print.id }}" ><small>Remove items</small></a>
                                     </div>
-                                    <input class="form-control form-control-sm qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.print.id }}" id="id_qty_{{ item.print.id }}">
-                                    <div class="input-group-append">
-                                        <button class="increment-qty btn btn-sm btn-black rounded-0"
-                                            data-item_id="{{ item.print.id }}" id="increment-qty_{{ item.print.id }}">
-                                            <span>
-                                                <i class="fas fa-plus fa-sm"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-                                    <a class="update-link"><small>Update quantity / </small></a>
-                                    <br class="small-br-none">
-                                    <a class="remove-item" id="remove_{{ item.print.id }}" ><small>Remove items</small></a>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
-                </div>
                 {% endfor %}
-                <div class="row">
-                    <div class="col align-right">
-                        <p>Total = {{ total|floatformat:2 }}</p>
-                        <p>Delivery = {{ delivery|floatformat:2 }}</p>
-                        <p>Grand total = {{ grand_total|floatformat:2 }}</p>
-                        <p><a href="{% url 'all_prints' %}"><strong><i class="fas fa-arrow-left"></i> Keep shopping</strong></a> or 
-                        <a href="{% url 'checkout' %}"><strong>Checkout securely</strong></a></p>
+                {% if user.is_authenticated %}
+                    <div class="row">
+                        <div class="col align-right">
+                            <p>Total = {{ total|floatformat:2 }}</p>
+                            <p>Delivery = {{ delivery|floatformat:2 }}</p>
+                            <p>Grand total = {{ grand_total|floatformat:2 }}</p>
+                            <p><a href="{% url 'all_prints' %}"><strong><i class="fas fa-arrow-left"></i> Keep shopping</strong></a> or 
+                            <a href="{% url 'checkout' %}"><strong>Checkout securely</strong></a></p>
+                        </div>
                     </div>
-                </div>
+                {% else %}
+                    <h3>Purchases on Plan Chest can only be made by registered account holders. <a href="{% url 'account_signup' %}">Register as a customer</a> before making a purchase.</h3>
+                {% endif %}
                 <br>
             {% else %}
                 <p class="lead mb-5">Your bag is empty.</p>

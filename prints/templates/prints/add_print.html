@@ -17,14 +17,11 @@
         </div>
         <div class="col-sm-7 col-9 standard-left-border">
             <form method="POST" action="{% url 'add_print' %}" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form|crispy }} 
+                {% csrf_token %}
+                {{ form|crispy }} 
                 <button type="submit">Submit</button>
             </form>
         </div>
     </div>
 </div>
-
-
-
 {% endblock %}
