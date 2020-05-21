@@ -4,6 +4,18 @@
 
 /* GENERAL */
 
+.stretch-row {
+    min-height: calc(100vh - 191px);
+}
+
+.stretch-row-middle {
+    min-height: calc(100vh - 255px);
+}
+
+.stretch-row-beneath {
+    min-height: calc(100vh - 296px);
+}
+
 /* Navbar */
 .header-logo {
     font-family: 'IM Fell Double Pica', serif;
@@ -22,7 +34,9 @@
     border-bottom: solid 1px black;
 }
 
-
+.image-background {
+    background-color: red;
+}
 /* To make the navbar stick to the top of the screen */
 .fixed-top {
     z-index: 4;
@@ -148,15 +162,17 @@ button {
 
 .fixed-background {
     position: fixed;
+    top: 132px;
     z-index: -999;
 }
 
 .background-image {
-    width: 120vw;
-    height: 225px;
+    height: calc(100vh - 191px);
+    width: 100%;
     opacity: 50%;
     object-fit: cover;
     overflow: hidden;
+    background: linear-gradient(to bottom, transparent, 50%, white)
 }
 
 .intro-copy, .intro-body {
@@ -274,6 +290,10 @@ button {
 
     .container-top-padding {
         padding-top: 93px;
+    }
+
+    .fixed-background {
+        top: 106px;
     }
 }
 

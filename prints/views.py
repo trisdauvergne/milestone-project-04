@@ -81,20 +81,14 @@ def add_print(request):
     designer = get_object_or_404(RegisteredUserProfile,
                                  user=user)
 
-    upload_form = UploadPrintForm()  # some random comment
+    upload_form = UploadPrintForm()
 
     if request.method == 'POST':
         upload_form = UploadPrintForm(request.POST,
                                       request.FILES)
 
-    # Remove print statements
-
         if upload_form.is_valid():
-            print("*********")
-            print(type(upload_form))
             upload_form = upload_form.save(commit=False)
-            print("*********")
-            print(type(upload_form))
             upload_form.designer = designer
             upload_form.save()
             messages.success(request, f'Your print was uploaded!')
