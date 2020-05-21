@@ -11,7 +11,10 @@ from profiles.models import RegisteredUserProfile
 
 
 class Order(models.Model):
-    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
+    stripe_pid = models.CharField(max_length=254,
+                                  null=False,
+                                  blank=False,
+                                  default='')
     customer = models.ForeignKey(RegisteredUserProfile,
                                  null=True,
                                  on_delete=models.CASCADE)
@@ -110,4 +113,3 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return str(self.lineitem_total)
-

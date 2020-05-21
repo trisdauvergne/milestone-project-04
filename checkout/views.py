@@ -124,21 +124,7 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """ Handle successful checkouts """
-    # save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-
-    # if request.user.is_authenticated:
-    #     customer_profile = RegisteredUserProfile.objects.get(user=request.user)
-    #     # Attach the user's profile to the order
-    #     order.customer = customer_profile
-    #     order.save()
-
-    #     if save_info:
-    #         profile_data = {
-    #             'default_first_name': first_name,
-    #             'default_last_name': last_name,
-    #             'default_country': default_country,
-    #         }
 
     messages.success(request, f'Order successfully processed! \
     Your order number is {order_number}. A confirmation email \

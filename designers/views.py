@@ -1,11 +1,8 @@
 from django.shortcuts import render
 from profiles.models import RegisteredUserProfile
-# from django.contrib.auth.models import User
 
 from prints.models import Print
 
-
-# Create your views here.
 
 def all_designers(request):
     """ A view to return the all designers page """

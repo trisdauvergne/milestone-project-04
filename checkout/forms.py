@@ -15,7 +15,7 @@ class OrderForm(forms.ModelForm):
                   'postcode')
 
     def __init__(self, *args, **kwargs):
-        """ 
+        """
         Adding placeholders and classes, removing auto-generated
         labels and setting autofocus on first field
         """
