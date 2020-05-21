@@ -9,8 +9,6 @@ import random
 def index(request):
     """ A view to return the landing 'index' page """
 
-    # user = request.user
-
     background_prints = Print.objects.all()
     random_print = random.choice(background_prints)
 
@@ -18,8 +16,6 @@ def index(request):
         'print': random_print,
     }
 
-    # 1. Check if all information.
-    # 2. If not, redirect to profile page.
     return render(request,
                   'home/index.html',
                   context)
