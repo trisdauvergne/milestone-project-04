@@ -216,6 +216,8 @@ If the user is logged in, it will show them the **'Log out'** button in the navi
 - During development I used the standard **sqlite3** database installed with Django
 - On deployment, the SQL database provided by Heroku is a **PostgreSQL** database
 
+## Relational Schema
+- The relational schema can be previewed [here](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/plan_chest_schema.jpeg)
 #### The User Model
 - The user model is the standard Allauth user model 
 

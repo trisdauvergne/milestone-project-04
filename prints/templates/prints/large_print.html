@@ -9,7 +9,6 @@
         </div>
         <div class="col-6 standard-left-border margin-top">
             <h1 class="fixed-header image-inline">{{ print.title }}</h1>
-            <!-- <p class="display-small image-inline"><a href="{% url 'all_prints' %}"><strong><i class="fas fa-arrow-left"></i> Back to all prints</strong></a></p> -->
             <p class="display-small image-inline"><a href="{% url 'individual_designer' print.designer.id %}"><strong>See more of {{ print.designer.first_name }} {{ print.designer.last_name }}'s work</strong></a></p>
         </div>
     </div>
@@ -32,7 +31,6 @@
                 {% csrf_token %}
                     <div class="form-row">
                         <div class="col-9">
-                            <!-- <p>Quantity:</p> -->
                             <br>
                             <div class="input-group">
                                 <div class="input-group-prepend">
