@@ -303,11 +303,10 @@ loads a page with all prints now arranged by price, from the lowest price to hig
 
 ## Further testing:
 
-1. Asked fellow students to look at the site and report any issues they encountered. Issues spotted include:
-- No error message when unknown bands were searched for (NOTE:_This feature was added after this feedback was received_)
-- Found issue when trying to play songs which have an apostrophe in the title (_NOTE: Realised that any apostrophes in song titles in the template literal onclick function caused the string to prematurely end, so had to replace apostrophes with '&apos' instead_)
+1. Asked fellow students to look at the site and report any issues they encountered. Issues include:
+
 2. Asked friends and family to test the site for ease of use
-3. The website has been viewed on different browsers, no issues were found 
+3. The website has been viewed in different browsers, no issues were found 
 
 ## Bugs and problems
 
