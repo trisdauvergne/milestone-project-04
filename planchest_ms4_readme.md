@@ -2,7 +2,7 @@
 
 # "A platform to raise the profile of print designers and connect them with new customers"
 
-# MUSIC. 
+# Plan Chest 
 
 View the project on Github pages [here](https://trisdauvergne.github.io/milestone-project-04/)
 
@@ -36,25 +36,32 @@ The 'Plan Chest' site will be open for anyone to join, as either a customer or a
 - The site stores registered customers' order histories, allowing them to easily view their previous purchases
 
 # WIREFRAMES 
-1. Opening page (before search):
- <!-- - [Desktop](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/wireframes/desktop-wireframe-1.jpg)
- - [Tablet](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/wireframes/tablet-wireframe-1.jpg)
- - [Mobile](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/wireframes/mobile-wireframe-1.jpg) -->
+1. Home page:
+ - [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/homepage_desktop.jpg)
+ - [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/homepage_tablet.jpg)
+ - [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/homepage_mobile.jpg)
+ - [Mobile with dropdown](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/homepage_mobile_dropdown.jpg)
 
-2. Artist information (after search):
- <!-- - [Desktop](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/wireframes/desktop-wireframe-2.jpg)
- - [Tablet](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/wireframes/tablet-wireframe-2.jpg)
- - [Mobile](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/wireframes/mobile-wireframe-2.jpg) -->
+2. All designers page:
+ - [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designers_desktop.jpg)
+ - [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designers_tablet.jpg)
+ - [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designers_mobile.jpg)
 
-3. Song information (after an artist name is clicked):
- <!-- - [Desktop](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/wireframes/desktop-wireframe-3.jpg)
- - [Tablet](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/wireframes/tablet-wireframe-3.jpg)
- - [Mobile](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/wireframes/mobile-wireframe-3.jpg) -->
+3. Designers detail page:
+ - [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designer_detail_desktop.jpg)
+ - [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designer_detail_tablet.jpg)
+ - [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designer_detail_mobile.jpg)
 
- 4. Preview songs (after a song title is clicked):
- <!-- - [Desktop](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/wireframes/desktop-wireframe-4.jpg)
- - [Tablet](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/wireframes/tablet-wireframe-4.jpg)
- - [Mobile](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/wireframes/mobile-wireframe-4.jpg) -->
+ 4. All prints page:
+ - [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/prints_desktop.jpg)
+ - [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/prints_tablet.jpg)
+ - [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/prints_mobile.jpg)
+
+5. Print detail page:
+ - [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/print_detail_desktop.jpg)
+ - [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/print_detail_tablet.jpg)
+ - [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/print_detail_mobile.jpg)
+
 
 ## FEATURES
 
