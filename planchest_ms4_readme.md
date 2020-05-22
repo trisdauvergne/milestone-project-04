@@ -37,31 +37,60 @@ The 'Plan Chest' site will be open for anyone to join, as either a customer or a
 
 # WIREFRAMES 
 1. Home page:
- - [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/homepage_desktop.jpg)
- - [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/homepage_tablet.jpg)
- - [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/homepage_mobile.jpg)
- - [Mobile with dropdown](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/homepage_mobile_dropdown.jpg)
+- [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/homepage_desktop.jpg)
+- [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/homepage_tablet.jpg)
+- [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/homepage_mobile.jpg)
+- [Mobile with dropdown](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/homepage_mobile_dropdown.jpg)
 
 2. All designers page:
- - [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designers_desktop.jpg)
- - [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designers_tablet.jpg)
- - [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designers_mobile.jpg)
+- [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designers_desktop.jpg)
+- [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designers_tablet.jpg)
+- [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designers_mobile.jpg)
 
 3. Designers detail page:
- - [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designer_detail_desktop.jpg)
- - [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designer_detail_tablet.jpg)
- - [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designer_detail_mobile.jpg)
+- [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designer_detail_desktop.jpg)
+- [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designer_detail_tablet.jpg)
+- [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/designer_detail_mobile.jpg)
 
  4. All prints page:
- - [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/prints_desktop.jpg)
- - [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/prints_tablet.jpg)
- - [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/prints_mobile.jpg)
+- [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/prints_desktop.jpg)
+- [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/prints_tablet.jpg)
+- [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/prints_mobile.jpg)
 
 5. Print detail page:
- - [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/print_detail_desktop.jpg)
- - [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/print_detail_tablet.jpg)
- - [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/print_detail_mobile.jpg)
+- [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/print_detail_desktop.jpg)
+- [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/print_detail_tablet.jpg)
+- [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/print_detail_mobile.jpg)
 
+6. Your profile page:
+- [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/profile_desktop.jpg)
+- [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/profile_tablet.jpg)
+- [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/profile_mobile.jpg)
+
+7. Order history page:
+- [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/order_history_desktop.jpg)
+- [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/order_history_tablet.jpg)
+- [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/order_history_mobile.jpg)
+
+8. Add work page:
+- [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/add_work_desktop.jpg)
+- [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/add_work_tablet.jpg)
+- [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/add_work_mobile.jpg)
+ 
+9. Login page:
+- [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/login_desktop.jpg)
+- [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/login_tablet.jpg)
+- [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/login_mobile.jpg)
+
+10. Bag page:
+- [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/bag_desktop.jpg)
+- [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/bag_tablet.jpg)
+- [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/bag_mobile.jpg)
+
+11. Registration page:
+- [Desktop](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/signup_form_desktop.jpg)
+- [Tablet](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/signup_form_tablet.jpg)
+- [Mobile](https://github.com/trisdauvergne/milestone-project-04/blob/master/readme_assets/signup_form_mobile.jpg)
 
 ## FEATURES
 
