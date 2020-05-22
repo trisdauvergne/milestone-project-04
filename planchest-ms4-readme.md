@@ -24,7 +24,7 @@ The 'Plan Chest' site will be open for anyone to join, as either a customer or a
 5. Polly, "I work for a design company and want to buy a print, but want to create an account first."
 6. Flo, "I'm a print designer and am stuck for ideas. I want to see other print design work that will hopefully give me some inspiration. I don't want to join 'Plan Chest' as I don't have any plans of buying or selling anything."
 7. Sally, "I'm registered on Plan Chest as a customer and need to buy a design for a collection my company is designing. I'm a business so will need to print the order confirmation with all the price details on it."
-8. Mandy, "Someone has bought a print from me and wants to use it exclusively. I need to stop selling that print on 'Plan Chest' so need to delete it."
+8. Mandy, "I'm a print designer and sell on Plan Chest. Someone has bought a print from me and wants to use it exclusively so I need to stop selling that print on 'Plan Chest' and need to delete it."
 
 ### 'Plan Chest' site is the best place for users to achieve their goals because: 
 - The site is easy to navigate with clear instructions, steps and accessibility

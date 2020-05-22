@@ -106,8 +106,12 @@ To fulfill their mission of edit the price of their work, the user must follow 6
 
 8. _“I'm a print designer and sell on Plan Chest. Someone has bought a print from me and wants to use it exclusively so **I need to stop selling that print on 'Plan Chest' and need to delete it**.”_
 
-- The user can easily fulfill their mission in 5 steps : _Search for artist name, click on artist name, view song results_ (the user could now potentially see the song title in this list)
-- The user may need to take 2 additional steps to listen to the songs to jog their memory (these steps may need to be repeated for different artists): _Click on song title, click play in audio source_
+- The user can easily fulfill their mission of deleting a print in 4 steps : 
+1. _Click on the 'Login' button in the navigation bar and enter their details_
+2. _When logged in, click on 'Prints' in the navigation bar_ 
+3. _Click on the print they would like to delete_
+4. _Click on the 'delete it' button_ 
+
 - [User journey screenshots here](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/user-stories/user-story-4.jpeg)
 
 
