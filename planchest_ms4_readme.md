@@ -171,6 +171,7 @@ If the user is logged in, it will show them the **'Log out'** button in the navi
 - A way to check work before it goes live on the site
 - Ability for non-registered users to make purchases
 - Confirmation before actions like delete / remove items
+- Image size limit for images that are uploaded
 
 ## Technologies used
 - HTML and CSS programming languages
