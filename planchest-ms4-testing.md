@@ -11,62 +11,102 @@
 ## Testing client stories from the UX section of [Milestone Project 2 Readme](milestone-project-2-readme.md)
 
 1. _"I'm a print designer and currently only work directly for clients. I've got lots of work that I've done in my free time and **I want to register on 'Plan Chest' and upload work to sell** so I can hopefully earn some extra money.”_
+- To fulfill their mission of registering on the site and uploading work, the user must follow 7 steps: 
+1. _Click on 'Register' in the navigation bar or the text 'register as a designer' in the body copy to go to the registration page_
+2. _Fill in their details on the registration page (clicking register as designer to be able to upload their work)_ 
+3. _Going to their email and clicking on the verification link to verify their email address_
+4. _Following the verification link to confirm their email address on the site_ 
+5. _Sign in to the site with their newly confirmed details_ 
+6. _When logged in, click on 'Add work' in the navigation bar_
+7. _Fill out the form to upload a print to the database_
 
-- The user can fulfill their mission in 3 steps to show Jax Jones's most popular songs: _Search for artist name, click on artist name, view song results_
+
+
 - [User journey screenshots here](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/user-stories/user-story-1.jpeg)
 
 
 
 2. _“I'm registered as a designer on 'Plan Chest' and have uploaded some of my work on to the site. **I want to charge more so want to edit the price**”_
+To fulfill their mission of edit the price of their work, the user must follow 6 steps: 
+1. _Click on the 'Login' button in the navigation bar and enter their details_
+2. _When logged in, click on 'Prints' in the navigation bar_ 
+3. _Click on the print they would like to edit_
+4. _Click on the 'edit your print' button_ 
+5. _Click on the 'update item' button_ 
 
-- The user can easily fulfill the first part of their mission in 3 steps: _Search for artist name, click on artist name, view song results_
-- To fulfill the second part of their mission, they need to add 2 more steps: _Click on song title, click play in audio source_
+
+
 - [User journey screenshots here](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/user-stories/user-story-2.jpeg)
 
 
 
-3. _“I'm a designer and need to buy some print for a new collection. I have no idea who I want to work with so **I want to do a bit of exploration before making a decision**.”_
+3. _“I'm a product designer and need to buy some print for a new collection. I have no idea who I want to work with so **I want to do a bit of exploration before making a decision**.”_
+- The user can fulfill their mission of browsing designers in 3 steps:
+1. _Visit the 'Plan Chest' website and click on 'Designers' in the navigation bar_
+2. _Review the list of designers_
+3. _Click on a designer's name to see their work_
+4. _The process can then be repeated_
 
-- The user can easily fulfill their mission in 5 steps: _Search for artist name, click on artist name, view song results, click on song title, click play in audio source_
+
 - [User journey screenshots here](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/user-stories/user-story-3.jpeg)
 
 
 
 4. _“I've purchased lots of prints from 'Plan Chest' but can't remember which one I ordered in March as I want to buy from that designer again. **I need to look through my order history so I can find the details of the print**.”_
 
-- The user can easily fulfill their mission in 3 steps (which would need to be repeated for different artists): _Search for artist name, click on artist name, view song results_ (the user could now potentially see the song title in this list)
-- The user may need to take 2 additional steps to listen to the songs to jog their memory (these steps may need to be repeated for different artists): _Click on song title, click play in audio source_
+- In order for the user to fulfill their mission and view their previous orders, they can follow the following 4 steps:
+1. _Click on the 'Login' button in the navigation bar and enter their details_
+2. _When logged in, click on 'Order history' in the navigation bar_ 
+3. _Browse through their order history_
+4. _Click on the correct order to view details of the order_
+
+
 - [User journey screenshots here](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/user-stories/user-story-4.jpeg)
 
 
 
 5. _“**I work for a design company and want to buy a print, but want to create an account first**.”_
 
-- The user can easily fulfill their mission in 3 steps (which would need to be repeated for different artists): _Search for artist name, click on artist name, view song results_ (the user could now potentially see the song title in this list)
-- The user may need to take 2 additional steps to listen to the songs to jog their memory (these steps may need to be repeated for different artists): _Click on song title, click play in audio source_
+- The user can fulfill their mission of creating an account in 4 steps: 
+1. _Click on 'Register' in the navigation bar or the text 'register as a customer' in the body copy to go to the registration page_
+2. _Fill in their details on the registration page (clicking register as designer to be able to upload their work)_ 
+3. _Going to their email and clicking on the verification link to verify their email address_
+4. _Following the verification link to confirm their email address on the site_ 
+
 - [User journey screenshots here](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/user-stories/user-story-4.jpeg)
 
 
 
 6. _“I'm a print designer and am stuck for ideas. **I want to see other print design work that will hopefully give me some inspiration**. I don't want to join 'Plan Chest' as I don't have any plans of buying or selling anything.”_
 
-- The user can easily fulfill their mission in 3 steps (which would need to be repeated for different artists): _Search for artist name, click on artist name, view song results_ (the user could now potentially see the song title in this list)
-- The user may need to take 2 additional steps to listen to the songs to jog their memory (these steps may need to be repeated for different artists): _Click on song title, click play in audio source_
+- This user can fulfill their mission of browsing print designs in 2 steps:
+1. _Visit the 'Plan Chest' website and click on 'Prints' in the navigation bar_
+2. _Review the prints on the website_
+
 - [User journey screenshots here](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/user-stories/user-story-4.jpeg)
 
 
 
-7. _“**I need to buy a design for a collection my company is designing. I'm a business so will need to print the order confirmation with all the price details on it**.”_
+7. _“**I'm registered on Plan Chest as a customer and need to buy a design for a collection my company is designing. I'm a business so will need the order confirmation with all the price details on it**.”_
 
-- The user can easily fulfill their mission in 3 steps (which would need to be repeated for different artists): _Search for artist name, click on artist name, view song results_ (the user could now potentially see the song title in this list)
-- The user may need to take 2 additional steps to listen to the songs to jog their memory (these steps may need to be repeated for different artists): _Click on song title, click play in audio source_
+- The user can fulfill their mission in 9 steps:
+1. _Visit the 'Plan Chest' website and login to their account in order to make a purchase_
+2. _When logged in, click on 'Prints' in the navigation bar_
+3. _Click on the print they would like to purchase_
+4. _In the print detail page, click on 'Add to bag'_
+5. _Click on the 'Bag' button which appears in the navigation bar_
+6. _In the bag page, click on 'Checkout securely'_
+7. _Fill in the required details on the form including a valid card number_
+8. _The user will be redirected to a confirmation of their order_
+9. _The user can also go the email address they provided in the order form where they will have been sent a copy of the order as well_
+ 
 - [User journey screenshots here](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/user-stories/user-story-4.jpeg)
 
 
 
-8. _“Someone has bought a print from me and wants to use it exclusively. **I need to stop selling that print on 'Plan Chest' so need to delete it**.”_
+8. _“I'm a print designer and sell on Plan Chest. Someone has bought a print from me and wants to use it exclusively so **I need to stop selling that print on 'Plan Chest' and need to delete it**.”_
 
-- The user can easily fulfill their mission in 3 steps (which would need to be repeated for different artists): _Search for artist name, click on artist name, view song results_ (the user could now potentially see the song title in this list)
+- The user can easily fulfill their mission in 5 steps : _Search for artist name, click on artist name, view song results_ (the user could now potentially see the song title in this list)
 - The user may need to take 2 additional steps to listen to the songs to jog their memory (these steps may need to be repeated for different artists): _Click on song title, click play in audio source_
 - [User journey screenshots here](https://github.com/trisdauvergne/milestone-project-02/blob/master/assets/readme-assets/user-stories/user-story-4.jpeg)
 
