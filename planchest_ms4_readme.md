@@ -209,6 +209,71 @@ If the user is logged in, it will show them the **'Log out'** button in the navi
 - Confirmation before actions like delete / remove items
 - Image size limit for images that are uploaded
 
+## Information Architecture
+### Database Choice
+
+- During development I used the standard **sqlite3** database installed with Django
+- On deployment, the SQL database provided by Heroku is a **PostgreSQL** database
+
+#### The User Model
+- The user model is the standard Allauth user model 
+
+#### The Registered User Model
+- Holds the information for registered users, specifically for designers so their bio and contact details can be displayed for all users on the site
+
+**RegisteredUserProfile Model**
+
+| Name | Key in db | Validation | Field Type |
+--- | --- | --- | ---
+user | User | on_delete=models.CASCADE | OneToOne to User
+Register as designer | register_as_designer | blank=True | BooleanField
+Register as customer | register_as_customer | blank=True | BooleanField
+First name | first_name | max_length=30, null=False, blank=False | CharField
+Last name | last_name | max_length=30, null=False, blank=False | CharField
+Country | country | blank_label = 'Country', null=False, blank=False | CountryField
+
+#### Print Model
+- Holds the information about prints uploaded to the database by registered users
+
+**Print Model**
+| Name | Key in db | Validation | Field Type |
+--- | --- | --- | ---
+designer (not shown on page) | designer | null=False, blank=False, related_name="designer_key, on_delete=models.CASCADE | ForeignKey to RegisteredUserProfile 
+Title | title | max_length=254, null=False, blank=False | CharField
+Description | description | 'A few words about this work', max_length=254, null=False, blank=False | CharField
+Size | size | max_length=30, null=False, blank=False | CharField
+Price | price | max_digits=30, decimal_places=2, null=False, blank=False | DecimalField
+Image | image | upload_to='previews/' | ImageField
+
+#### 0rder Model
+- Holds the topline information about orders made through the site
+
+**Order Model**
+| Name | Key in db | Validation | Field Type |
+--- | --- | --- | ---
+stripe_pid | stripe_pid | max_length=254, null=False, blank=False, default='' |  
+customer | customer | null=True, on_delete=models.CASCADE | ForeignKey to RegisteredUserProfile
+Date | date | auto_now_add=True | DateTimeField
+Email | email | max_length=254, null=False, blank=False | EmailField
+Phone number | phone_number | max_length=20, null=False, blank=False | CharField
+Street address 1 | street_address_1 | max_length=80, null=False, blank=False | CharField
+Street address 2 | street_address_2 | max_length=80, null=False, blank=False | CharField
+Town | town | max_length=50, null=True, blank=True | CharField
+Country | country | blank_label='Country, null=False, blank=False | CountryField
+Postcode | postcode | max_length=10, null=False, blank=False | CharField
+Delivery Cost | delivery_cost | max_length=8, decimal_places=2, null=False, default=0 | DecimalField
+Order Total | order_total | max_length=8, decimal_places=2, null=False, default=0 | DecimalField
+Grand Total | grand_total | max_length=8, decimal_places=2, null=False, default=0| DecimalField
+
+#### Order Line Items
+- Holds the details of the order itself, including the item information with multiple keys 
+
+**OrderLineItem Model**
+Order | customer | null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems' | ForeignKey to Order
+The print | print_details | null=False, blank-=False, on_delete=models.CASCADE | ForeignKey to Print
+Quantity | quantity | null=False, blank=False, default=0 | IntegerField
+Line Item | lineitem_total | max_length=10, decimal_places=2, null=False, blank=False, editable=False | DecimalField
+
 ## Technologies used
 - HTML and CSS programming languages
 - [BootstrapCDN](https://www.bootstrapcdn.com/): [BootStrap4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) to assist with the structuring and responsiveness of the site
