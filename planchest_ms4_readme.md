@@ -4,7 +4,7 @@
 
 # Plan Chest 
 
-View the project on Github pages [here](https://trisdauvergne.github.io/milestone-project-04/)
+View the live project on Heroku [here](https://planchest-ms4.herokuapp.com/)
 
 ## An introduction to the project
 
@@ -269,6 +269,8 @@ Grand Total | grand_total | max_length=8, decimal_places=2, null=False, default=
 - Holds the details of the order itself, including the item information with multiple keys 
 
 **OrderLineItem Model**
+| Name | Key in db | Validation | Field Type |
+--- | --- | --- | ---
 Order | customer | null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems' | ForeignKey to Order
 The print | print_details | null=False, blank-=False, on_delete=models.CASCADE | ForeignKey to Print
 Quantity | quantity | null=False, blank=False, default=0 | IntegerField
@@ -280,56 +282,62 @@ Line Item | lineitem_total | max_length=10, decimal_places=2, null=False, blank=
 - [Google Fonts](https://fonts.google.com/) for the fonts used throughout the page
 - [Github](https://github.com/) to store repositories of the project
 - [Gitpod](https://www.gitpod.io/) for providing the workspace where the code was written
-- [ICO Converter](https://www.icoconverter.com/) to create the tab icon
+- [Stripe](https://stripe.com) for the payment system used to validate and accept card payments in the project  
+- [AWS S3 Bucket](https://aws.amazon.com/) to store images that users have uploaded into the database
+- [Coverage](https://coverage.readthedocs.io/en/v4.5.x/) to perform coverage reports
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) to style forms used within Django
+- [Django Heroku](https://pypi.org/project/django-heroku/) used to deploy Django projects to Heroku
+- [Gunicorn](https://pypi.org/project/gunicorn/) WSGI HTTP Server for UNIX to help in deploying the project
+- [Pillow](https://pillow.readthedocs.io/en/stable/) has been used to aid in the process of storing images to the database
+- [Psycopg2](https://pypi.org/project/psycopg2/) as an adaptor to PostgreSQL
+- [Whitenoise](http://whitenoise.evans.io/en/stable/) which allows the web app to serve its own static files
+- [Django Storages](https://django-storages.readthedocs.io/en/latest/) has been used for storage backends
+- [AdobeXD](https://www.adobe.com/products/xd.html) has been used to create the wireframes for this project
 
 ## Testing
 
-<!-- Testing information can be found in the separate testing file which can be accessed [here](milestone-project-2-testing.md). -->
+Testing information can be found in the separate testing file which can be accessed [here](https://github.com/trisdauvergne/milestone-project-04/blob/master/planchest_ms4_testing.md).
 
 ## Deployment
 
-This project was developed using the [Gitpod](https://www.gitpod.io/) IDE, commited to Git and pushed to Github using its built in function. 
+This project was developed using the [Gitpod](https://www.gitpod.io/) IDE, commited to Git and pushed to Github using its built in function. The project has been deployed to Heroku and can be viewed live [here](https://planchest-ms4.herokuapp.com/)
 
-The following steps were taken to deploy this page from its [Github](https://github.com/trisdauvergne/milestone-project-04) repository to Github pages:
+**PLEASE NOTE**: No staticfiles have been pushed to GitHub but were added to a [.gitignore](https://github.com/trisdauvergne/milestone-project-04/blob/master/.gitignore) file, as Heroku cannot host these files.  
 
-1. Log into [GitHub](https://github.com/)
-2. Select trisdauvergne/milestone-project-02 from the list of repositories
-3. Select 'Settings' from the row of menu items on screen
-4. Scroll down to the 'Github Pages' section
-5. Under 'Source', click the drop down menu and select 'Master Branch'
-6. The page is automatically refreshed and the website is now deployed
-7. The link can now be found in the same 'Github Pages' section after 'Your page is now published at...'
+###  Deploying to Heroku
+In order to deploy 'Plan Chest' to Heroku, take the following steps:
+1. Create a requirements.txt file using the command pip3 freeze > requirements.txt file so Heroku knows which dependencies it needs to run the app
+2. Create a Profile to tell Heroku what type of application is being deployed utilising Gunicorn (inserting the following into the file web: gunicorn django_todo.wsgi:**insert your own here application name**)
+3. Git add, commit and push the new requirements.txt and Procfile
+4. Log in to Heroku from the CLI by typing **heroku login** 
+4. Create a new app on the Heroku website by typing the following into the command line: **heroku create **your app's name here** --region eu** (you can change this depending on which region you are in)
+5. In your newly created app on Heroku, go to resources and the add-ons section where you can search for Postgres and select Hobby Dev-free and click on provisions
+6. Go to the app's settings to reveal the config vars to paste in all of your .env key value pairs. **Don't include the development=1 variable** as this is only for local deployment
+7. Still in Heroku, click on 'Deploy' and select the deployment method of GitHub, then link your Github repository to your Heroku app
+8. From the command line of your local IDE, enter the Heroku postres shell, migrate your database models and create a new superuser account in your new database (instructions for doing this can be found in the [Heroku documentation](https://devcenter.heroku.com/articles/heroku-postgresql))
+9. Your app should now be deployed to Heroku at this point and you can open the app from its dashboard
+10. From the link to your app, type /admin at the end of the URL to be able to log in with your newly created superuser account and create a new instance of a Registered User and Print 
+
+You will then need to create a free account for each of the following services:
+- Stripe
+- AWS (then set up an S3 bucket)
 
 At the moment of submitting this Milestone project the Development Branch and Master Branch are identical.
-
-## To run this project locally
-
-Follow the below steps to clone this project from Github:
-
-1. Go to the project repository [here](https://github.com/trisdauvergne/milestone-project-04)
-2. Look for the green button on the right hand side of the page that says 'Clone or Download' (you may need to scroll down slightly to see it)
-3. Copy and paste the link in the box
-4. Open Terminal
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type git clone, and then paste the URL you copied in Step 2.
-> git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-7. Press Enter. Your local clone will be created.
 
 ## Credits
 
 ### Content
-- Copy for the site has been written by Tristan Dauvergne
-- All artist and song data has called from the [Deezer API](https://rapidapi.com/deezerdevs/api/deezer-1) 
+- All copy for the site has been written by Tristan Dauvergne
 
 ### Media
-- Headphone icon in tab sourced from [Icons 8](https://icons8.com)
-- [Emojipedia](https://emojipedia.org/people/) for the frowning face emoji in the error message
+- All imagery has been uploaded with permission from the designers - Peter Dunn, Mandy Sade, Stephanie Clarke and Lea Poinsignon
+
+### Code
+- The code in the bag app and checkout has been written closely following the demonstrations in the Boutique Ado project. It was advised by Code Institute that this would be acceptable, due to the complexity of the functions and to meet the requirements of the project
 
 ### Acknowledgments
-This site has been built as my Milestone 2 Project to demonstrate incorporating JavaScript and an API into a site. I selected a music API for a few reasons:
-1. I love music and I often think of artists who I haven't listened to for a while then want to listen to their songs
-2. I know there is a lot of data connected to music but I have often found that a lot of it is not relevant to my mission 
+This site has been built as my final full stack project with Code Institute, aimed to showcase and utilise everything that has been learnt during teh course. 
 
-The design inspiration from this site comes from many places including typographic posters and book layouts.
+I decided to create a print design site as my partner and many of our friends are in this industry. It a specialist area, but is very broad at the same time and I wanted to find a way to showcase the breadth of styles, techniques and ideas encompassed in print design.
 
 I have been guided through this project by my mentor Brian Macharia who has given me professional guidance to improve the UX of this site.

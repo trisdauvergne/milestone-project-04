@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'django_countries',
     'bag',
     'checkout',
-    # 'dj-database-url',
 
     # Other
     'crispy_forms',
