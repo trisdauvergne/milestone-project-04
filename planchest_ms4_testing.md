@@ -1,4 +1,4 @@
-![MUSIC site logo]()
+![Plan Chest logo](readme_assets/planchestlogo.jpg "Plan Chest logo")
 
 # Manual testing of 'Plan Chest' website
 

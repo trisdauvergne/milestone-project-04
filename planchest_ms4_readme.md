@@ -1,16 +1,17 @@
-<!-- ![MUSIC site logo](assets/readme-assets/readme-images/logo.jpg "MUSIC site logo") -->
+![Plan Chest logo](readme_assets/planchestlogo.jpg "Plan Chest logo")
 
-# "A platform to raise the profile of print designers and connect them with new customers"
+
+## "A platform to raise the profile of print design and connect print designers to new customers"
 
 # Plan Chest 
 
-View the live project on Heroku [here](https://planchest-ms4.herokuapp.com/)
+View the live project on Heroku [here](https://planchest-ms4.herokuapp.com/).
 
 ## An introduction to the project
 
-'Plan Chest' is a site which enables print designers to raise their profile on a new platform and to also sell their work to a new customer base. 
+'Plan Chest' is a site which enables print designers to raise the profile of their trade, promote themselves on a new platform and sell their work to a new customer base. 
 
-The site will also allows designer and customer users to discover new print designers (or check out the competition), see inspirational work and make purchases.
+The site will allow users to discover new print designers (or simply check out the competition), explore inspirational work and purchase prints uploaded by the designers themselves.
 
 The 'Plan Chest' site will be open for anyone to join, as either a customer or a designer. Both customers and designers can make purchases, but only those registered as designers will be able to start uploading and selling their work. 
 

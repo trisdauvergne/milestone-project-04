@@ -8,7 +8,9 @@
             <span></span>
         </div>
         <div class="col-6 standard-left-border margin-top">
-            <h1 class="fixed-header">{{ print.title }}</h1>
+            <h1 class="fixed-header image-inline">{{ print.title }}</h1>
+            <!-- <p class="display-small image-inline"><a href="{% url 'all_prints' %}"><strong><i class="fas fa-arrow-left"></i> Back to all prints</strong></a></p> -->
+            <p class="display-small image-inline"><a href="{% url 'individual_designer' print.designer.id %}"><strong>See more of {{ print.designer.first_name }} {{ print.designer.last_name }}'s work</strong></a></p>
         </div>
     </div>
     <div class="row">
@@ -29,8 +31,9 @@
                 <form class="form" action="{% url 'add_print_to_bag' print.id %}" method="POST">
                 {% csrf_token %}
                     <div class="form-row">
-                        <div class="col-12">
-                            <p>Quantity:</p>
+                        <div class="col-9">
+                            <!-- <p>Quantity:</p> -->
+                            <br>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <button class="decrement-qty btn btn-sm btn-black rounded-0" data-item_id="{{ print.id }}" id="decrement-qty_{{ print.id }}">
@@ -50,14 +53,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-3">
                             <input type="submit" class="btn bag-btn" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
                 <br>
-                <p><a href="{% url 'individual_designer' print.designer.id %}"><strong>See more of {{ print.designer.first_name }} {{ print.designer.last_name }}'s work</strong></a></p>
+                <p class="display-large"><a href="{% url 'individual_designer' print.designer.id %}"><strong>See more of {{ print.designer.first_name }} {{ print.designer.last_name }}'s work</strong></a></p>
                 <br>
                 <p><a href="{% url 'all_prints' %}"><strong><i class="fas fa-arrow-left"></i> Back to all prints</strong></a></p>
                 

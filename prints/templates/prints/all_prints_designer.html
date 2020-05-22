@@ -26,6 +26,7 @@
         <div class="col-sm-7 col-9 standard-left-border">
             {% for designer in designers %}
                 <div class="col">
+                    <br>
                     <a href="{% url 'individual_designer' designer.id%}"><p><strong>{{ designer.first_name }} {{ designer.last_name }}</strong></p></a>
                     <div class="row">
                         {% for print in designer.designer_key.all %}
