@@ -7,6 +7,9 @@
 
 View the live project on Heroku [here](https://planchest-ms4.herokuapp.com/).
 
+Username (and email): wekihi4895@mxcdd.com
+Password: guestuserpassword
+
 ## An introduction to the project
 
 'Plan Chest' is a site which enables print designers to raise the profile of their trade, promote themselves on a new platform and sell their work to a new customer base. 
